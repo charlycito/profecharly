@@ -11,7 +11,11 @@
   <!-- ENCABEZADO -->
   <header>
     <h1>💻 PROFE CHARLY | Habilidades Digitales</h1>
-    <nav>
+
+    <!-- Botón menú móvil -->
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav-menu">
       <a href="../index.html">Inicio</a>
       <a href="#guia">Guía</a>
       <a href="#video">Video: Aprende CmapCloud</a>
@@ -20,7 +24,7 @@
     </nav>
   </header>
 
-  <!-- PORTADA / HERO -->
+  <!-- PORTADA -->
   <section class="hero">
     <h2>Habilidades Digitales</h2>
     <p>Desarrolla competencias para aprovechar herramientas tecnológicas en tu vida académica y profesional.</p>
@@ -30,7 +34,6 @@
   <section class="content" id="guia">
     <h3>📘 Guía Oficial de Habilidades Digitales</h3>
     <p>Puedes consultar o descargar la guía completa en el siguiente enlace:</p>
-
     <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/EeUlWIWSbSBFjrO8itv-uAUBhg5x7paS61nsU07DbS2xYA?e=KrAogp" target="_blank">
       🔗 Abrir Guía de Habilidades Digitales
     </a>
@@ -40,7 +43,6 @@
   <section class="video-section" id="video">
     <h3>🎥 Aprende a crear tu primer mapa conceptual en CmapCloud</h3>
     <p>Observa el siguiente video para aprender paso a paso cómo elaborar tus mapas conceptuales en línea usando <strong>CmapCloud</strong>:</p>
-    
     <div class="video-container">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/F2TuQ5FmsYw?si=Q07WmeWRLmpLli8G"
         title="YouTube video player" frameborder="0"
@@ -67,10 +69,19 @@
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Profe Charly | Preparatoria Amozoc - BUAP</p>
   </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
