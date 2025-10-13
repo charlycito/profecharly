@@ -1,0 +1,264 @@
+/* =========================================================
+   🌐 PROFE CHARLY | INFORMÁTICA BUAP
+   Hoja de estilo principal
+   ========================================================= */
+
+/* 🔤 Tipografía y base general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   🔷 ENCABEZADO
+   ========================================================= */
+header {
+  background: linear-gradient(90deg, #001f3f, #0074D9);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+  font-size: 1.8em;
+  letter-spacing: 1px;
+}
+
+/* 🔗 Navegación */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   🦸 SECCIÓN HERO (Presentación)
+   ========================================================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'),
+              linear-gradient(180deg, #e8f0ff, #f9fbff);
+  animation: fadeIn 1.2s ease;
+}
+
+.hero h2 {
+  font-size: 2em;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================================================
+   📚 TARJETAS DE CURSOS
+   ========================================================= */
+
+/* Estructura general */
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+/* Diseño de cada tarjeta */
+.card {
+  flex: 1 1 230px;        /* ancho flexible */
+  max-width: 250px;       /* límite máximo de anchura */
+  min-height: 200px;      /* altura uniforme */
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+/* Animación progresiva al cargar */
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.5s; }
+.card:nth-child(3) { animation-delay: 0.7s; }
+.card:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Hover con animación */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #003366;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: #0074D9;
+}
+
+/* =========================================================
+   👤 PERFIL DEL DOCENTE
+   ========================================================= */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #eef3fa;
+  animation: fadeIn 1.5s ease;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.profile-info h2 {
+  margin: 0;
+  color: #001f3f;
+  animation: fadeIn 1.3s ease;
+}
+
+/* =========================================================
+   💬 SECCIONES INFORMATIVAS
+   ========================================================= */
+.recommendations,
+.schedule {
+  background-color: #eef3fa;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.recommendations h2,
+.schedule h2 {
+  color: #001f3f;
+}
+
+.recommendations p,
+.schedule p {
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================================================
+   📅 HORARIO Y CONTACTO
+   ========================================================= */
+.contact-section {
+  background-color: #f9fafc;
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.contact-section h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   ✏️ FORMULARIOS
+   ========================================================= */
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #0074D9;
+  outline: none;
+}
+
+button {
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   🔚 RESPONSIVE (para celulares y tabletas)
+   ========================================================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .courses {
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
