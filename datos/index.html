@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Datos y Comunicación | Profe Charly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💻 PROFE CHARLY | Manejo de Datos y Comunicación</h1>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#guia">Guía del Alumno</a>
+      <a href="#videos">Videos: Regresión Lineal</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Manejo de Datos y Comunicación</h2>
+    <p>Aprende a analizar, comunicar y representar información mediante herramientas digitales y software científico.</p>
+  </section>
+
+  <section class="content" id="descargas">
+    <h3>📦 Descarga e instala GNU Octave</h3>
+    <p>Octave es una herramienta libre y potente para realizar análisis de datos y cálculos matemáticos. Puedes descargarlo desde el sitio oficial:</p>
+    <a class="btn-link" href="https://octave.org/download" target="_blank">🔗 Descargar Octave</a>
+  </section>
+
+  <section class="content" id="guia">
+    <h3>📘 Guía del Alumno</h3>
+    <p>Consulta o descarga la guía oficial del curso en el siguiente enlace:</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/ER8BR6tOfftMonxYreF7oGABt_BcHx6ycd6GECuy7vNWzA?e=vzWaPz" target="_blank">
+      🔗 Abrir Guía de Manejo de Datos y Comunicación
+    </a>
+  </section>
+
+  <section class="video-section" id="videos">
+    <h3>🎥 Videos de apoyo: Regresión Lineal</h3>
+    <p>Selecciona el video que deseas visualizar:</p>
+
+    <div class="video-selector">
+      <select id="videoSelect">
+        <option value="5Mmr_tqZRU4">Parte 1 – Introducción a la Regresión Lineal</option>
+        <option value="E0AKVNgH0NQ">Parte 2 – Continuación y análisis</option>
+      </select>
+    </div>
+
+    <div class="video-container">
+      <iframe id="videoFrame" width="560" height="315"
+        src="https://www.youtube.com/embed/5Mmr_tqZRU4"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Profe Charly | Preparatoria Amozoc - BUAP</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+
+    const videoSelect = document.getElementById('videoSelect');
+    const videoFrame = document.getElementById('videoFrame');
+    videoSelect.addEventListener('change', () => {
+      const id = videoSelect.value;
+      videoFrame.src = `https://www.youtube.com/embed/${id}`;
+    });
+  </script>
+</body>
+</html>
