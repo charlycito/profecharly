@@ -1,0 +1,90 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #222;
+  scroll-behavior: smooth;
+}
+header {
+  background: linear-gradient(90deg, #001f3f, #0074D9);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 { font-size: 1.3em; margin: 0; }
+nav.nav-menu { display: flex; gap: 15px; align-items: center; }
+nav.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+nav.nav-menu a:hover { color: #FFD700; transform: scale(1.05); }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.menu-toggle.active { transform: rotate(90deg); }
+.hero {
+  text-align: center;
+  padding: 70px 20px 50px;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'),
+              linear-gradient(180deg, #e8f0ff, #f9fbff);
+}
+.hero h2 { font-size: 2em; color: #003366; margin-bottom: 10px; }
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+.content h3 { color: #003366; margin-bottom: 15px; }
+.btn-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #0074D9;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-link:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  nav.nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #003366;
+    text-align: center;
+    padding: 15px 0;
+    animation: fadeIn 0.4s ease;
+  }
+  nav.nav-menu.show { display: flex; }
+  nav.nav-menu a { margin: 10px 0; font-size: 1.1em; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoría | Profe Charly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💻 PROFE CHARLY | Tutoría</h1>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="#justificante">Justificante</a>
+      <a href="#pat">PAT</a>
+      <a href="#reglamento">Reglamento BUAP</a>
+      <a href="#frase">Frase del Día</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Tutoría Académica</h2>
+    <p>Acompañamiento personalizado para tu crecimiento académico, personal y profesional.</p>
+  </section>
+
+  <section class="content" id="justificante">
+    <h3>📝 Formato de Justificante de Faltas</h3>
+    <p>Descarga el formato oficial de justificante en caso de inasistencias. Preséntalo debidamente llenado y firmado.</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/Eb9vgozz1l9Ngfgo6wQfJgoBueVfnbQt5Uhm4bcWCU2fIg?e=wj5Hjw" target="_blank">
+      📄 Descargar Formato de Justificante
+    </a>
+  </section>
+
+  <section class="content" id="pat">
+    <h3>📘 Programa de Acción Tutorial (PAT)</h3>
+    <p>Consulta el documento del <strong>PAT</strong>, donde se establecen los objetivos, estrategias y acciones del acompañamiento tutorial.</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/EVA7iZmYpl9JmwM73BNVz7sBa226S-XY_2PG5dm2avSMrg?e=I5D3vI" target="_blank">
+      🔗 Abrir PAT
+    </a>
+  </section>
+
+  <section class="content" id="reglamento">
+    <h3>📚 Reglamento de la BUAP</h3>
+    <p>Consulta el <strong>Reglamento de Requisitos y Procedimientos</strong> para la admisión, permanencia y trayectoria académica de los alumnos.</p>
+    <a class="btn-link" href="http://www.contraloria.buap.mx/sites/default/files/Normativa%20Universitaria/Reglamento%20de%20Requisitos%20y%20Procedimientos%20para%20la%20Admision%2C%20Permanencia%20y%20Trayectoria%20Academica%20de%20los%20Alumnos%20de%20Modalidad%20Escolarizada.pdf" target="_blank">
+      📘 Ver Reglamento BUAP
+    </a>
+  </section>
+
+  <section class="content" id="frase">
+    <h3>💬 Frase del Día</h3>
+    <p>Haz clic en el botón para inspirarte y motivarte a seguir creciendo cada día 💪</p>
+    <button id="btnFrase" class="btn-link">✨ Mostrar Frase del Día</button>
+    <p id="fraseTexto" style="margin-top:20px; font-style:italic; color:#003366; font-size:1.1em;"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Profe Charly | Preparatoria Amozoc - BUAP</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+
+    const frases = [
+      "La educación es el arma más poderosa que puedes usar para cambiar el mundo. — Nelson Mandela",
+      "El éxito es la suma de pequeños esfuerzos repetidos día tras día. — Robert Collier",
+      "No te rindas, cada dificultad es una oportunidad disfrazada. — Proverbios 24:10",
+      "La disciplina es el puente entre las metas y los logros. — Jim Rohn",
+      "El sabio oirá y aumentará el saber. — Proverbios 1:5",
+      "El aprendizaje nunca agota la mente. — Leonardo da Vinci",
+      "El único lugar donde el éxito viene antes que el trabajo es en el diccionario. — Vidal Sassoon",
+      "Haz hoy lo que otros no quieren, haz mañana lo que otros no pueden. — Jerry Rice",
+      "El que se esfuerza y persevera, alcanza sus metas. — Proverbios 13:4",
+      "No importa lo lento que vayas, siempre y cuando no te detengas. — Confucio",
+      "La constancia convierte lo ordinario en extraordinario. — Desconocido",
+      "La educación no cambia el mundo, cambia a las personas que van a cambiar el mundo. — Paulo Freire",
+      "No dejes que lo que no puedes hacer interfiera con lo que sí puedes hacer. — John Wooden",
+      "El que adquiere sabiduría ama su alma; el que guarda la inteligencia hallará el bien. — Proverbios 19:8",
+      "Los grandes logros requieren tiempo y paciencia. — Maya Angelou",
+      "La mente es como un paracaídas, solo funciona si se abre. — Albert Einstein",
+      "Sé fuerte y valiente, no temas ni te desalientes. — Josué 1:9",
+      "El fracaso es la oportunidad de comenzar de nuevo, con más inteligencia. — Henry Ford",
+      "Hazlo con pasión o no lo hagas. — Rosa N. Cary",
+      "Cada día es una nueva oportunidad para aprender algo nuevo. — Desconocido",
+      "Los sueños no funcionan a menos que tú trabajes por ellos. — John C. Maxwell"
+    ];
+
+    document.getElementById('btnFrase').addEventListener('click', () => {
+      const frase = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById('fraseTexto').textContent = frase;
+    });
+  </script>
+</body>
+</html>
