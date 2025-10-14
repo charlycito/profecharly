@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovación de Aplicaciones | Profe Charly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💻 PROFE CHARLY | Innovación de Aplicaciones</h1>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="#formato">Formato de Actividades</a>
+      <a href="#guia">Guía del Alumno</a>
+      <a href="#manual">Manual del Estudiante</a>
+      <a href="#videos">Videos Guía</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Innovación de Aplicaciones</h2>
+    <p>Crea tus propias aplicaciones móviles con <strong>MIT App Inventor</strong> y desarrolla tu pensamiento lógico, creatividad y capacidad para resolver problemas reales.</p>
+  </section>
+
+  <section class="content" id="formato">
+    <h3>📝 Formato para Entrega de Actividades</h3>
+    <p>Antes de iniciar tus proyectos, descarga y utiliza este formato oficial para entregar tus actividades correctamente.</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:w:/g/personal/jcarlos_arellano_correo_buap_mx/EdWXO5U_rw1IjaVLz-rBfLwBXJ2hX2bO6Zql98ab9otfyA?e=TOROIz" target="_blank">
+      📄 Descargar Formato para Entrega de Actividades
+    </a>
+  </section>
+
+  <section class="content" id="guia">
+    <h3>📘 Guía del Alumno</h3>
+    <p>Consulta la guía oficial del curso donde encontrarás los temas, competencias y actividades a desarrollar.</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/EcoxYHyUgO1DinOwpIkn9cgBIVg4Xe2qcvVjy36vgIvRvw?e=AvkVcg" target="_blank">
+      🔗 Abrir Guía del Alumno
+    </a>
+  </section>
+
+  <section class="content" id="manual">
+    <h3>📙 Manual del Estudiante</h3>
+    <p>Este manual te ayudará a dominar las herramientas y funciones de MIT App Inventor, paso a paso.</p>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/EVPPv8FLMF1NldriUZe6Lm0BGrX7bRtRVfqnEK5GutwZhA?e=Gtw2w0" target="_blank">
+      📘 Descargar Manual del Estudiante
+    </a>
+  </section>
+
+  <section class="content" id="videos">
+    <h3>🎥 Videos Guía MIT App Inventor</h3>
+    <p>Consulta la carpeta con los videos guía donde aprenderás a programar:</p>
+    <ul style="list-style: none; padding-left: 0;">
+      <li>📱 <strong>App de Tablas de Multiplicar</strong></li>
+      <li>📍 <strong>App “Midiendo Distancias con el GPS”</strong></li>
+    </ul>
+    <a class="btn-link" href="https://correobuap-my.sharepoint.com/:f:/g/personal/jcarlos_arellano_correo_buap_mx/EiugIcRBHIpIuKxmOCu8ikMBpsvKiMPuBymSv-eDB0DRqA?e=F2ayi6" target="_blank">
+      🎬 Abrir Carpeta con Videos Guía
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 Profe Charly | Preparatoria Amozoc - BUAP</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
