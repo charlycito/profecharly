@@ -6,13 +6,60 @@
   <title>Tutoría | Profe Charly</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
+  <style>
+    /* 🔹 Estilo extra solo para la sección de avisos */
+    .avisos-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 25px 30px;
+      text-align: left;
+      min-height: 240px;
+      transition: opacity 0.6s ease;
+    }
+    .aviso {
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+    .aviso.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .avisos-controls {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .avisos-controls button {
+      background: #0074D9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .avisos-controls button:hover {
+      background: #005fa3;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>💻 PROFE CHARLY | Tutoría</h1>
     <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <nav class="nav-menu">
       <a href="../index.html">Inicio</a>
+      <a href="#avisos">Avisos</a>
       <a href="#justificante">Justificante</a>
       <a href="#pat">PAT</a>
       <a href="#reglamento">Reglamento BUAP</a>
@@ -26,6 +73,56 @@
     <p>Acompañamiento personalizado para tu crecimiento académico, personal y profesional.</p>
   </section>
 
+  <!-- 🔹 SECCIÓN DE AVISOS -->
+  <section class="content" id="avisos">
+    <h3>📢 Avisos para Tutorados</h3>
+    <div class="avisos-container">
+      <div class="aviso active">
+        <h4>🎓 Beca Líderes del Mañana 2026 – Tec de Monterrey</h4>
+        <p>Chicos de 5.º semestre, el <strong>29 de octubre</strong> nos visitará personal del <em>Tec de Monterrey</em> para explicar su programa <strong>Beca Líderes del Mañana 2026</strong>.<br>
+        Solo podrán asistir quienes tengan promedio igual o superior a 9. Mañana confirmaré quiénes cumplen con ese requisito. 🌟</p>
+      </div>
+
+      <div class="aviso">
+        <h4>🏫 Servicios escolares BUAP</h4>
+        <p>Recuerden que pueden consultar los servicios que ofrece la <strong>Dirección de Administración Escolar (DAE)</strong>: constancias, kárdex, credenciales, afiliación IMSS, entre otros.</p>
+        <a class="btn-link" href="https://escolar.buap.mx/" target="_blank">Abrir portal DAE</a>
+      </div>
+
+      <div class="aviso">
+        <h4>💀 Concurso de ofrendas</h4>
+        <p>El lunes se realizará el <strong>sorteo de espacios</strong> para el concurso de ofrendas.  
+        Les pido que su jefe de grupo o representante asista a la cancha a las <strong>12:30 p.m.</strong> para elegir su lugar. 🙌</p>
+      </div>
+
+      <div class="aviso">
+        <h4>❤️ Apoyo solidario – Donación de Ketoconazol</h4>
+        <p>Se solicita el apoyo de la comunidad estudiantil para donar <strong>Ketoconazol</strong> (crema o shampoo).  
+        Las comunidades afectadas lo necesitan por problemas de piel causados por el lodo y la humedad.  
+        Recibiremos los donativos lunes y martes. ¡Gracias por su empatía! 💙</p>
+      </div>
+
+      <div class="aviso">
+        <h4>🎭 Actividad Día de Muertos – Enlonado</h4>
+        <p>El lunes se colocará lona en el área del concurso de ofrendas.  
+        Se solicita un <strong>donativo de $10 por alumno</strong> para cubrir el costo y que todos estén más cómodos durante la exposición. 🎭</p>
+      </div>
+
+      <div class="aviso">
+        <h4>📌 Venta con causa</h4>
+        <p>El lunes nos visitará una <strong>señora de la tercera edad</strong> que ofrecerá productos artesanales del Día de Muertos (inciensos, collares, figuras, rehiletes, etc.).  
+        Cualquier compra será una gran ayuda para ella.  
+        Podrán encontrarla en el <strong>lobby</strong>. 🙏</p>
+      </div>
+    </div>
+
+    <div class="avisos-controls">
+      <button id="prevAviso">⬅️ Anterior</button>
+      <button id="nextAviso">Siguiente ➡️</button>
+    </div>
+  </section>
+
+  <!-- 🔹 JUSTIFICANTE -->
   <section class="content" id="justificante">
     <h3>📝 Formato de Justificante de Faltas</h3>
     <p>Descarga el formato oficial de justificante en caso de inasistencias. Preséntalo debidamente llenado y firmado.</p>
@@ -34,6 +131,7 @@
     </a>
   </section>
 
+  <!-- 🔹 PAT -->
   <section class="content" id="pat">
     <h3>📘 Programa de Acción Tutorial (PAT)</h3>
     <p>Consulta el documento del <strong>PAT</strong>, donde se establecen los objetivos, estrategias y acciones del acompañamiento tutorial.</p>
@@ -42,6 +140,7 @@
     </a>
   </section>
 
+  <!-- 🔹 REGLAMENTO -->
   <section class="content" id="reglamento">
     <h3>📚 Reglamento de la BUAP</h3>
     <p>Consulta el <strong>Reglamento de Requisitos y Procedimientos</strong> para la admisión, permanencia y trayectoria académica de los alumnos.</p>
@@ -50,6 +149,7 @@
     </a>
   </section>
 
+  <!-- 🔹 FRASE DEL DÍA -->
   <section class="content" id="frase">
     <h3>💬 Frase del Día</h3>
     <p>Haz clic en el botón para inspirarte y motivarte a seguir creciendo cada día 💪</p>
@@ -61,7 +161,9 @@
     <p>© 2025 Profe Charly | Preparatoria Amozoc - BUAP</p>
   </footer>
 
+  <!-- 🔹 SCRIPT -->
   <script>
+    // Menú móvil
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
     toggle.addEventListener('click', () => {
@@ -69,6 +171,7 @@
       toggle.classList.toggle('active');
     });
 
+    // Frases del día
     const frases = [
       "La educación es el arma más poderosa que puedes usar para cambiar el mundo. — Nelson Mandela",
       "El éxito es la suma de pequeños esfuerzos repetidos día tras día. — Robert Collier",
@@ -76,27 +179,33 @@
       "La disciplina es el puente entre las metas y los logros. — Jim Rohn",
       "El sabio oirá y aumentará el saber. — Proverbios 1:5",
       "El aprendizaje nunca agota la mente. — Leonardo da Vinci",
-      "El único lugar donde el éxito viene antes que el trabajo es en el diccionario. — Vidal Sassoon",
       "Haz hoy lo que otros no quieren, haz mañana lo que otros no pueden. — Jerry Rice",
-      "El que se esfuerza y persevera, alcanza sus metas. — Proverbios 13:4",
-      "No importa lo lento que vayas, siempre y cuando no te detengas. — Confucio",
-      "La constancia convierte lo ordinario en extraordinario. — Desconocido",
-      "La educación no cambia el mundo, cambia a las personas que van a cambiar el mundo. — Paulo Freire",
-      "No dejes que lo que no puedes hacer interfiera con lo que sí puedes hacer. — John Wooden",
-      "El que adquiere sabiduría ama su alma; el que guarda la inteligencia hallará el bien. — Proverbios 19:8",
-      "Los grandes logros requieren tiempo y paciencia. — Maya Angelou",
-      "La mente es como un paracaídas, solo funciona si se abre. — Albert Einstein",
-      "Sé fuerte y valiente, no temas ni te desalientes. — Josué 1:9",
-      "El fracaso es la oportunidad de comenzar de nuevo, con más inteligencia. — Henry Ford",
-      "Hazlo con pasión o no lo hagas. — Rosa N. Cary",
-      "Cada día es una nueva oportunidad para aprender algo nuevo. — Desconocido",
-      "Los sueños no funcionan a menos que tú trabajes por ellos. — John C. Maxwell"
+      "No importa lo lento que vayas, siempre y cuando no te detengas. — Confucio"
     ];
-
     document.getElementById('btnFrase').addEventListener('click', () => {
       const frase = frases[Math.floor(Math.random() * frases.length)];
       document.getElementById('fraseTexto').textContent = frase;
     });
+
+    // Rotador de avisos
+    const avisos = document.querySelectorAll('.aviso');
+    let indice = 0;
+    const mostrarAviso = i => {
+      avisos.forEach(a => a.classList.remove('active'));
+      avisos[i].classList.add('active');
+    };
+    document.getElementById('nextAviso').addEventListener('click', () => {
+      indice = (indice + 1) % avisos.length;
+      mostrarAviso(indice);
+    });
+    document.getElementById('prevAviso').addEventListener('click', () => {
+      indice = (indice - 1 + avisos.length) % avisos.length;
+      mostrarAviso(indice);
+    });
+    setInterval(() => {
+      indice = (indice + 1) % avisos.length;
+      mostrarAviso(indice);
+    }, 8000);
   </script>
 </body>
 </html>
