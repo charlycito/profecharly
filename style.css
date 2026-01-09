@@ -262,3 +262,32 @@ button:hover {
     width: 90%;
   }
 }
+/* =========================================================
+   🧩 TÍTULOS DE SECCIÓN (Asignaturas actuales / Trayectoria)
+   ========================================================= */
+.section-title {
+  text-align: center;
+  padding: 10px 20px 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title h2 {
+  color: #001f3f;
+  margin: 25px 0 5px 0;
+}
+
+.section-title p {
+  margin: 0 auto 10px auto;
+  color: #333;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   📚 VARIANTE VISUAL PARA "TRAYECTORIA"
+   ========================================================= */
+.courses-secondary .card {
+  opacity: 0.95;
+  filter: saturate(0.9);
+}
