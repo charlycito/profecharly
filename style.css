@@ -290,3 +290,51 @@ button:hover {
   opacity: 0.95;
   filter: saturate(0.9);
 }
+
+/* =========================================================
+   🧩 BLOQUE EXTRAORDINARIO (CTA)
+   ========================================================= */
+.extra-callout {
+  padding: 10px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.extra-box {
+  max-width: 1100px;
+  width: 100%;
+  background: linear-gradient(90deg, #fff7d6, #ffffff);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  border-radius: 16px;
+  padding: 22px 22px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.extra-box h2 {
+  margin: 0 0 8px 0;
+  color: #001f3f;
+}
+
+.extra-box p {
+  margin: 0 0 14px 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.extra-btn {
+  display: inline-block;
+  background-color: #0074D9;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.extra-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 116, 217, 0.25);
+  text-decoration: none;
+}
