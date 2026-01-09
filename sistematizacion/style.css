@@ -1,1 +1,239 @@
+/* =========================================================
+   📊 PROFE CHARLY | SISTEMATIZACIÓN DE DATOS
+   Hoja de estilo (sistematizacion/style.css)
+   ========================================================= */
+
+/* 🔤 Base general */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Enlaces */
+a {
+  color: #0074D9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   🔷 ENCABEZADO
+   ========================================================= */
+header {
+  background: linear-gradient(90deg, #001f3f, #0074D9);
+  color: white;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.35em;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   🍔 MENÚ + NAVEGACIÓN
+   ========================================================= */
+.menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.03);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-menu a {
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #FFD700;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   🦸 HERO
+   ========================================================= */
+.hero {
+  text-align: center;
+  padding: 48px 18px;
+  background:
+    url('https://www.transparenttextures.com/patterns/cubes.png'),
+    linear-gradient(180deg, #e8f0ff, #f9fbff);
+}
+
+.hero h2 {
+  margin: 0 0 10px 0;
+  font-size: 2em;
+  color: #003366;
+}
+
+.hero p {
+  margin: 0 auto;
+  max-width: 900px;
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+/* =========================================================
+   📌 CONTENEDORES DE CONTENIDO
+   ========================================================= */
+.content,
+.video-section {
+  max-width: 1000px;
+  margin: 22px auto;
+  padding: 26px 22px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.content h3,
+.video-section h3 {
+  margin: 0 0 12px 0;
+  color: #001f3f;
+}
+
+.content p,
+.video-section p {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Detalle visual sutil (barra izquierda) */
+.content {
+  border-left: 6px solid #0074D9;
+}
+
+/* =========================================================
+   🎥 VIDEO RESPONSIVO
+   ========================================================= */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  margin-top: 14px;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================================================
+   🔚 FOOTER
+   ========================================================= */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 28px;
+  color: #666;
+  background: #eef3fa;
+}
+
+/* =========================================================
+   📱 RESPONSIVE (Celular / Tablet)
+   ========================================================= */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 1.15em;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  /* Mostramos botón y ocultamos menú horizontal */
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.12);
+    padding: 12px 12px;
+    border-radius: 12px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+
+  .nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.10);
+  }
+
+  .hero {
+    padding: 36px 14px;
+  }
+
+  .hero h2 {
+    font-size: 1.7em;
+  }
+
+  .content,
+  .video-section {
+    margin: 16px 12px;
+    padding: 20px 16px;
+  }
+}
 
