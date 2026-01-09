@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistematización de Datos | Profe Charly</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
 
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>📊 PROFE CHARLY | Sistematización de Datos</h1>
+
+    <!-- Botón menú móvil -->
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#video">Video: Tutorial Genially</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="hero">
+    <h2>Sistematización de Datos</h2>
+    <p>
+      Organiza, procesa y analiza datos para convertir información en decisiones.<br>
+      Segundo semestre: vamos a trabajar con enfoque práctico y productos claros.
+    </p>
+  </section>
+
+  <!-- BIENVENIDA -->
+  <section class="content" id="bienvenida">
+    <h3>🎯 Bienvenida al segundo semestre</h3>
+    <p>
+      ¡Bienvenidas y bienvenidos! En este segundo semestre vamos a fortalecer la forma en que
+      <strong>organizamos</strong>, <strong>interpretamos</strong> y <strong>presentamos</strong> datos.
+      La meta es que puedas crear productos claros (tablas, reportes, visualizaciones e interactivos)
+      que comuniquen información de manera profesional.
+    </p>
+    <p>
+      Aquí encontrarás recursos y materiales para avanzar paso a paso. La constancia y la práctica
+      serán tu superpoder este semestre. 💪📈
+    </p>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section" id="video">
+    <h3>🎥 Tutorial: Crear un interactivo en Genially (actividad de Entorno de la Hoja de Cálculo)</h3>
+    <p>
+      En este video te explico cómo crear un interactivo en <strong>Genially</strong> para elaborar la actividad
+      de <strong>Entorno de la Hoja de Cálculo</strong>. Pon atención a la estructura, los elementos interactivos
+      y la forma de presentar el producto final.
+    </p>
+
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/yzS0OG3-bSo?si=nV_fA6oHeLgLc_E1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p style="margin-top: 15px;">
+      🔗 Si tienes problemas para ver el video incrustado, ábrelo directamente en YouTube:
+      <a href="https://www.youtube.com/watch?v=yzS0OG3-bSo" target="_blank" rel="noopener noreferrer">
+        Ver video en YouTube
+      </a>
+    </p>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2026 Profe Charly | Preparatoria Amozoc - BUAP</p>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
