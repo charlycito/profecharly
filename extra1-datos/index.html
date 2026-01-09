@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraordinario I | Manejo de Datos y Comunicación</title>
+
+  <!-- CSS propio del extraordinario -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>🧩 PROFE CHARLY | Extraordinario I</h1>
+
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav-menu">
+      <a href="../index.html">Inicio</a>
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#video">Video guía</a>
+      <a href="#guia">Guía del estudiante</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Extraordinario I</h2>
+    <p>
+      Manejo de Datos y Comunicación<br>
+      Recursos, materiales y acompañamiento para acreditar la asignatura.
+    </p>
+  </section>
+
+  <!-- BIENVENIDA -->
+  <section class="content" id="bienvenida">
+    <h3>📌 Bienvenida al curso extraordinario</h3>
+    <p>
+      Bienvenidas y bienvenidos al <strong>Extraordinario I de Manejo de Datos y Comunicación</strong>.
+      Este espacio concentra los recursos que necesitarás para organizar tu trabajo, comprender las
+      actividades y avanzar de forma clara durante este proceso.
+    </p>
+    <p>
+      Te recomiendo revisar con atención cada material y mantener comunicación constante ante cualquier duda.
+      La constancia y el orden serán clave para lograr el objetivo. 💪📊
+    </p>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section" id="video">
+    <h3>🎥 Video guía: explicación general del extraordinario</h3>
+    <p>
+      En el siguiente video encontrarás una explicación general sobre el trabajo del extraordinario,
+      el enfoque de las actividades y las recomendaciones para organizar tu entrega.
+    </p>
+
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jGZn2YB0k6I?si=eExC3NNJ5FINkiK-"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="video-link">
+      🔗 Si no se visualiza correctamente, puedes abrirlo directamente en:
+      <a href="https://www.youtube.com/watch?v=jGZn2YB0k6I" target="_blank" rel="noopener noreferrer">
+        YouTube
+      </a>
+    </p>
+  </section>
+
+  <!-- GUÍA DEL ESTUDIANTE -->
+  <section class="content" id="guia">
+    <h3>📘 Guía del estudiante – Manejo de Datos y Comunicación</h3>
+    <p>
+      Consulta la <strong>Guía del Estudiante</strong> de la asignatura. Este documento es fundamental,
+      ya que contiene los contenidos, orientaciones y criterios que te ayudarán a desarrollar
+      correctamente las actividades del extraordinario.
+    </p>
+
+    <a class="btn-link"
+       href="https://correobuap-my.sharepoint.com/personal/jcarlos_arellano_correo_buap_mx/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjcarlos%5Farellano%5Fcorreo%5Fbuap%5Fmx%2FDocuments%2FMyWeb%2Fmdatos%2Fguiamanejo%2Epdf&parent=%2Fpersonal%2Fjcarlos%5Farellano%5Fcorreo%5Fbuap%5Fmx%2FDocuments%2FMyWeb%2Fmdatos&ga=1"
+       target="_blank" rel="noopener noreferrer">
+      📄 Abrir Guía del Estudiante (PDF)
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Profe Charly | Preparatoria Amozoc – BUAP</p>
+  </footer>
+
+  <!-- SCRIPT MENÚ MÓVIL -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
 
