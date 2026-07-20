@@ -1,134 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal académico de Informática del Profe Charly en la Preparatoria Amozoc, BUAP.">
   <title>Profe Charly | Informática BUAP</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
+<body id="inicio">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header>
-    <h1>💻 PROFE CHARLY | Informática</h1>
-    <nav>
-      <a href="#extraordinario">Extraordinario I</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio">💻 <span>PROFE CHARLY</span><small>Informática</small></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
       <a href="#cursos">Asignaturas actuales</a>
-      <a href="#trayectoria">Trayectoria</a>
-      <a href="#recomendaciones">Recomendaciones</a>
+      <a href="#anteriores">Ciclos anteriores</a>
+      <a href="#perfil">Perfil docente</a>
+      <a href="#asesorias">Asesorías</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Bienvenido al sitio de Informática del Profe Charly</h2>
-    <p>
-      Explora, aprende y crea con los recursos, cursos y proyectos del Profe Charly.<br>
-      Complejo Regional Centro, sede Amozoc – BUAP.
-    </p>
-  </section>
-  <!-- ✅ EXTRAORDINARIO I -->
-  <section class="extra-callout" id="extraordinario">
-    <div class="extra-box">
-      <h2>🧩 Extraordinario I | Manejo de Datos y Comunicación</h2>
-      <p>
-        Accede aquí al material, actividades, avisos y recursos del curso de extraordinario.
-      </p>
-      <a class="extra-btn" href="extra1-datos/index.html">Entrar al Extraordinario</a>
-    </div>
-  </section>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <p class="period-badge">Periodo Otoño 2026</p>
+      <h1 id="titulo-principal">Bienvenido al espacio digital del Profe Charly</h1>
+      <p>Consulta materiales, actividades, avisos y recursos de tus asignaturas de Informática.</p>
+      <p class="campus">Complejo Regional Centro, sede Amozoc – BUAP</p>
+    </section>
 
-  <!-- ✅ ASIGNATURAS ACTUALES -->
-  <section class="section-title" id="cursos">
-    <h2>📌 Asignaturas actuales</h2>
-    <p>Contenido y recursos del semestre en curso.</p>
-  </section>
+    <section class="notices section-shell" aria-labelledby="avisos-titulo">
+      <div class="section-heading compact">
+        <span class="section-icon" aria-hidden="true">i</span>
+        <div><p class="eyebrow">Información vigente</p><h2 id="avisos-titulo">Avisos generales</h2></div>
+      </div>
+      <div class="notice-carousel" aria-live="polite">
+        <button class="carousel-button previous" type="button" aria-label="Aviso anterior">‹</button>
+        <article class="notice-card" id="aviso-activo"></article>
+        <button class="carousel-button next" type="button" aria-label="Aviso siguiente">›</button>
+      </div>
+      <div class="carousel-dots" id="indicadores-avisos" aria-label="Seleccionar aviso"></div>
+    </section>
 
-  <section class="courses">
+    <section class="section-shell" id="cursos" aria-labelledby="cursos-titulo">
+      <div class="section-heading"><p class="eyebrow">Semestre en curso</p><h2 id="cursos-titulo">Asignaturas actuales</h2><p>Selecciona una asignatura para consultar su espacio académico.</p></div>
+      <div class="course-grid">
+        <a class="course-card current" href="cultura-digital-1/index.html">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+          <h3>Cultura Digital I</h3><p>Comprende el entorno digital, utiliza la tecnología de forma responsable y desarrolla habilidades para buscar, organizar y comunicar información.</p><span class="card-link">Entrar a la asignatura →</span>
+        </a>
+        <a class="course-card current" href="manejo-datos/index.html">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
+          <h3>Manejo de Datos y Comunicaciones</h3><p>Analiza, organiza y representa datos mediante herramientas digitales para comunicar información y apoyar la toma de decisiones.</p><span class="card-link">Entrar a la asignatura →</span>
+        </a>
+        <a class="course-card current" href="innovacion-aplicaciones/index.html">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></span>
+          <h3>Innovación de Aplicaciones</h3><p>Diseña aplicaciones móviles con MIT App Inventor para resolver necesidades mediante la creatividad y el pensamiento computacional.</p><span class="card-link">Entrar a la asignatura →</span>
+        </a>
+        <a class="course-card current" href="tutoria-3/index.html">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 2.7-7 6-7s6 3 6 7M15 14c3 0 5 2.2 5 5"/></svg></span>
+          <h3>Tutoría III</h3><p>Acompañamiento académico y personal para fortalecer hábitos de estudio, toma de decisiones y bienestar escolar.</p><span class="card-link">Entrar a la asignatura →</span>
+        </a>
+      </div>
+    </section>
 
-    <div class="card" onclick="location.href='sistematizacion/index.html'" style="cursor:pointer;">
-      <h3>Sistematización de Datos</h3>
-      <p>Organiza, procesa y analiza datos para tomar mejores decisiones con evidencia.</p>
-    </div>
+    <section class="previous-courses" id="anteriores" aria-labelledby="anteriores-titulo">
+      <div class="section-shell">
+        <div class="section-heading"><p class="eyebrow">Archivo académico</p><h2 id="anteriores-titulo">Asignaturas de ciclos anteriores</h2><p>Materiales de cursos previos que continúan disponibles para consulta.</p></div>
+        <div class="course-grid previous-grid">
+          <a class="course-card previous" href="habilidades/index.html"><h3>Habilidades Digitales</h3><p>Herramientas tecnológicas y plataformas digitales para la vida académica y profesional.</p><span class="card-link">Consultar →</span></a>
+          <a class="course-card previous" href="sistematizacion/index.html"><h3>Sistematización de Datos</h3><p>Organización, procesamiento y análisis de datos para tomar decisiones con evidencia.</p><span class="card-link">Consultar →</span></a>
+          <a class="course-card previous" href="entorno/index.html"><h3>Entorno de Desarrollo a través de Tecnologías Digitales</h3><p>Fundamentos para desarrollar soluciones mediante programación y herramientas digitales.</p><span class="card-link">Consultar →</span></a>
+          <a class="course-card previous" href="dispositivos/index.html"><h3>Desarrollo de Habilidades Digitales a través de Dispositivos Autónomos</h3><p>Lógica, sensores y automatización con dispositivos autónomos.</p><span class="card-link">Consultar →</span></a>
+        </div>
+      </div>
+    </section>
 
-    <div class="card" onclick="location.href='entorno/index.html'" style="cursor:pointer;">
-      <h3>Entorno de Desarrollo a través de Tecnologías Digitales</h3>
-      <p>Fundamentos y práctica para desarrollar soluciones con herramientas de programación y entornos digitales.</p>
-    </div>
+    <section class="profile section-shell" id="perfil" aria-labelledby="perfil-titulo">
+      <img src="images/fperfil.jpeg" alt="Juan Carlos Arellano Ponce">
+      <div class="profile-info"><p class="eyebrow">Perfil docente</p><h2 id="perfil-titulo">Juan Carlos Arellano Ponce</h2><p><strong>Correo:</strong> <a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p><p><strong>Cubículo:</strong> 213</p></div>
+    </section>
 
-    <div class="card" onclick="location.href='dispositivos/index.html'" style="cursor:pointer;">
-      <h3>Desarrollo de Habilidades Digitales a través de Dispositivos Autónomos</h3>
-      <p>Aprende con dispositivos y sistemas autónomos: lógica, sensores y automatización con enfoque práctico.</p>
-    </div>
+    <section class="info-band" id="recomendaciones">
+      <div class="section-shell info-grid">
+        <article><h2>Recomendaciones</h2><p>Para consultas académicas, utiliza el correo institucional o mensaje privado y sigue las reglas de netiqueta.</p><p>Si tienes dificultades para acceder a los materiales o realizar alguna actividad, informa oportunamente al profesor y describe claramente el problema.</p></article>
+        <article id="asesorias"><h2>Horario de asesorías</h2><p class="schedule-time">Miércoles, 11:15 a. m.<br>Viernes, 2:15 p. m.</p><p>Laboratorio de Cómputo<br>Preparatoria Amozoc – BUAP</p></article>
+      </div>
+    </section>
 
-    <div class="card" onclick="location.href='tutoria/index.html'" style="cursor:pointer;">
-      <h3>Tutoría</h3>
-      <p>Acompañamiento académico, orientación y estrategias para mejorar tu desempeño y bienestar escolar.</p>
-    </div>
+    <section class="contact-section section-shell" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="section-heading"><p class="eyebrow">Comunicación</p><h2 id="contacto-titulo">Contacto académico</h2><p>Utiliza este formulario para enviar dudas o solicitudes relacionadas con las asignaturas. Describe claramente tu situación e incluye tus datos académicos.</p></div>
+      <iframe title="Formulario de contacto académico" src="https://forms.office.com/Pages/ResponsePage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm4eQ9g8B1hhPsDGa4-B0UPVURUhCU0RYUjBWS1M4Q0pPQ05XV0RNTUM1MS4u&embed=true" loading="lazy" allowfullscreen></iframe>
+    </section>
+  </main>
 
-  </section>
-
-  <!-- ✅ TRAYECTORIA -->
-  <section class="section-title" id="trayectoria">
-    <h2>🧭 Trayectoria de asignaturas impartidas</h2>
-    <p>Materias de ciclos anteriores que fortalecen las bases digitales.</p>
-  </section>
-
-  <section class="courses courses-secondary">
-
-    <div class="card" onclick="location.href='habilidades/index.html'" style="cursor:pointer;">
-      <h3>Habilidades Digitales</h3>
-      <p>Herramientas tecnológicas y plataformas digitales para la vida académica y profesional.</p>
-    </div>
-
-    <div class="card" onclick="location.href='datos/index.html'" style="cursor:pointer;">
-      <h3>Manejo de Datos y Comunicación</h3>
-      <p>Análisis, gestión de información y comunicación efectiva en entornos digitales.</p>
-    </div>
-
-    <div class="card" onclick="location.href='innovacion/index.html'" style="cursor:pointer;">
-      <h3>Innovación de Aplicaciones</h3>
-      <p>Creación de aplicaciones móviles con MIT App Inventor y desarrollo de pensamiento creativo.</p>
-    </div>
-
-  </section>
-
-  <section class="profile">
-    <img src="images/fperfil.jpeg" alt="Foto de Juan Carlos Arellano Ponce" />
-    <div class="profile-info">
-      <h2>Juan Carlos Arellano Ponce</h2>
-      <p><strong>Correo:</strong> jcarlos.arellano@correo.buap.mx</p>
-      <p><strong>Cubículo:</strong> 213</p>
-    </div>
-  </section>
-
-  <section class="recommendations" id="recomendaciones">
-    <h2>Recomendaciones</h2>
-    <p>📧 Por favor, contacta por mensaje privado o correo institucional siguiendo las reglas de netiqueta.</p>
-    <p>💡 En caso de dudas técnicas, puedes comunicarte con el área de soporte técnico de la preparatoria.</p>
-  </section>
-
-  <section class="schedule">
-    <h2>Horario de Asesorías</h2>
-    <p>🕒 Martes 3:00 PM y Miércoles 10:30 AM<br />Laboratorio Cómputo | Preparatoria Amozoc - BUAP</p>
-  </section>
-
-  <section class="contact-section" id="contacto">
-    <h2>Formulario de Contacto</h2>
-    <iframe
-      width="640px"
-      height="480px"
-      src="https://forms.office.com/Pages/ResponsePage.aspx?id=x8fjOlHq3kaVQBL0EQ6sm4eQ9g8B1hhPsDGa4-B0UPVURUhCU0RYUjBWS1M4Q0pPQ05XV0RNTUM1MS4u&embed=true"
-      frameborder="0"
-      marginwidth="0"
-      marginheight="0"
-      style="border: none; max-width: 100%; max-height: 100vh;"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      msallowfullscreen>
-    </iframe>
-  </section>
-
+  <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
+  <script src="avisos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
