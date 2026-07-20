@@ -18,8 +18,8 @@
     titulo.textContent = sesion.titulo;
     visor.src = sesion.pdf;
     visor.title = `Sesión ${sesion.numero}: ${sesion.titulo}`;
-    abrir.href = sesion.pdf;
-    descargar.href = enlaceDescarga(sesion.pdf);
+    abrir.href = sesion.abrir || sesion.pdf;
+    descargar.href = sesion.descargar || enlaceDescarga(sesion.pdf);
 
     [...menu.children].forEach((boton, i) => {
       const activo = i === indice;
@@ -39,3 +39,4 @@
 
   mostrarSesion(0);
 })();
+
