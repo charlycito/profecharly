@@ -1,0 +1,21 @@
+ACTUALIZACIÓN DEL SITIO PROFE CHARLY — OTOÑO 2026
+
+Este paquete contiene únicamente los archivos nuevos o actualizados.
+Las carpetas existentes de asignaturas anteriores y la carpeta images deben conservarse.
+
+Archivos que sustituyen a los actuales:
+- index.html
+- style.css
+
+Archivos nuevos:
+- avisos.js
+- script.js
+- cultura-digital-1/index.html
+- manejo-datos/index.html
+- innovacion-aplicaciones/index.html
+- tutoria-3/index.html
+
+Para modificar los avisos, edita solamente la lista del archivo avisos.js.
+Cada aviso debe conservar los campos titulo, mensaje y categoria.
+
+La página pública no fue modificada al preparar este paquete.
