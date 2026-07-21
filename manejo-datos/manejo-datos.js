@@ -40,3 +40,46 @@
   mostrarSesion(0);
 })();
 
+(() => {
+  const menu = document.querySelector("#menu-audios");
+  const numero = document.querySelector("#numero-audio");
+  const titulo = document.querySelector("#titulo-audio");
+  const reproductor = document.querySelector("#reproductor-spotify");
+  const abrir = document.querySelector("#abrir-audio");
+
+  if (
+    !menu ||
+    !Array.isArray(audiosManejoDatos) ||
+    audiosManejoDatos.length === 0
+  ) return;
+
+  function mostrarAudio(indice) {
+    const audio = audiosManejoDatos[indice];
+
+    numero.textContent = `Sesión ${audio.numero}`;
+    titulo.textContent = audio.titulo;
+    reproductor.src = audio.spotify;
+    reproductor.title = `Audio de la sesión ${audio.numero}: ${audio.titulo}`;
+    abrir.href = audio.abrir;
+
+    [...menu.children].forEach((boton, i) => {
+      const activo = i === indice;
+      boton.classList.toggle("active", activo);
+      boton.setAttribute("aria-pressed", activo ? "true" : "false");
+    });
+  }
+
+  audiosManejoDatos.forEach((audio, indice) => {
+    const boton = document.createElement("button");
+    boton.type = "button";
+    boton.className = "session-menu-button";
+    boton.innerHTML =
+      `<span>Sesión ${audio.numero}</span>` +
+      `<strong>${audio.titulo}</strong>`;
+
+    boton.addEventListener("click", () => mostrarAudio(indice));
+    menu.appendChild(boton);
+  });
+
+  mostrarAudio(0);
+})();
