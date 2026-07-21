@@ -19,6 +19,7 @@
     <nav aria-label="Navegación de la asignatura">
       <a href="#guia">Guía</a>
       <a href="#sesiones">Sesiones</a>
+      <a href="#audios">Audios</a>
       <a href="../index.html">Página principal</a>
     </nav>
   </header>
@@ -82,6 +83,50 @@
       </div>
     </section>
 
+    <section class="audio-section" id="audios" aria-labelledby="audios-titulo">
+  <div class="section-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Podcast de las sesiones</p>
+      <h2 id="audios-titulo">Escucha y repasa</h2>
+      <p>Selecciona una sesión para escuchar su audio complementario.</p>
+    </div>
+
+    <div class="session-layout audio-layout">
+      <aside class="session-menu" aria-label="Audios disponibles">
+        <h3>Audios</h3>
+        <div id="menu-audios"></div>
+      </aside>
+
+      <article class="session-viewer audio-viewer">
+        <div class="session-viewer-header">
+          <div>
+            <p class="session-number" id="numero-audio"></p>
+            <h3 id="titulo-audio"></h3>
+          </div>
+
+          <a
+            id="abrir-audio"
+            class="text-button"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            Abrir en Spotify ↗
+          </a>
+        </div>
+
+        <iframe
+          id="reproductor-spotify"
+          title="Audio de la sesión seleccionada"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+      </article>
+    </div>
+  </div>
+</section>
+
+    
     <section class="coming-soon section-shell" aria-labelledby="proximamente-titulo">
       <p class="eyebrow">Próximamente</p>
       <h2 id="proximamente-titulo">Más recursos para aprender</h2>
