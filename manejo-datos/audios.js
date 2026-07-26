@@ -4,5 +4,11 @@ const audiosManejoDatos = [
     titulo: "Los datos están en todas partes",
     spotify: "https://open.spotify.com/embed/episode/6nnOgKDAqaDKQeXkh9H9cg",
     abrir: "https://open.spotify.com/episode/6nnOgKDAqaDKQeXkh9H9cg"
+  },
+  {
+    numero: 2,
+    titulo: "Diseño del instrumento de recolección de datos",
+    spotify: "https://open.spotify.com/embed/episode/4Exct3SGTJ0ofiYUyPIlW9",
+    abrir: "https://open.spotify.com/episode/4Exct3SGTJ0ofiYUyPIlW9"
   }
 ];
