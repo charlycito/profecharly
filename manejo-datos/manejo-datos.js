@@ -5,6 +5,8 @@
   const visor = document.querySelector("#visor-pdf");
   const abrir = document.querySelector("#abrir-sesion");
   const descargar = document.querySelector("#descargar-sesion");
+  const materiales = document.querySelector("#materiales-sesion");
+  const listaMateriales = document.querySelector("#lista-materiales-sesion");
 
   if (!menu || !Array.isArray(sesionesManejoDatos) || sesionesManejoDatos.length === 0) return;
 
@@ -20,6 +22,37 @@
     visor.title = `Sesión ${sesion.numero}: ${sesion.titulo}`;
     abrir.href = sesion.abrir || sesion.pdf;
     descargar.href = sesion.descargar || enlaceDescarga(sesion.pdf);
+
+    if (materiales && listaMateriales) {
+      const recursos = Array.isArray(sesion.materiales) ? sesion.materiales : [];
+      materiales.hidden = recursos.length === 0;
+      listaMateriales.replaceChildren();
+
+      recursos.forEach((recurso) => {
+        const tarjeta = document.createElement("article");
+        tarjeta.className = "session-material-card";
+
+        const tipo = document.createElement("p");
+        tipo.className = "resource-tag";
+        tipo.textContent = recurso.tipo;
+
+        const encabezado = document.createElement("h5");
+        encabezado.textContent = recurso.titulo;
+
+        const descripcion = document.createElement("p");
+        descripcion.textContent = recurso.descripcion;
+
+        const enlace = document.createElement("a");
+        enlace.className = "text-button";
+        enlace.href = recurso.abrir;
+        enlace.target = "_blank";
+        enlace.rel = "noopener";
+        enlace.textContent = "Abrir documento ↗";
+
+        tarjeta.append(tipo, encabezado, descripcion, enlace);
+        listaMateriales.appendChild(tarjeta);
+      });
+    }
 
     [...menu.children].forEach((boton, i) => {
       const activo = i === indice;
