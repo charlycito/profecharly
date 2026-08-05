@@ -53,5 +53,32 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1xIvH8RbMgm_yZC-8KH2UA2ZYL29xFHBt/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 4,
+    titulo: "Organización y depuración de una base de datos",
+    pdf: "https://drive.google.com/file/d/1rGXzGK3tRnCGnHnA4vPdZboUyg6te0yW/preview",
+    abrir: "https://drive.google.com/file/d/1rGXzGK3tRnCGnHnA4vPdZboUyg6te0yW/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1rGXzGK3tRnCGnHnA4vPdZboUyg6te0yW",
+    materiales: [
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 3: Organización y depuración de una base de datos",
+        descripcion: "Documento para registrar el proceso de revisión, organización y limpieza de la base de datos del equipo.",
+        abrir: "https://drive.google.com/file/d/1M_X9oGkP6DwV3d7a1MCcG9px79H5L4DA/view?usp=sharing"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 3: Organización y depuración de una base de datos",
+        descripcion: "Guía de consulta para organizar la información y aplicar criterios de depuración antes del análisis.",
+        abrir: "https://drive.google.com/file/d/1anR26tjTpfWqwsjWP3GRV8bQOGlVsqtZ/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica",
+        titulo: "10 errores que debes evitar al organizar y depurar una base de datos y conceptos que todo analista debe recordar",
+        descripcion: "Material de consulta rápida para reconocer errores frecuentes y recordar los conceptos esenciales de la sesión.",
+        abrir: "https://drive.google.com/file/d/1c3mMKvZWzau3Rxw0X1_i9UIPb0Ygsx00/view?usp=sharing"
+      }
+    ]
   }
 ];
