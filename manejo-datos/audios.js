@@ -10,5 +10,11 @@ const audiosManejoDatos = [
     titulo: "Diseño del instrumento de recolección de datos",
     spotify: "https://open.spotify.com/embed/episode/4Exct3SGTJ0ofiYUyPIlW9",
     abrir: "https://open.spotify.com/episode/4Exct3SGTJ0ofiYUyPIlW9"
+  },
+  {
+    numero: 3,
+    titulo: "Evita datos basura en tus formularios",
+    spotify: "https://open.spotify.com/embed/episode/0TRqaV5zc6rDGHtPYRsGmB",
+    abrir: "https://open.spotify.com/episode/0TRqaV5zc6rDGHtPYRsGmB"
   }
 ];
