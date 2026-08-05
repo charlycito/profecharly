@@ -26,5 +26,33 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1hwJeH8PovV4l9bO8BKYBjozeeWXv9llL/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 3,
+    titulo: "Construcción, validación y publicación de formularios digitales",
+    pdf: "https://drive.google.com/file/d/1BV_0lONENn502Za69XBxOMmCJtETcjjb/preview",
+    abrir: "https://drive.google.com/file/d/1BV_0lONENn502Za69XBxOMmCJtETcjjb/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1BV_0lONENn502Za69XBxOMmCJtETcjjb",
+    materiales: [
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del analista No. 2: Construcción, validación y publicación de formularios digitales",
+        descripcion: "Guía para construir, revisar, probar y publicar correctamente el formulario digital del equipo.",
+        abrir: "https://drive.google.com/file/d/1PW6Rry-vSMu24-3PnzeihEQEEOPYSTmT/view?usp=sharing"
+      },
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 2: Construcción y validación del formulario digital",
+        descripcion: "Documento para registrar la construcción, prueba piloto, observaciones y correcciones del formulario.",
+        abrir: "https://drive.google.com/file/d/15HbY6EWmfIDSsT6wbFDr8V7AAAKVvtHF/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica · PNG",
+        titulo: "10 errores que debes evitar al construir un formulario digital",
+        descripcion: "Infografía de consulta rápida para detectar errores antes de compartir el formulario.",
+        abrir: "https://drive.google.com/file/d/1xIvH8RbMgm_yZC-8KH2UA2ZYL29xFHBt/view?usp=sharing"
+      }
+    ]
   }
 ];
+
