@@ -30,9 +30,9 @@ const sesionesManejoDatos = [
   {
     numero: 3,
     titulo: "Construcción, validación y publicación de formularios digitales",
-    pdf: "https://drive.google.com/file/d/1BV_0lONENn502Za69XBxOMmCJtETcjjb/preview",
-    abrir: "https://drive.google.com/file/d/1BV_0lONENn502Za69XBxOMmCJtETcjjb/view?usp=sharing",
-    descargar: "https://drive.google.com/uc?export=download&id=1BV_0lONENn502Za69XBxOMmCJtETcjjb",
+    pdf: "https://drive.google.com/file/d/1vqFvdwVkJ2877LoQwbH9TLrYG67uNHHN/preview",
+    abrir: "https://drive.google.com/file/d/1vqFvdwVkJ2877LoQwbH9TLrYG67uNHHN/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1vqFvdwVkJ2877LoQwbH9TLrYG67uNHHN",
     materiales: [
       {
         tipo: "Manual de apoyo",
@@ -55,4 +55,3 @@ const sesionesManejoDatos = [
     ]
   }
 ];
-
