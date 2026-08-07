@@ -22,5 +22,11 @@ const audiosManejoDatos = [
     titulo: "Cómo organizar y depurar bases de datos",
     spotify: "https://open.spotify.com/embed/episode/6gbUs57QL5n31Qk3UamcDM",
     abrir: "https://open.spotify.com/episode/6gbUs57QL5n31Qk3UamcDM"
+  },
+  {
+    numero: 5,
+    titulo: "Cómo armar tablas dinámicas correctamente",
+    spotify: "https://open.spotify.com/embed/episode/3aFBBh8IG0l688RO938jqM",
+    abrir: "https://open.spotify.com/episode/3aFBBh8IG0l688RO938jqM"
   }
 ];
