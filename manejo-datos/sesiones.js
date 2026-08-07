@@ -80,5 +80,38 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1c3mMKvZWzau3Rxw0X1_i9UIPb0Ygsx00/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 5,
+    titulo: "Creación e interpretación inicial de tablas dinámicas",
+    pdf: "https://drive.google.com/file/d/1-VaIIrkJeb4j-TeXZ0xb8eyvMug5WFSf/preview",
+    abrir: "https://drive.google.com/file/d/1-VaIIrkJeb4j-TeXZ0xb8eyvMug5WFSf/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1-VaIIrkJeb4j-TeXZ0xb8eyvMug5WFSf",
+    materiales: [
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 4: Creación e interpretación inicial de tablas dinámicas",
+        descripcion: "Documento para registrar la creación de tablas dinámicas y las primeras interpretaciones obtenidas a partir de los datos.",
+        abrir: "https://drive.google.com/file/d/18J69_4-tou2N2_rVe9_7Pp4iB1iBuj04/view?usp=sharing"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 4: Creación e interpretación inicial de tablas dinámicas",
+        descripcion: "Guía de consulta para construir tablas dinámicas correctamente y comenzar a interpretar sus resultados.",
+        abrir: "https://drive.google.com/file/d/1Zh59yUt_4jbKxrI50y7tByTPQ8j1G4k3/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica",
+        titulo: "Guía Práctica No. 4: Cómo crear e interpretar tablas dinámicas",
+        descripcion: "Material de consulta rápida con el procedimiento y los conceptos esenciales para trabajar con tablas dinámicas.",
+        abrir: "https://drive.google.com/file/d/1M3E_Hgg2m3fERFrw7itB5JvD_AcrObN6/view?usp=sharing"
+      },
+      {
+        tipo: "Lista de comprobación",
+        titulo: "Creación e interpretación de tablas dinámicas",
+        descripcion: "Instrumento para verificar que la tabla dinámica esté correctamente construida y que su interpretación sea clara y pertinente.",
+        abrir: "https://drive.google.com/file/d/1hZ_v5yP9YGvfQO_XM8mTzsoI56V-Ti6Y/view?usp=sharing"
+      }
+    ]
   }
 ];
