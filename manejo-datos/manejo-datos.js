@@ -7,6 +7,11 @@
   const descargar = document.querySelector("#descargar-sesion");
   const materiales = document.querySelector("#materiales-sesion");
   const listaMateriales = document.querySelector("#lista-materiales-sesion");
+  const video = document.querySelector("#video-sesion");
+  const tituloVideo = document.querySelector("#titulo-video-sesion");
+  const descripcionVideo = document.querySelector("#descripcion-video-sesion");
+  const reproductorVideo = document.querySelector("#reproductor-video-sesion");
+  const abrirVideo = document.querySelector("#abrir-video-sesion");
 
   if (!menu || !Array.isArray(sesionesManejoDatos) || sesionesManejoDatos.length === 0) return;
 
@@ -52,6 +57,22 @@
         tarjeta.append(tipo, encabezado, descripcion, enlace);
         listaMateriales.appendChild(tarjeta);
       });
+    }
+
+    if (video && tituloVideo && descripcionVideo && reproductorVideo && abrirVideo) {
+      const recursoVideo = sesion.video;
+      video.hidden = !recursoVideo;
+
+      if (recursoVideo) {
+        tituloVideo.textContent = recursoVideo.titulo;
+        descripcionVideo.textContent = recursoVideo.descripcion;
+        reproductorVideo.src = recursoVideo.youtube;
+        reproductorVideo.title = `Sesión ${sesion.numero}: ${recursoVideo.titulo}`;
+        abrirVideo.href = recursoVideo.abrir;
+      } else {
+        reproductorVideo.removeAttribute("src");
+        abrirVideo.href = "#";
+      }
     }
 
     [...menu.children].forEach((boton, i) => {
