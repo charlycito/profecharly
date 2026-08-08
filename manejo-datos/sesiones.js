@@ -113,5 +113,44 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1hZ_v5yP9YGvfQO_XM8mTzsoI56V-Ti6Y/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 6,
+    titulo: "Gráficos dinámicos e interpretación de resultados",
+    pdf: "https://drive.google.com/file/d/16t_OTRQGemwlqqNOK3lyyY0H72onvRnX/preview",
+    abrir: "https://drive.google.com/file/d/16t_OTRQGemwlqqNOK3lyyY0H72onvRnX/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=16t_OTRQGemwlqqNOK3lyyY0H72onvRnX",
+    materiales: [
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 5: Gráficos dinámicos e interpretación de resultados",
+        descripcion: "Documento para registrar la creación de gráficos dinámicos y la interpretación de los resultados obtenidos.",
+        abrir: "https://drive.google.com/file/d/1dVYTgReMuMpfYKpDT6w0W2oKIgzvuVh4/view?usp=sharing"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 5: Gráficos dinámicos e interpretación de resultados",
+        descripcion: "Guía de consulta para elegir, crear y analizar gráficos dinámicos a partir de las tablas dinámicas del proyecto.",
+        abrir: "https://drive.google.com/file/d/1QVNnV6cIzsZvtBEd3rdi7gEN6ojoSiwm/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica",
+        titulo: "Guía Práctica No. 5: Gráficos dinámicos — elige, crea y comunica información con claridad",
+        descripcion: "Material de consulta rápida para seleccionar el gráfico adecuado y comunicar los resultados con claridad.",
+        abrir: "https://drive.google.com/file/d/1O_w4UWXl0JqXKxjQ49GCqOTO4pMjBdXy/view?usp=sharing"
+      },
+      {
+        tipo: "Lista de comprobación",
+        titulo: "Lista de Comprobación No. 5: Revisión del archivo antes de entregar la Evidencia 1.2",
+        descripcion: "Instrumento para revisar el dashboard, sus gráficos dinámicos y los elementos requeridos antes de la entrega.",
+        abrir: "https://drive.google.com/file/d/1-DuzwBVFyn5bT_mPCyCYfknzfpiiDEEJ/view?usp=sharing"
+      }
+    ],
+    video: {
+      titulo: "Orientaciones para realizar un dashboard",
+      descripcion: "Video del Profe Charly con indicaciones para organizar y construir el dashboard de la Evidencia 1.2.",
+      youtube: "https://www.youtube-nocookie.com/embed/jGZn2YB0k6I",
+      abrir: "https://www.youtube.com/watch?v=jGZn2YB0k6I"
+    }
   }
 ];
