@@ -124,6 +124,13 @@ footer { padding:34px 20px; text-align:center; color:#cfdfeb; background:#031728
 .session-material-card h5 { margin:5px 0 8px; color:var(--navy); font-family:"Poppins",sans-serif; font-size:.98rem; }
 .session-material-card > p:not(.resource-tag) { margin:0 0 15px; color:var(--muted); font-size:.86rem; }
 .session-material-card .text-button { margin-top:auto; }
+.session-video { padding:24px; border-top:1px solid var(--border); background:#fff; }
+.session-video[hidden] { display:none; }
+.session-video-heading h4 { margin:4px 0 6px; color:var(--navy); font-size:1.1rem; }
+.session-video-heading > p:last-child { margin:0 0 18px; color:var(--muted); font-size:.9rem; }
+.session-video-frame { position:relative; width:100%; padding-top:56.25%; overflow:hidden; border:1px solid var(--border); border-radius:14px; background:#071b2d; box-shadow:0 7px 22px rgba(5,42,74,.09); }
+.session-video-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.session-video > .text-button { display:inline-block; margin-top:15px; }
 .resource-hero { color:#fff; background:linear-gradient(125deg,var(--navy-deep),#075484 68%,#0878c9); }
 .resource-hero .section-shell { padding-block:66px; }
 .resource-hero h1 { max-width:850px; margin:14px 0 13px; font-size:clamp(2rem,4vw,3.15rem); }
