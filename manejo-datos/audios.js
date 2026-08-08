@@ -28,5 +28,12 @@ const audiosManejoDatos = [
     titulo: "Cómo armar tablas dinámicas correctamente",
     spotify: "https://open.spotify.com/embed/episode/3aFBBh8IG0l688RO938jqM",
     abrir: "https://open.spotify.com/episode/3aFBBh8IG0l688RO938jqM"
+  },
+  {
+    numero: 6,
+    titulo: "Gráficos dinámicos e interpretación de resultados",
+    spotify: "https://open.spotify.com/embed/episode/2qNFhN2193NPnYe1XXLkPV",
+    abrir: "https://open.spotify.com/episode/2qNFhN2193NPnYe1XXLkPV"
   }
 ];
+
