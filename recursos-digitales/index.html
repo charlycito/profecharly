@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="apa7.css">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body id="inicio">
@@ -17,7 +18,8 @@
     <a class="brand" href="../index.html">💻 <span>PROFE CHARLY</span><small>Informática</small></a>
     <nav aria-label="Navegación de recursos">
       <a href="../index.html">Inicio</a>
-      <a href="#mapas-conceptuales">Mapas conceptuales</a>
+      <a href="#mapas-conceptuales" data-tool-link="mapas-conceptuales">Mapas conceptuales</a>
+      <a href="#apa7" data-tool-link="apa7">APA 7</a>
       <a href="../index.html#cursos">Asignaturas</a>
       <a href="../index.html#contacto">Contacto</a>
     </nav>
@@ -26,17 +28,27 @@
     <section class="resource-hero">
       <div class="section-shell">
         <p class="period-badge">Caja de herramientas digitales</p>
-        <h1>Recursos digitales para aprender y crear</h1>
-        <p>Materiales de apoyo que puedes utilizar en distintas asignaturas para organizar información, comunicar tus ideas y desarrollar trabajos académicos.</p>
+        <h1>Elige una herramienta para aprender y crear</h1>
+        <p>Consulta todos los recursos desde esta misma página. Al elegir una herramienta, el contenido se actualizará sin llevarte a otra sección del sitio.</p>
         <a class="back-link" href="../index.html">← Volver a la página principal</a>
       </div>
     </section>
-    <section class="resource-intro section-shell" aria-label="Información del recurso">
-      <article><h2>¿Para qué sirve?</h2><p>Para identificar conceptos importantes y mostrar de manera visual las relaciones que existen entre ellos.</p></article>
-      <article><h2>¿Cuándo utilizarlo?</h2><p>Cuando una actividad te pida sintetizar, organizar o explicar información mediante un mapa conceptual.</p></article>
-      <article><h2>¿Qué aprenderás?</h2><p>A estructurar correctamente un mapa conceptual y a elaborarlo en línea utilizando CmapCloud.</p></article>
+    <section class="tool-picker section-shell" aria-labelledby="elige-herramienta">
+      <div class="section-heading compact">
+        <p class="eyebrow">Caja de herramientas</p>
+        <h2 id="elige-herramienta">¿Qué necesitas hacer?</h2>
+        <p>Selecciona una opción. Puedes guardar o compartir el enlace directo de cada herramienta.</p>
+      </div>
+      <div class="tool-picker-grid" role="navigation" aria-label="Herramientas disponibles">
+        <a class="tool-choice" href="#mapas-conceptuales" data-tool-link="mapas-conceptuales">
+          <span class="tool-choice-icon" aria-hidden="true">◇</span><span><strong>Mapas conceptuales</strong><small>Organiza y relaciona tus ideas con CmapCloud.</small></span>
+        </a>
+        <a class="tool-choice" href="#apa7" data-tool-link="apa7">
+          <span class="tool-choice-icon apa" aria-hidden="true">“ ”</span><span><strong>Citas y referencias APA 7</strong><small>Aprende, consulta ejemplos y practica.</small></span>
+        </a>
+      </div>
     </section>
-    <section class="learning-resource" id="mapas-conceptuales" aria-labelledby="mapas-titulo">
+    <section class="tool-panel learning-resource" id="mapas-conceptuales" data-tool-panel="mapas-conceptuales" aria-labelledby="mapas-titulo">
       <div class="section-shell">
         <div class="section-heading">
           <p class="eyebrow">Organización de información</p>
@@ -58,7 +70,11 @@
         <p class="resource-note"><strong>Consejo:</strong> utiliza este recurso cada vez que una actividad de cualquiera de tus asignaturas solicite un mapa conceptual. Puedes volver aquí y consultar el procedimiento cuando lo necesites.</p>
       </div>
     </section>
+    <section class="tool-panel apa-inline" id="apa7" data-tool-panel="apa7" aria-live="polite" hidden>
+      <div class="section-shell tool-loading"><p>Cargando la guía de citas y referencias APA 7…</p></div>
+    </section>
   </main>
   <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
+  <script src="caja-herramientas.js"></script>
 </body>
 </html>
