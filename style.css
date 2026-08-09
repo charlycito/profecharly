@@ -161,6 +161,7 @@ footer { padding:34px 20px; text-align:center; color:#cfdfeb; background:#031728
 .tool-choice.active { border-color:var(--blue); background:#eef8fe; box-shadow:0 0 0 4px rgba(8,120,201,.10); }
 .tool-choice-icon { display:grid; place-items:center; flex:0 0 58px; height:58px; border-radius:16px; color:#fff; background:var(--blue); font:700 1.55rem "Poppins",sans-serif; }
 .tool-choice-icon.apa { background:#087c65; }
+.tool-choice-icon.access { background:#6b4ca5; font-size:1.45rem; }
 .tool-choice strong,.tool-choice small { display:block; }
 .tool-choice strong { font-family:"Poppins",sans-serif; font-size:1.02rem; }
 .tool-choice small { margin-top:5px; color:var(--muted); line-height:1.45; }
