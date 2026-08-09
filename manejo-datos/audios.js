@@ -34,6 +34,11 @@ const audiosManejoDatos = [
     titulo: "Gráficos dinámicos e interpretación de resultados",
     spotify: "https://open.spotify.com/embed/episode/2qNFhN2193NPnYe1XXLkPV",
     abrir: "https://open.spotify.com/episode/2qNFhN2193NPnYe1XXLkPV"
+  },
+  {
+    numero: 7,
+    titulo: "Análisis estadístico y correlación",
+    spotify: "https://open.spotify.com/embed/episode/417oJl1dmei6ksj2ylPsJy",
+    abrir: "https://open.spotify.com/episode/417oJl1dmei6ksj2ylPsJy"
   }
 ];
-
