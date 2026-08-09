@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Recupera tus accesos BUAP | Profe Charly</title></head>
+<body>
+<main id="contenido-accesos">
+  <section class="access-hero">
+    <div class="section-shell access-hero-grid">
+      <div><p class="period-badge">Caja de herramientas digitales</p><h1>Recupera tus accesos BUAP</h1><p>Identifica el servicio al que no puedes ingresar y sigue la ruta correspondiente.</p></div>
+      <aside class="access-mentor"><span aria-hidden="true">🔐</span><strong>Consejo de CharlyBot</strong><small>Nunca compartas contraseñas, NIP ni códigos de verificación.</small></aside>
+    </div>
+  </section>
+
+  <section class="section-shell access-route-picker" aria-labelledby="access-question">
+    <div class="section-heading compact"><p class="eyebrow">Selecciona tu problema</p><h2 id="access-question">¿A qué servicio no puedes ingresar?</h2></div>
+    <div class="access-route-buttons" role="tablist" aria-label="Servicios BUAP">
+      <button class="access-route active" type="button" role="tab" aria-selected="true" data-access-tab="correo"><span>✉</span><strong>Correo institucional, Microsoft 365 o Teams</strong></button>
+      <button class="access-route" type="button" role="tab" aria-selected="false" data-access-tab="autoservicios"><span>👤</span><strong>Autoservicios BUAP</strong></button>
+    </div>
+  </section>
+
+  <section class="section-shell access-panel active" data-access-panel="correo">
+    <div class="section-heading"><p class="eyebrow">Ruta 1</p><h2>Correo institucional, Microsoft 365 o Teams</h2><p>Intenta primero la recuperación en línea. Si no puedes completarla, solicita apoyo a DCyTIC.</p></div>
+    <ol class="access-steps">
+      <li><span>1</span><div><h3>Intenta recuperar tu cuenta</h3><p>Ingresa al portal oficial y sigue las indicaciones que aparezcan en pantalla.</p><a class="primary-button" href="https://recuperacioncorreo.buap.mx/" target="_blank" rel="noopener">Abrir recuperación de correo ↗</a></div></li>
+      <li><span>2</span><div><h3>Reúne la información necesaria</h3><ul><li>Nombre completo y matrícula.</li><li>Preparatoria Amozoc, Complejo Regional Centro.</li><li>Descripción clara del problema y del servicio afectado.</li><li>Captura de pantalla donde se observe el error.</li><li>Fotografía legible de tu credencial de estudiante.</li><li>Medio alternativo de contacto.</li></ul></div></li>
+      <li><span>3</span><div><h3>Contacta a DCyTIC</h3><div class="contact-grid"><p><b>Correo</b><a href="mailto:ccs@correo.buap.mx">ccs@correo.buap.mx</a></p><p><b>Teléfono</b><a href="tel:+522222140700">(222) 214 0700</a></p><p><b>Extensión BUAP</b><span>6789</span></p><p><b>Horario</b><span>Lunes a viernes, 9:00 a 17:00 h</span></p></div><a class="text-button" href="https://ccs.buap.mx/" target="_blank" rel="noopener">Abrir Mesa de Servicios de DCyTIC ↗</a></div></li>
+    </ol>
+
+    <section class="mail-builder" aria-labelledby="mail-title">
+      <div><p class="eyebrow">Modelo para solicitar apoyo</p><h2 id="mail-title">Prepara tu correo para DCyTIC</h2><p>Completa los campos. La información se procesa únicamente en esta página; tú decides cuándo copiarla y enviarla.</p></div>
+      <form id="access-mail-form" class="mail-fields">
+        <label>Nombre completo<input id="student-name" type="text" autocomplete="name" placeholder="Ejemplo: Juan Pérez Sánchez"></label>
+        <label>Matrícula<input id="student-id" type="text" inputmode="numeric" placeholder="Ejemplo: 222400000"></label>
+        <label>Servicio afectado<select id="affected-service"><option>Correo institucional</option><option>Microsoft Teams</option><option>Microsoft 365</option><option>Correo institucional y Microsoft Teams</option></select></label>
+        <label>Medio alternativo de contacto<input id="alternate-contact" type="text" placeholder="Correo alterno o teléfono"></label>
+        <label class="field-wide">Describe brevemente el problema<textarea id="problem-description" rows="4" placeholder="Explica qué ocurre y qué mensaje aparece. No escribas contraseñas ni códigos."></textarea></label>
+      </form>
+      <div class="mail-preview"><h3>Texto listo para revisar</h3><p><b>Asunto:</b> Solicitud de recuperación de acceso al correo institucional</p><pre id="mail-output"></pre><button id="copy-access-mail" class="primary-button" type="button">Copiar correo</button><p id="copy-access-status" class="copy-status" aria-live="polite"></p></div>
+      <aside class="security-note"><strong>Antes de enviarlo</strong><p>Adjunta la captura del error y la fotografía de tu credencial. No incluyas contraseñas, NIP ni códigos de verificación.</p></aside>
+    </section>
+  </section>
+
+  <section class="section-shell access-panel" data-access-panel="autoservicios" hidden>
+    <div class="section-heading"><p class="eyebrow">Ruta 2</p><h2>No puedo ingresar a Autoservicios BUAP</h2><p>La solicitud de restablecimiento se realiza directamente con las coordinadoras académicas de la Preparatoria Amozoc.</p></div>
+    <ol class="access-steps compact-steps">
+      <li><span>1</span><div><h3>Acude con las coordinadoras académicas</h3><p>Explica que necesitas el restablecimiento de tu acceso a Autoservicios BUAP.</p></div></li>
+      <li><span>2</span><div><h3>Proporciona tus datos</h3><p>Ten disponibles tu <b>nombre completo</b> y tu <b>matrícula</b>, además de los datos que te soliciten.</p></div></li>
+      <li><span>3</span><div><h3>Sigue sus indicaciones</h3><p>Espera la confirmación de que tu cuenta ha sido restablecida.</p></div></li>
+      <li><span>4</span><div><h3>Ingresa con la contraseña temporal</h3><p>Una vez restablecida la cuenta, utiliza tu fecha de nacimiento en seis dígitos: <code>ddmmaa</code>.</p><div class="date-example"><b>Ejemplo:</b> si naciste el 7 de marzo de 2009, escribe <code>070309</code>.</div></div></li>
+    </ol>
+    <aside class="coordination-note"><span aria-hidden="true">🏫</span><div><strong>Importante</strong><p>Acude directamente con las coordinadoras académicas de la Preparatoria Amozoc para solicitar apoyo.</p></div></aside>
+  </section>
+</main>
+</body>
+</html>
