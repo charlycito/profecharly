@@ -1,10 +1,11 @@
 (() => {
-  const tools = ['mapas-conceptuales', 'apa7', 'accesos-buap', 'tareas-teams'];
+  const tools = ['mapas-conceptuales', 'apa7', 'accesos-buap', 'tareas-teams', 'correo-institucional'];
   const panels = [...document.querySelectorAll('[data-tool-panel]')];
   const links = [...document.querySelectorAll('[data-tool-link]')];
   let apaLoaded = false;
   let accessLoaded = false;
   let teamsLoaded = false;
+  let firstMailLoaded = false;
 
   async function loadApa() {
     if (apaLoaded) return;
@@ -75,11 +76,38 @@
     }
   }
 
+  async function loadFirstMail() {
+    if (firstMailLoaded) return;
+    const target = document.querySelector('[data-tool-panel="correo-institucional"]');
+    try {
+      const response = await fetch('correo-institucional.html');
+      if (!response.ok) throw new Error('No fue posible cargar el recurso');
+      const html = await response.text();
+      const page = new DOMParser().parseFromString(html, 'text/html');
+      const main = page.querySelector('main');
+      if (!main) throw new Error('Contenido no disponible');
+      target.innerHTML = main.innerHTML;
+      target.querySelectorAll('[data-tool-link]').forEach(link => {
+        link.addEventListener('click', event => {
+          const name = link.dataset.toolLink;
+          if (!tools.includes(name)) return;
+          event.preventDefault();
+          history.pushState(null, '', `#${name}`);
+          showTool(name, true);
+        });
+      });
+      firstMailLoaded = true;
+    } catch (error) {
+      target.innerHTML = '<div class="section-shell tool-loading tool-error"><p>No se pudo cargar la guía. Intenta actualizar la página.</p></div>';
+    }
+  }
+
   async function showTool(name, scroll = false) {
     const selected = tools.includes(name) ? name : 'mapas-conceptuales';
     if (selected === 'apa7') await loadApa();
     if (selected === 'accesos-buap') await loadAccess();
     if (selected === 'tareas-teams') await loadTeams();
+    if (selected === 'correo-institucional') await loadFirstMail();
     panels.forEach(panel => { panel.hidden = panel.dataset.toolPanel !== selected; });
     links.forEach(link => {
       const active = link.dataset.toolLink === selected;
@@ -91,6 +119,7 @@
       'apa7': 'Citas y referencias APA 7 | Profe Charly',
       'accesos-buap': 'Recupera tus accesos BUAP | Profe Charly',
       'tareas-teams': 'Entrega tareas en Microsoft Teams | Profe Charly',
+      'correo-institucional': 'Obtén tu correo institucional | Profe Charly',
       'mapas-conceptuales': 'Mapas conceptuales | Profe Charly'
     };
     document.title = titles[selected];
