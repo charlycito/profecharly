@@ -152,5 +152,50 @@ const sesionesManejoDatos = [
       youtube: "https://www.youtube-nocookie.com/embed/jGZn2YB0k6I",
       abrir: "https://www.youtube.com/watch?v=jGZn2YB0k6I"
     }
+  },
+  {
+    numero: 7,
+    titulo: "Análisis estadístico y correlación",
+    pdf: "https://drive.google.com/file/d/1OnwVRsJuEL2U4XCYL_MLuzdjq4mu67Hh/preview",
+    abrir: "https://drive.google.com/file/d/1OnwVRsJuEL2U4XCYL_MLuzdjq4mu67Hh/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1OnwVRsJuEL2U4XCYL_MLuzdjq4mu67Hh",
+    materiales: [
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 6: Análisis estadístico y correlación",
+        descripcion: "Documento para registrar los cálculos, comparaciones, correlaciones e interpretaciones obtenidas durante el análisis de los datos.",
+        abrir: "https://drive.google.com/file/d/1c6o1AccOu8eOY5v63N_B5ZouNxQbudD5/view?usp=sharing"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 6: Análisis estadístico y correlación",
+        descripcion: "Guía de consulta para aplicar estadística básica, analizar relaciones entre variables e interpretar los resultados con sentido.",
+        abrir: "https://drive.google.com/file/d/1qfleG5RMVBxgX01pgAe6ZGK2QjB8d_B4/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica",
+        titulo: "Guía Práctica No. 6: Análisis estadístico — resume, compara e interpreta datos con sentido",
+        descripcion: "Material de consulta rápida para calcular medidas estadísticas, comparar resultados y redactar interpretaciones claras.",
+        abrir: "https://drive.google.com/file/d/1zrbBCth1A-iwXEj4w0DDUQZg8Q-Kvcwv/view?usp=sharing"
+      },
+      {
+        tipo: "Lista de comprobación",
+        titulo: "Lista de Comprobación No. 6: Análisis estadístico y correlación — revisión del avance para continuar en la Sesión 8",
+        descripcion: "Instrumento para comprobar que los cálculos, gráficos, correlaciones e interpretaciones estén listos antes de continuar con la entrega final.",
+        abrir: "https://drive.google.com/file/d/14GE-hatEq7DeMPqTKMM9HQPU_eomzkbU/view?usp=sharing"
+      },
+      {
+        tipo: "Ruta de trabajo",
+        titulo: "Ruta de Trabajo del Estudiante — Sesión 7: Estadística básica y correlación",
+        descripcion: "Secuencia de actividades, recursos y productos que orienta el trabajo del estudiante durante la sesión.",
+        abrir: "https://drive.google.com/file/d/12FTI2VmEKvEr7HW_EZi6eOJhY4EZ3g0_/view?usp=sharing"
+      }
+    ],
+    video: {
+      titulo: "Estadística básica y correlación",
+      descripcion: "Video de apoyo para reforzar el análisis estadístico y la interpretación de la correlación en los datos del proyecto.",
+      youtube: "https://www.youtube-nocookie.com/embed/xfpok0kI2S8",
+      abrir: "https://www.youtube.com/watch?v=xfpok0kI2S8"
+    }
   }
 ];
