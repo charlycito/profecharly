@@ -1,9 +1,10 @@
 (() => {
-  const tools = ['mapas-conceptuales', 'apa7', 'accesos-buap'];
+  const tools = ['mapas-conceptuales', 'apa7', 'accesos-buap', 'tareas-teams'];
   const panels = [...document.querySelectorAll('[data-tool-panel]')];
   const links = [...document.querySelectorAll('[data-tool-link]')];
   let apaLoaded = false;
   let accessLoaded = false;
+  let teamsLoaded = false;
 
   async function loadApa() {
     if (apaLoaded) return;
@@ -54,10 +55,31 @@
     }
   }
 
+  async function loadTeams() {
+    if (teamsLoaded) return;
+    const target = document.querySelector('[data-tool-panel="tareas-teams"]');
+    try {
+      const response = await fetch('tareas-teams.html');
+      if (!response.ok) throw new Error('No fue posible cargar el recurso');
+      const html = await response.text();
+      const page = new DOMParser().parseFromString(html, 'text/html');
+      const main = page.querySelector('main');
+      if (!main) throw new Error('Contenido no disponible');
+      target.innerHTML = main.innerHTML;
+      const script = document.createElement('script');
+      script.src = 'tareas-teams.js';
+      script.onload = () => { teamsLoaded = true; };
+      document.body.appendChild(script);
+    } catch (error) {
+      target.innerHTML = '<div class="section-shell tool-loading tool-error"><p>No se pudo cargar la guía. Intenta actualizar la página.</p></div>';
+    }
+  }
+
   async function showTool(name, scroll = false) {
     const selected = tools.includes(name) ? name : 'mapas-conceptuales';
     if (selected === 'apa7') await loadApa();
     if (selected === 'accesos-buap') await loadAccess();
+    if (selected === 'tareas-teams') await loadTeams();
     panels.forEach(panel => { panel.hidden = panel.dataset.toolPanel !== selected; });
     links.forEach(link => {
       const active = link.dataset.toolLink === selected;
@@ -65,11 +87,13 @@
       if (active) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
-    document.title = selected === 'apa7'
-      ? 'Citas y referencias APA 7 | Profe Charly'
-      : selected === 'accesos-buap'
-        ? 'Recupera tus accesos BUAP | Profe Charly'
-        : 'Mapas conceptuales | Profe Charly';
+    const titles = {
+      'apa7': 'Citas y referencias APA 7 | Profe Charly',
+      'accesos-buap': 'Recupera tus accesos BUAP | Profe Charly',
+      'tareas-teams': 'Entrega tareas en Microsoft Teams | Profe Charly',
+      'mapas-conceptuales': 'Mapas conceptuales | Profe Charly'
+    };
+    document.title = titles[selected];
     if (scroll) document.querySelector(`[data-tool-panel="${selected}"]`).scrollIntoView({ behavior:'smooth', block:'start' });
   }
 
