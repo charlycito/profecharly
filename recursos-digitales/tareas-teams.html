@@ -29,6 +29,13 @@
       <li><span>6</span><div><h3>Pulsa Entregar</h3><p>Selecciona <b>Entregar</b>. Espera la confirmación y no cierres Teams durante el proceso.</p></div></li>
       <li><span>7</span><div><h3>Comprueba el estado</h3><p>La tarea debe mostrar <b>Entregado</b>, la fecha y la hora. Si aún aparece el botón <b>Entregar</b>, el envío no terminó.</p></div></li>
     </ol>
+    <aside class="teams-resource-card">
+      <div><p class="eyebrow">Apoyo visual</p><h3>Infografía: entrega desde computadora</h3><p>Repasa el procedimiento completo en una sola imagen. Puedes abrirla en grande o consultarla directamente en Google Drive.</p></div>
+      <div class="teams-resource-actions">
+        <button class="teams-resource-button" type="button" data-infographic-open="https://drive.google.com/file/d/1zIVriPHlPNQ_I5J0WT2Lb8UcuI2fT9Fw/preview" data-infographic-title="Infografía para entregar tareas en Teams desde computadora">Ver infografía</button>
+        <a class="teams-resource-link" href="https://drive.google.com/file/d/1zIVriPHlPNQ_I5J0WT2Lb8UcuI2fT9Fw/view?usp=sharing" target="_blank" rel="noopener">Abrir en Drive ↗</a>
+      </div>
+    </aside>
   </section>
 
   <section class="section-shell teams-guide" data-teams-panel="celular" hidden>
@@ -42,6 +49,19 @@
       <li><span>6</span><div><h3>Verifica el resultado</h3><p>Confirma que aparezca el estado <b>Entregado</b>. Si la conexión falló, vuelve a abrir la tarea y verifica nuevamente.</p></div></li>
     </ol>
     <aside class="teams-warning"><strong>Evita perder tu trabajo</strong><p>Si el archivo es pesado o tu conexión es inestable, realiza la entrega con anticipación y no cierres la aplicación mientras se carga.</p></aside>
+    <aside class="teams-resource-card">
+      <div><p class="eyebrow">Apoyo visual</p><h3>Infografía: entrega desde celular</h3><p>Consulta los pasos principales desde tu teléfono. Puedes verla en grande o abrirla directamente en Google Drive.</p></div>
+      <div class="teams-resource-actions">
+        <button class="teams-resource-button" type="button" data-infographic-open="https://drive.google.com/file/d/1WdmAx2LNQ2XIUA35oxGtD3zksn6kzKOA/preview" data-infographic-title="Infografía para entregar tareas en Teams desde celular">Ver infografía</button>
+        <a class="teams-resource-link" href="https://drive.google.com/file/d/1WdmAx2LNQ2XIUA35oxGtD3zksn6kzKOA/view?usp=sharing" target="_blank" rel="noopener">Abrir en Drive ↗</a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section-shell teams-video" aria-labelledby="teams-video-title">
+    <div class="section-heading"><p class="eyebrow">Video de apoyo</p><h2 id="teams-video-title">Entregar tareas por Teams</h2><p>Observa el procedimiento desde computadora y celular. Después utiliza la lista de comprobación para confirmar tu entrega.</p></div>
+    <div class="teams-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/1eMC2houUVg" title="Video: Entregar tareas por Microsoft Teams" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <p class="teams-video-link"><a href="https://www.youtube.com/watch?v=1eMC2houUVg" target="_blank" rel="noopener">Ver el video directamente en YouTube ↗</a></p>
   </section>
 
   <section class="section-shell teams-after" aria-labelledby="after-title">
@@ -71,6 +91,11 @@
     <ul><li>Actualiza Teams o vuelve a iniciar sesión con tu cuenta institucional.</li><li>Comprueba tu conexión y espera a que termine la carga.</li><li>Reduce el tamaño del archivo si es necesario; Microsoft permite hasta 10 recursos de 500 MB cada uno por tarea.</li><li>Toma una captura donde se vea el error, la tarea, la fecha y la hora.</li><li>Comunica el problema al profesor lo antes posible y adjunta la evidencia.</li></ul>
     <p class="teams-source">Procedimiento basado en la guía oficial de <a href="https://support.microsoft.com/es-es/education/assignments/turn-in-an-assignment-in-microsoft-teams" target="_blank" rel="noopener">Microsoft: Entregar una tarea en Teams ↗</a>.</p>
   </section>
+
+  <dialog class="teams-infographic-modal" id="teams-infographic-modal" aria-labelledby="teams-infographic-title">
+    <div class="teams-modal-header"><h2 id="teams-infographic-title">Infografía</h2><button type="button" data-infographic-close aria-label="Cerrar infografía">×</button></div>
+    <div class="teams-modal-body"><iframe id="teams-infographic-frame" title="Visor de infografía" loading="lazy"></iframe></div>
+  </dialog>
 </main>
 </body>
 </html>
