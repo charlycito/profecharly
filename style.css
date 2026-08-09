@@ -108,6 +108,10 @@ footer { padding:34px 20px; text-align:center; color:#cfdfeb; background:#031728
 /* Caja de herramientas y página de recursos digitales */
 .digital-resources { background:linear-gradient(180deg,#f5f8fb 0%,#edf5fb 100%); }
 .featured-resource { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:26px; padding:34px; border:1px solid #cfe2ef; border-radius:20px; background:#fff; box-shadow:var(--shadow); }
+.resource-home-grid { display:grid; gap:20px; }
+.apa-resource .featured-resource-icon { color:#087c65; background:#e6f6f0; }
+.resource-directory { display:flex; align-items:center; justify-content:space-between; gap:28px; padding-block:38px; }
+.resource-directory .section-heading { margin:0; }
 .featured-resource h3 { margin:8px 0 9px; color:var(--navy); font-size:1.35rem; }
 .featured-resource p { margin:0; color:var(--muted); }
 .featured-resource-icon { display:grid; place-items:center; width:72px; height:72px; border-radius:20px; color:var(--blue); background:var(--blue-light); }
@@ -150,6 +154,28 @@ footer { padding:34px 20px; text-align:center; color:#cfdfeb; background:#031728
 .resource-media-actions { display:flex; justify-content:flex-end; padding:14px 20px 18px; }
 .resource-note { margin:26px 0 0; padding:21px 24px; border-left:5px solid var(--gold); border-radius:12px; background:#fff; color:var(--muted); }
 .resource-note strong { color:var(--navy); }
+.tool-picker { padding-block:44px; }
+.tool-picker-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.tool-choice { display:flex; align-items:center; gap:18px; min-height:112px; padding:22px; border:2px solid #d5e4ee; border-radius:18px; color:var(--navy); background:#fff; text-decoration:none; box-shadow:0 6px 18px rgba(5,42,74,.06); transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+.tool-choice:hover,.tool-choice:focus-visible { transform:translateY(-2px); border-color:var(--blue); box-shadow:0 10px 24px rgba(5,42,74,.11); }
+.tool-choice.active { border-color:var(--blue); background:#eef8fe; box-shadow:0 0 0 4px rgba(8,120,201,.10); }
+.tool-choice-icon { display:grid; place-items:center; flex:0 0 58px; height:58px; border-radius:16px; color:#fff; background:var(--blue); font:700 1.55rem "Poppins",sans-serif; }
+.tool-choice-icon.apa { background:#087c65; }
+.tool-choice strong,.tool-choice small { display:block; }
+.tool-choice strong { font-family:"Poppins",sans-serif; font-size:1.02rem; }
+.tool-choice small { margin-top:5px; color:var(--muted); line-height:1.45; }
+.tool-panel[hidden] { display:none!important; }
+.tool-loading { padding-block:55px; color:var(--muted); text-align:center; }
+.tool-error { color:#9b2f4a; }
+.apa-inline .apa-hero { margin-top:0; }
+.apa-inline .apa-hero .back-link { display:none; }
+@media (max-width:760px) {
+  .featured-resource { grid-template-columns:auto 1fr; padding:24px; gap:18px; }
+  .featured-resource .primary-button { grid-column:1/-1; text-align:center; }
+  .resource-directory { display:block; }
+  .resource-directory .primary-button { display:block; margin-top:18px; text-align:center; }
+  .tool-picker-grid { grid-template-columns:1fr; }
+}
 
 /* Proyectos y experiencias */
 .projects-home { background:linear-gradient(135deg,#061f37,#083f67); }
