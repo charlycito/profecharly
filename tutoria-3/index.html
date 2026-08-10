@@ -1,1 +1,104 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tutoría III | Profe Charly</title><link rel="stylesheet" href="../style.css"><link rel="icon" href="../images/favicon.ico"></head><body><main><section class="hero"><p class="period-badge">Periodo Otoño 2026</p><h1>Tutoría III</h1><p>Este espacio se encuentra en preparación.</p><p><a class="period-badge" href="../index.html">← Volver a la página principal</a></p></section></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Recursos y avisos de Tutoría III para estudiantes de la Preparatoria Amozoc BUAP.">
+  <title>Tutoría III | Profe Charly</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../images/favicon.ico">
+  <style>
+    .tutoring-intro{max-width:760px}
+    .tutoring-notice{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start;margin-top:-34px;padding:30px;border:1px solid #ead58d;border-left:6px solid var(--gold);border-radius:18px;background:#fffaf0;box-shadow:var(--shadow)}
+    .tutoring-notice-icon{display:grid;place-items:center;width:58px;height:58px;border-radius:16px;color:#725600;background:#ffe9a6;font:700 1.55rem "Poppins",sans-serif}
+    .tutoring-notice h2{margin:2px 0 10px;color:var(--navy);font-size:1.4rem}
+    .tutoring-notice p{margin:0 0 14px;color:var(--muted)}
+    .delivery-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+    .delivery-list li{padding:14px 15px;border:1px solid #efdfaa;border-radius:12px;color:#4e493a;background:#fff;font-size:.9rem}
+    .delivery-list strong{display:block;color:var(--navy)}
+    .tutoring-resources{padding-top:56px}
+    .tutoring-resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .tutoring-resource-card{display:flex;flex-direction:column;padding:27px 24px;border:1px solid var(--border);border-top:5px solid var(--blue);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .tutoring-resource-card.featured{border-top-color:var(--gold)}
+    .tutoring-resource-card h3{margin:16px 0 10px;color:var(--navy);font-size:1.16rem}
+    .tutoring-resource-card>p{margin:0 0 20px;color:var(--muted);font-size:.92rem}
+    .tutoring-resource-card .primary-button{margin-top:auto;text-align:center}
+    .resource-kind{align-self:flex-start;padding:5px 10px;border-radius:999px;color:var(--blue);background:var(--blue-light);font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .featured .resource-kind{color:#725600;background:#fff1bd}
+    .regulation-title{font-size:1rem!important}
+    .privacy-note{margin:26px 0 0;padding:18px 20px;border-left:4px solid var(--blue);border-radius:10px;background:var(--blue-light);color:var(--muted)}
+    .privacy-note strong{color:var(--navy)}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr 1fr}.tutoring-resource-card:first-child{grid-column:1/-1}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="subject-header">
+    <div class="subject-hero">
+      <div class="section-shell subject-hero-content">
+        <p class="period-badge">Periodo Otoño 2026</p>
+        <h1>Tutoría III</h1>
+        <p class="tutoring-intro">Este espacio reúne avisos y documentos importantes para acompañar tu trayectoria académica y mantener organizado tu expediente estudiantil.</p>
+        <a class="back-link" href="../index.html">← Volver a la página principal</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="section-shell" aria-labelledby="aviso-entrega">
+      <article class="tutoring-notice">
+        <div class="tutoring-notice-icon" aria-hidden="true">!</div>
+        <div>
+          <p class="eyebrow">Importante para la próxima sesión</p>
+          <h2 id="aviso-entrega">Entrega de la ficha de identificación</h2>
+          <p>Descarga y completa tu ficha con <strong>datos verídicos</strong>. En la próxima sesión de Tutoría III deberás entregarla con las siguientes características:</p>
+          <ul class="delivery-list">
+            <li><strong>Impresa y llena</strong>Revisa que no falte ningún dato solicitado.</li>
+            <li><strong>Fotografía reciente</strong>Colócala en el espacio correspondiente de la ficha.</li>
+            <li><strong>En protector de hojas</strong>Así podrá integrarse correctamente a tu carpeta de expediente.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-shell tutoring-resources" aria-labelledby="recursos-tutoria">
+      <div class="section-heading">
+        <p class="eyebrow">Documentos para consultar</p>
+        <h2 id="recursos-tutoria">Recursos de Tutoría III</h2>
+        <p>Abre cada documento para completar tu ficha y conocer las normas que orientan tu permanencia y trayectoria académica en la BUAP.</p>
+      </div>
+
+      <div class="tutoring-resource-grid">
+        <article class="tutoring-resource-card featured">
+          <span class="resource-kind">Documento para entregar</span>
+          <h3>Ficha de identificación del estudiante</h3>
+          <p>Descarga el formato, complétalo con información verídica, agrega una fotografía reciente e imprímelo para la próxima sesión.</p>
+          <a class="primary-button" href="https://docs.google.com/document/d/1CfPLtPA2OeHhvXwEtFbss1TfUVNaq6VL/edit?usp=sharing&amp;ouid=110141638610296970108&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Abrir ficha de identificación</a>
+        </article>
+
+        <article class="tutoring-resource-card">
+          <span class="resource-kind">Guía del estudiante</span>
+          <h3>Conoce tus derechos, responsabilidades y trayectoria académica</h3>
+          <p>Consulta esta guía visual para reconocer de forma sencilla los aspectos esenciales del reglamento y su aplicación en tu vida estudiantil.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/10UjB55nOZ6LN4m_9OY_64PxvYA9cuB1U/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar guía del estudiante</a>
+        </article>
+
+        <article class="tutoring-resource-card">
+          <span class="resource-kind">Normativa oficial BUAP</span>
+          <h3 class="regulation-title">Reglamento de requisitos y procedimientos para la admisión, permanencia y trayectoria académica de los alumnos de modalidad escolarizada de la Benemérita Universidad Autónoma de Puebla</h3>
+          <p>Consulta el documento completo para conocer las disposiciones oficiales que regulan tu trayectoria académica.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/14ntM5LYrGaDP9KkgSyBgS1tFHWlFohg_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar reglamento oficial</a>
+        </article>
+      </div>
+
+      <p class="privacy-note"><strong>Cuida tus datos personales:</strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Profe Charly · Tutoría III · Preparatoria Amozoc BUAP</p>
+    <p><a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p>
+  </footer>
+</body>
+</html>
