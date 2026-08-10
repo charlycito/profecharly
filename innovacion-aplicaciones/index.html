@@ -1,1 +1,114 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Innovación de Aplicaciones | Profe Charly</title><link rel="stylesheet" href="../style.css"><link rel="icon" href="../images/favicon.ico"></head><body><main><section class="hero"><p class="period-badge">Periodo Otoño 2026</p><h1>Innovación de Aplicaciones</h1><p>Este espacio se encuentra en preparación.</p><p><a class="period-badge" href="../index.html">← Volver a la página principal</a></p></section></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recursos de la Sesión 1 de Innovación de Aplicaciones con el Profe Charly.">
+  <title>Innovación de Aplicaciones | Profe Charly</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../images/favicon.ico">
+  <style>
+    .innovation-intro { padding-block: 54px 26px; }
+    .innovation-intro .section-heading { margin-bottom: 0; }
+    .session-one { padding-block: 34px 72px; }
+    .resource-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-bottom:30px; }
+    .innovation-card { display:flex; flex-direction:column; padding:26px; border:1px solid var(--border); border-top:4px solid var(--gold); border-radius:18px; background:var(--white); box-shadow:var(--shadow); }
+    .innovation-card-icon { display:grid; place-items:center; width:56px; height:56px; margin-bottom:17px; border-radius:15px; color:var(--blue); background:var(--blue-light); font-size:1.7rem; }
+    .innovation-card .eyebrow { margin:0; }
+    .innovation-card h3 { margin:6px 0 9px; color:var(--navy); font-size:1.2rem; }
+    .innovation-card > p:not(.eyebrow) { margin:0 0 20px; color:var(--muted); }
+    .innovation-card .primary-button { align-self:flex-start; margin-top:auto; }
+    .slides-card { overflow:hidden; border:1px solid var(--border); border-radius:18px; background:var(--white); box-shadow:var(--shadow); }
+    .slides-card-header { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:25px 27px; border-bottom:1px solid var(--border); }
+    .slides-card-header h2 { margin:5px 0 6px; color:var(--navy); font-size:clamp(1.35rem,2.5vw,1.75rem); }
+    .slides-card-header p { margin:0; color:var(--muted); }
+    .slides-frame { height:720px; background:#dfe6eb; }
+    .slides-frame iframe { display:block; width:100%; height:100%; border:0; background:var(--white); }
+    .slides-help { margin:0; padding:15px 24px; color:var(--muted); background:#f8fafc; font-size:.85rem; }
+    @media (max-width:760px) {
+      .resource-cards { grid-template-columns:1fr; }
+      .slides-card-header { align-items:flex-start; flex-direction:column; }
+      .slides-card-header .primary-button { width:100%; text-align:center; }
+      .slides-frame { height:520px; }
+    }
+    @media (max-width:420px) { .slides-frame { height:460px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html">PROFE CHARLY <small>Informática BUAP</small></a>
+    <nav aria-label="Navegación de la asignatura">
+      <a href="../index.html">Inicio</a>
+      <a href="#sesion-1">Sesión 1</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="subject-hero">
+      <div class="section-shell subject-hero-content">
+        <p class="period-badge">Periodo Otoño 2026</p>
+        <h1>Innovación de Aplicaciones</h1>
+        <p>Pasaremos de utilizar aplicaciones a comprenderlas, analizarlas y crear soluciones propias con creatividad, pensamiento lógico y MIT App Inventor.</p>
+        <a class="back-link" href="../index.html">← Volver a la página principal</a>
+      </div>
+    </section>
+
+    <section class="section-shell innovation-intro" aria-labelledby="bienvenida">
+      <div class="section-heading">
+        <p class="eyebrow">¡Bienvenidos, muchachones!</p>
+        <h2 id="bienvenida">Comenzamos de consumidores a creadores</h2>
+        <p>En esta primera sesión observaremos las aplicaciones que usamos todos los días, reconoceremos las necesidades que resuelven y descubriremos que también podemos diseñar nuestras propias ideas.</p>
+      </div>
+    </section>
+
+    <section class="section-shell session-one" id="sesion-1" aria-labelledby="titulo-sesion-1">
+      <div class="section-heading">
+        <p class="eyebrow">Sesión 1</p>
+        <h2 id="titulo-sesion-1">De consumidores a creadores</h2>
+        <p>Consulta y descarga los materiales que utilizaremos durante la sesión.</p>
+      </div>
+
+      <div class="resource-cards">
+        <article class="innovation-card">
+          <div class="innovation-card-icon" aria-hidden="true">🔎</div>
+          <p class="eyebrow">Actividad del estudiante</p>
+          <h3>Radiografía de una aplicación cotidiana</h3>
+          <p>Analiza una aplicación que utilizas, identifica qué necesidad resuelve y reconoce sus elementos principales.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1yvy-QZaEbUC2gPwWWu_lQY2WmzDYYDLH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir radiografía</a>
+        </article>
+
+        <article class="innovation-card">
+          <div class="innovation-card-icon" aria-hidden="true">🧭</div>
+          <p class="eyebrow">Guía de la sesión</p>
+          <h3>Ruta de aprendizaje</h3>
+          <p>Sigue el recorrido de la Sesión 1, identifica sus momentos y revisa las actividades que realizarás.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1l1ZmPLT_OQUh3gyYUoJVCTEkFQpK8GR6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir ruta de aprendizaje</a>
+        </article>
+      </div>
+
+      <article class="slides-card" aria-labelledby="titulo-diapositivas">
+        <header class="slides-card-header">
+          <div>
+            <p class="eyebrow">Presentación de clase</p>
+            <h2 id="titulo-diapositivas">Diapositivas: De consumidores a creadores</h2>
+            <p>Visualiza aquí la presentación completa de la Sesión 1.</p>
+          </div>
+          <a class="primary-button" href="https://drive.google.com/file/d/1tecr14eVkpIRegpe6lpI-rS2QH4i74jF/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a>
+        </header>
+        <div class="slides-frame">
+          <iframe src="https://drive.google.com/file/d/1tecr14eVkpIRegpe6lpI-rS2QH4i74jF/preview" title="Diapositivas de la Sesión 1: De consumidores a creadores" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <p class="slides-help">Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
+    <p>Innovación de Aplicaciones</p>
+  </footer>
+</body>
+</html>
