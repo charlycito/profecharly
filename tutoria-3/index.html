@@ -28,8 +28,14 @@
     .regulation-title{font-size:1rem!important}
     .privacy-note{margin:26px 0 0;padding:18px 20px;border-left:4px solid var(--blue);border-radius:10px;background:var(--blue-light);color:var(--muted)}
     .privacy-note strong{color:var(--navy)}
+    .student-guide-viewer{margin-top:42px;padding:28px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .student-guide-viewer-header{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:20px}
+    .student-guide-viewer-header h3{margin:4px 0 7px;color:var(--navy);font-size:1.35rem}
+    .student-guide-viewer-header p{max-width:720px;margin:0;color:var(--muted)}
+    .student-guide-frame{display:block;width:100%;height:720px;border:1px solid var(--border);border-radius:12px;background:#f3f6f8}
     @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr 1fr}.tutoring-resource-card:first-child{grid-column:1/-1}}
-    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}}
+    @media(max-width:760px){.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
   </style>
 </head>
 <body>
@@ -92,7 +98,25 @@
         </article>
       </div>
 
-      <p class="privacy-note"><strong>Cuida tus datos personales: </strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
+      <article class="student-guide-viewer" aria-labelledby="visor-guia-estudiante">
+        <div class="student-guide-viewer-header">
+          <div>
+            <span class="resource-kind">Lectura en línea</span>
+            <h3 id="visor-guia-estudiante">Guía del estudiante BUAP</h3>
+            <p>Conoce tus derechos, responsabilidades y trayectoria académica. Puedes leer la guía directamente aquí o abrirla en una pestaña independiente.</p>
+          </div>
+          <a class="primary-button" href="https://drive.google.com/file/d/10UjB55nOZ6LN4m_9OY_64PxvYA9cuB1U/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir guía completa</a>
+        </div>
+        <iframe
+          class="student-guide-frame"
+          src="https://drive.google.com/file/d/10UjB55nOZ6LN4m_9OY_64PxvYA9cuB1U/preview"
+          title="Guía del estudiante BUAP: Conoce tus derechos, responsabilidades y trayectoria académica"
+          loading="lazy"
+          allow="autoplay"
+          allowfullscreen></iframe>
+      </article>
+
+      <p class="privacy-note"><strong>Cuida tus datos personales:</strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
     </section>
   </main>
 
