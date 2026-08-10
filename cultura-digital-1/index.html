@@ -1,1 +1,151 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cultura Digital I | Profe Charly</title><link rel="stylesheet" href="../style.css"><link rel="icon" href="../images/favicon.ico"></head><body><main><section class="hero"><p class="period-badge">Periodo Otoño 2026</p><h1>Cultura Digital I</h1><p>Este espacio se encuentra en preparación.</p><p><a class="period-badge" href="../index.html">← Volver a la página principal</a></p></section></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espacio académico de Ciudadanía Digital del Profe Charly en la Preparatoria Amozoc, BUAP.">
+  <title>Ciudadanía Digital | Profe Charly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <style>
+    .citizenship-hero { background:linear-gradient(125deg,#041d34,#075484 68%,#0878c9); }
+    .welcome-grid { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr); gap:26px; align-items:stretch; }
+    .welcome-card,.teacher-card,.diagnostic-card { border:1px solid var(--border); border-radius:20px; background:#fff; box-shadow:var(--shadow); }
+    .welcome-card { padding:34px; }
+    .welcome-card h2,.teacher-card h2,.diagnostic-card h2 { margin:5px 0 13px; color:var(--navy); }
+    .welcome-card p { color:var(--muted); }
+    .welcome-card p:last-child { margin-bottom:0; }
+    .subject-pillars { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:24px; }
+    .subject-pillar { padding:18px; border-radius:14px; background:var(--blue-light); }
+    .subject-pillar strong { display:block; margin-bottom:5px; color:var(--navy); font-family:"Poppins",sans-serif; }
+    .subject-pillar span { color:var(--muted); font-size:.88rem; }
+    .teacher-card { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:30px; text-align:center; }
+    .teacher-card img { width:150px; height:150px; object-fit:cover; border:5px solid #fff; border-radius:50%; box-shadow:0 10px 28px rgba(5,42,74,.16); }
+    .teacher-card p { margin:0; color:var(--muted); }
+    .teacher-card a { color:var(--blue); font-weight:600; }
+    .diagnostic-section { background:#eaf0f5; }
+    .diagnostic-intro { max-width:760px; margin:0 auto 28px; text-align:center; }
+    .diagnostic-intro h2 { margin:5px 0 10px; color:var(--navy); font-size:clamp(1.75rem,3vw,2.35rem); }
+    .diagnostic-intro p { margin:0; color:var(--muted); }
+    .diagnostic-layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:24px; align-items:start; }
+    .diagnostic-card { overflow:hidden; }
+    .diagnostic-card-header { padding:24px 26px 20px; border-bottom:1px solid var(--border); }
+    .diagnostic-card-header h3 { margin:4px 0 7px; color:var(--navy); }
+    .diagnostic-card-header p { margin:0; color:var(--muted); font-size:.92rem; }
+    .diagnostic-frame { display:block; width:100%; height:650px; border:0; background:#fff; }
+    .diagnostic-actions { padding:18px 24px 24px; text-align:center; background:#f8fbfd; }
+    .qr-card { padding:25px; text-align:center; }
+    .qr-card h3 { margin:5px 0 8px; color:var(--navy); }
+    .qr-card p { margin:0 0 18px; color:var(--muted); font-size:.9rem; }
+    .qr-card img { display:block; width:100%; max-width:240px; aspect-ratio:1; margin:0 auto 18px; object-fit:contain; border:1px solid var(--border); border-radius:14px; background:#fff; }
+    .qr-card .primary-button { width:100%; text-align:center; }
+    .privacy-note { max-width:850px; margin:24px auto 0; padding:17px 20px; border-left:5px solid var(--gold); border-radius:12px; color:var(--muted); background:#fff; }
+    .privacy-note strong { color:var(--navy); }
+    @media (max-width:900px) {
+      .welcome-grid,.diagnostic-layout { grid-template-columns:1fr; }
+      .teacher-card { max-width:520px; width:100%; margin:auto; }
+      .qr-card { max-width:520px; width:100%; margin:auto; }
+    }
+    @media (max-width:620px) {
+      .welcome-card { padding:25px 21px; }
+      .subject-pillars { grid-template-columns:1fr; }
+      .diagnostic-card-header { padding:21px 20px 17px; }
+      .diagnostic-frame { height:620px; }
+      .diagnostic-actions { padding:16px 18px 21px; }
+      .diagnostic-actions .primary-button { display:block; width:100%; }
+    }
+  </style>
+</head>
+<body id="inicio">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html">💻 <span>PROFE CHARLY</span><small>Informática</small></a>
+    <nav aria-label="Navegación de Ciudadanía Digital">
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="../index.html">Página principal</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="subject-hero citizenship-hero" aria-labelledby="titulo-asignatura">
+      <div class="section-shell subject-hero-content">
+        <p class="period-badge">Periodo Otoño 2026</p>
+        <h1 id="titulo-asignatura">Ciudadanía Digital</h1>
+        <p>Aprende a participar en los entornos digitales de manera responsable, segura, crítica, ética y creativa.</p>
+        <a class="back-link" href="../index.html">← Volver a la página principal</a>
+      </div>
+    </section>
+
+    <section class="section-shell" id="bienvenida" aria-labelledby="bienvenida-titulo">
+      <div class="welcome-grid">
+        <article class="welcome-card">
+          <p class="eyebrow">¡Bienvenidos, muchachones!</p>
+          <h2 id="bienvenida-titulo">Comenzamos una nueva experiencia de aprendizaje</h2>
+          <p>En esta asignatura analizaremos cómo usamos la tecnología y qué decisiones debemos tomar para convivir, aprender, crear y comunicarnos responsablemente en el mundo digital.</p>
+          <p>No se trata únicamente de saber utilizar dispositivos o aplicaciones. También aprenderemos a proteger nuestra información, evaluar contenidos, respetar a otras personas y reconocer los derechos y responsabilidades que tenemos al participar en Internet.</p>
+          <div class="subject-pillars" aria-label="Ejes de la asignatura">
+            <div class="subject-pillar"><strong>Participación responsable</strong><span>Convivir y comunicarnos con respeto en espacios digitales.</span></div>
+            <div class="subject-pillar"><strong>Seguridad y bienestar</strong><span>Cuidar nuestros datos, identidad y equilibrio digital.</span></div>
+            <div class="subject-pillar"><strong>Pensamiento crítico</strong><span>Analizar información y tomar decisiones conscientes.</span></div>
+          </div>
+        </article>
+
+        <aside class="teacher-card" aria-labelledby="docente-titulo">
+          <img src="../images/fperfil.jpeg" alt="Juan Carlos Arellano Ponce, Profe Charly">
+          <p class="eyebrow">Tu docente</p>
+          <h2 id="docente-titulo">Juan Carlos Arellano Ponce</h2>
+          <p>También puedes llamarme <strong>Profe Charly</strong>. Te acompañaré durante el curso para que aprendas, preguntes, experimentes y utilices la tecnología con propósito.</p>
+          <p><a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="diagnostic-section" id="diagnostico" aria-labelledby="diagnostico-titulo">
+      <div class="section-shell">
+        <div class="diagnostic-intro">
+          <p class="eyebrow">Antes de comenzar</p>
+          <h2 id="diagnostico-titulo">Diagnóstico inicial</h2>
+          <p>Este formulario permitirá conocer las características del grupo, su acceso a la tecnología y algunas experiencias previas. No es un examen: responde con sinceridad.</p>
+        </div>
+
+        <div class="diagnostic-layout">
+          <article class="diagnostic-card">
+            <div class="diagnostic-card-header">
+              <p class="eyebrow">Microsoft Forms</p>
+              <h3>Responde el diagnóstico aquí</h3>
+              <p>Completa todas las preguntas que correspondan a tu situación. Si el formulario no se muestra correctamente, utiliza el botón inferior.</p>
+            </div>
+            <iframe class="diagnostic-frame" title="Formulario de diagnóstico inicial de Ciudadanía Digital" src="https://forms.cloud.microsoft/r/UBwKFCXYiQ?embed=true" loading="lazy" allowfullscreen></iframe>
+            <div class="diagnostic-actions">
+              <a class="primary-button" href="https://forms.cloud.microsoft/r/UBwKFCXYiQ" target="_blank" rel="noopener noreferrer">Abrir el diagnóstico en otra pestaña →</a>
+            </div>
+          </article>
+
+          <aside class="diagnostic-card qr-card" aria-labelledby="qr-titulo">
+            <p class="eyebrow">Desde tu celular</p>
+            <h3 id="qr-titulo">Escanea el código QR</h3>
+            <p>Abre la cámara de tu teléfono, apunta al código y toca el enlace que aparecerá.</p>
+            <a href="https://drive.google.com/file/d/1Y0m31pDeooRq8wmFacHCc2-5YxGOjAen/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Abrir la imagen del código QR del diagnóstico">
+              <img src="https://drive.google.com/thumbnail?id=1Y0m31pDeooRq8wmFacHCc2-5YxGOjAen&sz=w1000" alt="Código QR para abrir el diagnóstico inicial de Ciudadanía Digital" loading="lazy">
+            </a>
+            <a class="primary-button" href="https://forms.cloud.microsoft/r/UBwKFCXYiQ" target="_blank" rel="noopener noreferrer">Responder diagnóstico</a>
+          </aside>
+        </div>
+
+        <p class="privacy-note"><strong>Importante:</strong> la información se utilizará únicamente con fines académicos para conocer mejor al grupo y orientar la planeación del curso.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Juan Carlos Arellano Ponce</p>
+    <p>Ciudadanía Digital | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p>
+    <a href="#inicio">Volver al inicio ↑</a>
+  </footer>
+</body>
+</html>
