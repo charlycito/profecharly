@@ -84,8 +84,25 @@
     .alert-status{display:inline-block;padding:6px 11px;border-radius:999px;color:#725600;background:#fff1bd;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
     .support-status{color:#14532d;background:#dcfce7}
     .responsibility-note{margin:16px 0 0;padding:14px 16px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a!important;font-size:.9rem}
+    .page-jump-nav{padding-top:30px}
+    .page-jump-nav nav{display:flex;flex-wrap:wrap;gap:10px;padding:16px;border:1px solid var(--border);border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.06)}
+    .page-jump-nav a{padding:9px 13px;border-radius:999px;color:var(--navy);background:var(--blue-light);font-size:.86rem;font-weight:700;text-decoration:none}
+    .page-jump-nav a:hover,.page-jump-nav a:focus-visible{color:#fff;background:var(--blue)}
+    .absence-procedure{padding-top:56px}
+    .absence-card{padding:28px;border:1px solid var(--border);border-top:5px solid var(--blue);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .absence-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .absence-card-header h3{margin:8px 0;color:var(--navy);font-size:1.35rem}
+    .absence-card-header p{max-width:760px;margin:0;color:var(--muted)}
+    .absence-requirements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .absence-requirement{padding:20px;border:1px solid var(--border);border-radius:14px;background:#f8fafc}
+    .absence-requirement h4{margin:0 0 10px;color:var(--navy);font-size:1rem}
+    .absence-requirement ul{margin:0;padding-left:20px;color:var(--muted)}
+    .absence-requirement li+li{margin-top:7px}
+    .absence-limit{margin:18px 0 0;padding:18px 20px;border-left:5px solid var(--gold);border-radius:10px;background:#fffaf0;color:#4e493a}
+    .absence-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
+    .absence-actions p{margin:0;color:var(--muted);font-size:.9rem}
     @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}.diagnostic-dates{grid-template-columns:1fr}}
-    @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
+    @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}.absence-card-header{flex-direction:column}.absence-requirements{grid-template-columns:1fr}}
     @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}.diagnostic-alert{padding:22px 18px}.diagnostic-alert-header{flex-direction:column}.reporting-cuts{grid-template-columns:1fr}}
   </style>
 </head>
@@ -103,6 +120,16 @@
   </header>
 
   <main id="contenido">
+    <div class="section-shell page-jump-nav">
+      <nav aria-label="Accesos rápidos de Tutoría III">
+        <a href="#avisos-estudiantes">Avisos vigentes</a>
+        <a href="#reinscripcion-otono-2026">Reinscripción</a>
+        <a href="#aviso-entrega">Ficha de identificación</a>
+        <a href="#justificacion-inasistencias">Justificar inasistencias</a>
+        <a href="#recursos-tutoria">Guía y normativa</a>
+      </nav>
+    </div>
+
     <section class="section-shell student-alerts" aria-labelledby="avisos-estudiantes">
       <div class="section-heading">
         <p class="eyebrow">Información vigente</p>
@@ -294,6 +321,48 @@
         </div>
       </article>
       <p class="privacy-note"><strong>Cuida tus datos personales:</strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
+    </section>
+
+    <section class="section-shell absence-procedure" aria-labelledby="justificacion-inasistencias">
+      <div class="section-heading">
+        <p class="eyebrow">Trámites y formatos escolares</p>
+        <h2 id="justificacion-inasistencias">Justificación de inasistencias</h2>
+        <p>Descarga el formato y entrega al profesor tutor la documentación completa que corresponda a tu caso.</p>
+      </div>
+
+      <article class="absence-card">
+        <div class="absence-card-header">
+          <div>
+            <span class="resource-kind">Formato para entregar</span>
+            <h3>Reúne estos documentos</h3>
+            <p>El formato debe estar debidamente llenado y firmado por la madre, el padre o la persona tutora responsable.</p>
+          </div>
+          <a class="primary-button" href="https://drive.google.com/file/d/1vcsyq8ZxgOpJWnLLpTSrnhfa5vP5SYlL/view?usp=sharing" target="_blank" rel="noopener noreferrer">Descargar formato de inasistencia</a>
+        </div>
+
+        <div class="absence-requirements">
+          <section class="absence-requirement">
+            <h4>En todos los casos</h4>
+            <ul>
+              <li>Formato de inasistencia completo y firmado.</li>
+              <li>INE de la madre, el padre o la persona tutora que haya firmado el formato.</li>
+              <li>Entrega de los documentos directamente al profesor tutor.</li>
+            </ul>
+          </section>
+          <section class="absence-requirement">
+            <h4>Si la inasistencia fue por enfermedad</h4>
+            <ul>
+              <li>Receta médica.</li>
+              <li>Ticket de compra de los medicamentos cuando la atención no haya sido proporcionada por el IMSS mediante el seguro facultativo.</li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="absence-limit"><strong>Límite por semestre:</strong> cada estudiante tiene derecho a solicitar hasta tres justificantes. Después del tercero, la madre, el padre o la persona tutora deberá acudir personalmente a la preparatoria para solicitar el justificante.</p>
+        <div class="absence-actions">
+          <p><strong>Protege tus datos:</strong> la INE y los comprobantes deben entregarse únicamente al profesor tutor; no los compartas en grupos, redes sociales ni medios públicos.</p>
+        </div>
+      </article>
     </section>
 
     <section class="section-shell tutoring-resources" aria-labelledby="recursos-tutoria">
