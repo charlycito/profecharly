@@ -58,7 +58,19 @@
     .reenrollment-notes li+li{margin-top:9px}
     .condonation-alert{margin-top:18px;padding:18px 20px;border-left:5px solid #b3261e;border-radius:10px;background:#fff1f0;color:#65302c}
     .condonation-alert strong{color:#8b1d17}
-    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}}
+    .student-alerts{padding-top:56px}
+    .student-alerts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .student-alert-card{overflow:hidden;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .student-alert-card-content{padding:25px 24px}
+    .student-alert-card h3{margin:10px 0;color:var(--navy);font-size:1.22rem}
+    .student-alert-card p{color:var(--muted)}
+    .student-alert-card ul{margin:16px 0 20px;padding-left:21px;color:var(--muted)}
+    .student-alert-card li+li{margin-top:8px}
+    .student-alert-image{display:block;width:100%;max-height:410px;object-fit:contain;background:#f3f6f8}
+    .alert-status{display:inline-block;padding:6px 11px;border-radius:999px;color:#725600;background:#fff1bd;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .support-status{color:#14532d;background:#dcfce7}
+    .responsibility-note{margin:16px 0 0;padding:14px 16px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a!important;font-size:.9rem}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}}
     @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
     @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
   </style>
@@ -77,6 +89,44 @@
   </header>
 
   <main id="contenido">
+    <section class="section-shell student-alerts" aria-labelledby="avisos-estudiantes">
+      <div class="section-heading">
+        <p class="eyebrow">Información vigente</p>
+        <h2 id="avisos-estudiantes">Avisos para estudiantes</h2>
+        <p>Revisa los periodos, requisitos y medios de atención de cada aviso.</p>
+      </div>
+
+      <div class="student-alerts-grid">
+        <article class="student-alert-card">
+          <div class="student-alert-card-content">
+            <span class="alert-status">Vigente hasta el 9 de septiembre</span>
+            <h3>Permisos Temporales Otoño 2026</h3>
+            <p>Si necesitas solicitar un permiso temporal, realiza el procedimiento únicamente a través de Autoservicios BUAP.</p>
+            <ul>
+              <li><strong>Periodo de solicitud:</strong> del 11 de agosto al 9 de septiembre de 2026.</li>
+              <li>El permiso se solicita por <strong>todo el semestre o cuatrimestre</strong>; no puede pedirse por días, semanas o periodos parciales.</li>
+              <li>Recibirás en tu correo institucional la autorización o el rechazo. También podrás consultar el estatus en Autoservicios.</li>
+              <li>Los permisos autorizados se reflejarán en Autoservicios.</li>
+            </ul>
+            <a class="primary-button" href="https://www.autoservicios.buap.mx" target="_blank" rel="noopener noreferrer">Ir a Autoservicios BUAP</a>
+            <p class="responsibility-note"><strong>Importante:</strong> el uso y resguardo de tu cuenta de Autoservicios es tu responsabilidad. Toda solicitud realizada desde ella se considera oficial.</p>
+          </div>
+        </article>
+
+        <article class="student-alert-card">
+          <img class="student-alert-image" src="https://drive.google.com/thumbnail?id=1UaEgRvKlnyx5nYYVWpVFuYuEqKGIj27e&amp;sz=w1200" alt="Información de Atención Psicológica Estudiantil en la Preparatoria Amozoc" loading="lazy">
+          <div class="student-alert-card-content">
+            <span class="alert-status support-status">Servicio de apoyo</span>
+            <h3>Atención Psicológica Estudiantil</h3>
+            <p><strong>Mtra. María Concepción Walle Zapién</strong><br>Lunes a viernes, de 9:00 a 17:00 h.</p>
+            <p>La atención se brinda presencialmente en Amozoc o en línea, de acuerdo con la disponibilidad.</p>
+            <p><strong>Nivel Medio Superior:</strong> si tienes dificultades con el trámite, acude con tu orientadora u orientador educativo, quien solicitará el apoyo correspondiente a la Secretaría Académica.</p>
+            <a class="primary-button" href="https://daes.buap.mx/salud-integral/atencion-psicologica/individual" target="_blank" rel="noopener noreferrer">Solicitar atención en DAES</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section-shell reenrollment" aria-labelledby="reinscripcion-otono-2026">
       <div class="reenrollment-banner">
         <div>
@@ -226,5 +276,4 @@
     <p><a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p>
   </footer>
 </body>
-  <!-- Actualización de publicación: 11-08-2026 -->
 </html>
