@@ -17,7 +17,7 @@
     .delivery-list li{padding:14px 15px;border:1px solid #efdfaa;border-radius:12px;color:#4e493a;background:#fff;font-size:.9rem}
     .delivery-list strong{display:block;color:var(--navy)}
     .tutoring-resources{padding-top:56px}
-    .tutoring-resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .tutoring-resource-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
     .tutoring-resource-card{display:flex;flex-direction:column;padding:27px 24px;border:1px solid var(--border);border-top:5px solid var(--blue);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
     .tutoring-resource-card.featured{border-top-color:var(--gold)}
     .tutoring-resource-card h3{margin:16px 0 10px;color:var(--navy);font-size:1.16rem}
@@ -28,14 +28,39 @@
     .regulation-title{font-size:1rem!important}
     .privacy-note{margin:26px 0 0;padding:18px 20px;border-left:4px solid var(--blue);border-radius:10px;background:var(--blue-light);color:var(--muted)}
     .privacy-note strong{color:var(--navy)}
+    .guidance-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:20px;align-items:start}
     .student-guide-viewer{margin-top:42px;padding:28px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .guidance-layout .student-guide-viewer{margin-top:0}
     .student-guide-viewer-header{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:20px}
     .student-guide-viewer-header h3{margin:4px 0 7px;color:var(--navy);font-size:1.35rem}
     .student-guide-viewer-header p{max-width:720px;margin:0;color:var(--muted)}
     .student-guide-frame{display:block;width:100%;height:720px;border:1px solid var(--border);border-radius:12px;background:#f3f6f8}
-    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr 1fr}.tutoring-resource-card:first-child{grid-column:1/-1}}
-    @media(max-width:760px){.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
-    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
+    .reenrollment{padding-top:56px}
+    .reenrollment-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px;padding:24px 26px;border-radius:18px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--blue));box-shadow:var(--shadow)}
+    .reenrollment-banner h2{margin:4px 0 7px;color:#fff;font-size:1.55rem}
+    .reenrollment-banner p{margin:0;color:rgba(255,255,255,.88)}
+    .deadline{flex:0 0 auto;padding:13px 18px;border:1px solid rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.12);text-align:center}
+    .deadline strong{display:block;color:#fff;font-size:1.08rem}
+    .deadline span{font-size:.8rem}
+    .reenrollment-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .reenrollment-step{padding:25px 24px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
+    .step-heading{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+    .step-number{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;color:#fff;background:var(--blue);font:700 1.08rem "Poppins",sans-serif}
+    .reenrollment-step h3{margin:0;color:var(--navy);font-size:1.12rem}
+    .step-date{display:block;margin-top:2px;color:var(--blue);font-size:.82rem;font-weight:700}
+    .reenrollment-step ol,.reenrollment-step ul{margin:0;padding-left:20px;color:var(--muted)}
+    .reenrollment-step li+li{margin-top:8px}
+    .period-box{margin:13px 0;padding:12px 14px;border-left:4px solid var(--gold);border-radius:8px;background:#fffaf0;color:#4e493a;font-size:.9rem}
+    .autoservices-button{display:inline-block;margin-top:16px}
+    .reenrollment-notes{margin-top:22px;padding:25px;border:1px solid #ead58d;border-radius:18px;background:#fffaf0}
+    .reenrollment-notes h3{margin:0 0 12px;color:var(--navy)}
+    .reenrollment-notes ul{margin:0;padding-left:20px;color:#4e493a}
+    .reenrollment-notes li+li{margin-top:9px}
+    .condonation-alert{margin-top:18px;padding:18px 20px;border-left:5px solid #b3261e;border-radius:10px;background:#fff1f0;color:#65302c}
+    .condonation-alert strong{color:#8b1d17}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}}
+    @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
   </style>
 </head>
 <body>
@@ -52,53 +77,121 @@
   </header>
 
   <main id="contenido">
-    <section class="section-shell" aria-labelledby="aviso-entrega">
+    <section class="section-shell reenrollment" aria-labelledby="reinscripcion-otono-2026">
+      <div class="reenrollment-banner">
+        <div>
+          <p class="eyebrow" style="color:#ffe08a">Dirección de Administración Escolar BUAP</p>
+          <h2 id="reinscripcion-otono-2026">Reinscripción Otoño 2026</h2>
+          <p>Nivel Medio Superior · Preparatorias y Bachilleratos</p>
+        </div>
+        <div class="deadline">
+          <span>Fecha límite de pago</span>
+          <strong>31 de agosto de 2026</strong>
+          <span>¡No habrá prórroga!</span>
+        </div>
+      </div>
+
+      <div class="reenrollment-steps">
+        <article class="reenrollment-step">
+          <div class="step-heading">
+            <span class="step-number">1</span>
+            <div><h3>Verifica tu contraseña (NIP)</h3><span class="step-date">Desde el 10 de julio de 2026</span></div>
+          </div>
+          <ol>
+            <li>Ingresa a <strong>Estudiantes y Docentes BUAP</strong> con tu matrícula y contraseña para verificar el acceso.</li>
+            <li>Si no puedes ingresar, solicita el reinicio de tu NIP con tu Secretaria/o Académica/o.</li>
+          </ol>
+          <a class="primary-button autoservices-button" href="https://www.autoservicios.buap.mx" target="_blank" rel="noopener noreferrer">Ir a Autoservicios BUAP</a>
+        </article>
+
+        <article class="reenrollment-step">
+          <div class="step-heading">
+            <span class="step-number">2</span>
+            <div><h3>Consulta tus materias</h3><span class="step-date">A partir del 10 de agosto de 2026</span></div>
+          </div>
+          <ol>
+            <li>Entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
+            <li>Elige el periodo que te corresponda.</li>
+          </ol>
+          <div class="period-box"><strong>Plan semestral:</strong> Otoño 2026 Nivel Medio Superior.<br><strong>Plan anual:</strong> Ciclo Escolar 2026-2027 Nivel Medio Superior.</div>
+          <ol start="3">
+            <li>Abre <strong>Horario inscrito por semana → Horario detalle → Impresión de horario</strong>.</li>
+            <li>Imprime tu horario y verifica que tengas todas las materias de tu grupo. Informa de inmediato cualquier inconsistencia a tu Secretaria/o Académica/o.</li>
+          </ol>
+        </article>
+
+        <article class="reenrollment-step">
+          <div class="step-heading">
+            <span class="step-number">3</span>
+            <div><h3>Imprime y paga tu póliza</h3><span class="step-date">Del 21 al 31 de agosto de 2026</span></div>
+          </div>
+          <ol>
+            <li>En Autoservicios, entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
+            <li>Elige el periodo correspondiente.</li>
+            <li>Selecciona <strong>Impresión de póliza de reinscripción</strong>.</li>
+            <li>Paga la póliza antes de la fecha límite indicada.</li>
+          </ol>
+        </article>
+
+        <article class="reenrollment-step">
+          <div class="step-heading">
+            <span class="step-number">4</span>
+            <div><h3>Verifica tu pago</h3><span class="step-date">Al siguiente día hábil bancario</span></div>
+          </div>
+          <ol>
+            <li>Entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
+            <li>Selecciona el <strong>módulo de verificación de pago de reinscripción</strong>.</li>
+            <li>Comprueba que tu pago se haya aplicado correctamente.</li>
+          </ol>
+          <div class="period-box"><strong>Si pagas en fin de semana:</strong> verifica la aplicación del pago a partir del martes siguiente.</div>
+        </article>
+      </div>
+
+      <div class="reenrollment-notes">
+        <h3>Información importante</h3>
+        <ul>
+          <li>Para cursar el periodo correspondiente es indispensable contar con las materias asignadas y realizar el pago de la aportación de reinscripción.</li>
+          <li>Para estudiantes del plan anual que se reinscriben a tercer año, la póliza incluirá el derecho al Certificado de Generación.</li>
+          <li>Si al concluir la fecha límite el pago no aparece reflejado en Autoservicios BUAP, las materias asignadas serán dadas de baja.</li>
+          <li>Si tienes dificultades durante la reinscripción o al imprimir la póliza, contacta a tu Secretaria/o Académica/o.</li>
+        </ul>
+        <p class="condonation-alert"><strong>Estudiantes con condonación:</strong> también deben imprimir su póliza. Si no lo hacen, el trámite y la condonación no tendrán efecto y las materias serán dadas de baja. El incumplimiento del pago en tiempo y forma también condiciona la participación en programas de becas institucionales y externas.</p>
+      </div>
+    </section>
+
+    <section class="section-shell tutoring-resources" aria-labelledby="aviso-entrega">
+      <div class="section-heading">
+        <p class="eyebrow">Para la próxima sesión</p>
+        <h2 id="aviso-entrega">Ficha de identificación del estudiante</h2>
+        <p>Prepara este documento para integrar correctamente tu expediente de Tutoría III.</p>
+      </div>
+
       <article class="tutoring-notice">
         <div class="tutoring-notice-icon" aria-hidden="true">!</div>
         <div>
-          <p class="eyebrow">Importante para la próxima sesión</p>
-          <h2 id="aviso-entrega">Entrega de la ficha de identificación</h2>
-          <p>Descarga y completa tu ficha con <strong>datos verídicos</strong>. En la próxima sesión de Tutoría III deberás entregarla con las siguientes características:</p>
+          <p class="eyebrow">Documento para entregar</p>
+          <h2>Descarga, completa e imprime tu ficha</h2>
+          <p>Llénala con <strong>datos verídicos</strong> y entrégala durante la próxima sesión con las siguientes características:</p>
           <ul class="delivery-list">
             <li><strong>Impresa y llena</strong>Revisa que no falte ningún dato solicitado.</li>
             <li><strong>Fotografía reciente</strong>Colócala en el espacio correspondiente de la ficha.</li>
             <li><strong>En protector de hojas</strong>Así podrá integrarse correctamente a tu carpeta de expediente.</li>
           </ul>
+          <a class="primary-button autoservices-button" href="https://docs.google.com/document/d/1CfPLtPA2OeHhvXwEtFbss1TfUVNaq6VL/edit?usp=sharing&amp;ouid=110141638610296970108&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Abrir ficha de identificación</a>
         </div>
       </article>
+      <p class="privacy-note"><strong>Cuida tus datos personales:</strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
     </section>
 
     <section class="section-shell tutoring-resources" aria-labelledby="recursos-tutoria">
       <div class="section-heading">
-        <p class="eyebrow">Documentos para consultar</p>
-        <h2 id="recursos-tutoria">Recursos de Tutoría III</h2>
-        <p>Abre cada documento para completar tu ficha y conocer las normas que orientan tu permanencia y trayectoria académica en la BUAP.</p>
+        <p class="eyebrow">Orientación y normativa BUAP</p>
+        <h2 id="recursos-tutoria">Conoce tus derechos, responsabilidades y trayectoria académica</h2>
+        <p>Consulta primero la guía visual y utiliza el reglamento oficial cuando necesites revisar las disposiciones completas.</p>
       </div>
 
-      <div class="tutoring-resource-grid">
-        <article class="tutoring-resource-card featured">
-          <span class="resource-kind">Documento para entregar</span>
-          <h3>Ficha de identificación del estudiante</h3>
-          <p>Descarga el formato, complétalo con información verídica, agrega una fotografía reciente e imprímelo para la próxima sesión.</p>
-          <a class="primary-button" href="https://docs.google.com/document/d/1CfPLtPA2OeHhvXwEtFbss1TfUVNaq6VL/edit?usp=sharing&amp;ouid=110141638610296970108&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Abrir ficha de identificación</a>
-        </article>
-
-        <article class="tutoring-resource-card">
-          <span class="resource-kind">Guía del estudiante</span>
-          <h3>Conoce tus derechos, responsabilidades y trayectoria académica</h3>
-          <p>Consulta esta guía visual para reconocer de forma sencilla los aspectos esenciales del reglamento y su aplicación en tu vida estudiantil.</p>
-          <a class="primary-button" href="https://drive.google.com/file/d/10UjB55nOZ6LN4m_9OY_64PxvYA9cuB1U/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar guía del estudiante</a>
-        </article>
-
-        <article class="tutoring-resource-card">
-          <span class="resource-kind">Normativa oficial BUAP</span>
-          <h3 class="regulation-title">Reglamento de requisitos y procedimientos para la admisión, permanencia y trayectoria académica de los alumnos de modalidad escolarizada de la Benemérita Universidad Autónoma de Puebla</h3>
-          <p>Consulta el documento completo para conocer las disposiciones oficiales que regulan tu trayectoria académica.</p>
-          <a class="primary-button" href="https://drive.google.com/file/d/14ntM5LYrGaDP9KkgSyBgS1tFHWlFohg_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar reglamento oficial</a>
-        </article>
-      </div>
-
-      <article class="student-guide-viewer" aria-labelledby="visor-guia-estudiante">
+      <div class="guidance-layout">
+       <article class="student-guide-viewer" aria-labelledby="visor-guia-estudiante">
         <div class="student-guide-viewer-header">
           <div>
             <span class="resource-kind">Lectura en línea</span>
@@ -114,9 +207,17 @@
           loading="lazy"
           allow="autoplay"
           allowfullscreen></iframe>
-      </article>
+       </article>
 
-      <p class="privacy-note"><strong>Cuida tus datos personales:</strong> entrega la ficha únicamente al profesor durante la sesión de Tutoría III; no la publiques ni la compartas en grupos o redes sociales.</p>
+       <div class="tutoring-resource-grid">
+        <article class="tutoring-resource-card">
+          <span class="resource-kind">Normativa oficial BUAP</span>
+          <h3 class="regulation-title">Reglamento de requisitos y procedimientos para la admisión, permanencia y trayectoria académica de los alumnos de modalidad escolarizada de la Benemérita Universidad Autónoma de Puebla</h3>
+          <p>Consulta el documento completo para conocer las disposiciones oficiales que regulan tu trayectoria académica.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/14ntM5LYrGaDP9KkgSyBgS1tFHWlFohg_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar reglamento oficial</a>
+        </article>
+       </div>
+      </div>
     </section>
   </main>
 
