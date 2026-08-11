@@ -42,5 +42,6 @@ function render(){makeFilters(catFilters,Object.entries(categories),category,key
 function openViewer(item){document.querySelector("#viewerTitle").textContent=item.title;document.querySelector("#viewerDescription").textContent=categories[item.category]+" · "+item.year;const link=document.querySelector("#driveLink");link.href="https://drive.google.com/file/d/"+item.id+"/view";link.classList.add("visible");document.querySelector("#viewerContent").innerHTML='<iframe class="certificate-frame" title="Constancia: '+item.title.replace(/"/g,"&quot;")+'" src="https://drive.google.com/file/d/'+item.id+'/preview" allow="autoplay"></iframe>';document.querySelector("#visor").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}
 render();
 </script>
-</body></html>
+</body>
+</html>
 
