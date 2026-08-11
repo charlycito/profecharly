@@ -60,6 +60,20 @@
     .condonation-alert strong{color:#8b1d17}
     .student-alerts{padding-top:56px}
     .student-alerts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .diagnostic-alert{margin-bottom:20px;padding:28px;border:2px solid #d6aa17;border-radius:20px;background:linear-gradient(135deg,#fffaf0,#fff);box-shadow:0 10px 28px rgba(114,86,0,.12)}
+    .diagnostic-alert-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .diagnostic-alert h3{margin:8px 0;color:var(--navy);font-size:1.45rem}
+    .diagnostic-alert-header p{max-width:760px;margin:0;color:var(--muted)}
+    .diagnostic-dates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .diagnostic-day{padding:18px;border:1px solid #ead58d;border-radius:14px;background:#fff}
+    .diagnostic-day h4{margin:0 0 12px;color:var(--navy);font-size:1rem}
+    .diagnostic-day ul{margin:0;padding-left:19px;color:var(--muted);font-size:.9rem}
+    .diagnostic-day li+li{margin-top:7px}
+    .reporting-cuts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+    .reporting-cut{padding:16px 18px;border-radius:13px;background:var(--navy);color:#fff}
+    .reporting-cut strong{display:block;margin-bottom:4px;color:#ffe08a;font-size:1.08rem}
+    .reporting-cut span{font-size:.9rem;line-height:1.45}
+    .reporting-cut.final{background:#8b1d17}
     .student-alert-card{overflow:hidden;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
     .student-alert-card-content{padding:25px 24px}
     .student-alert-card h3{margin:10px 0;color:var(--navy);font-size:1.22rem}
@@ -70,9 +84,9 @@
     .alert-status{display:inline-block;padding:6px 11px;border-radius:999px;color:#725600;background:#fff1bd;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
     .support-status{color:#14532d;background:#dcfce7}
     .responsibility-note{margin:16px 0 0;padding:14px 16px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a!important;font-size:.9rem}
-    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}.diagnostic-dates{grid-template-columns:1fr}}
     @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}}
-    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}.diagnostic-alert{padding:22px 18px}.diagnostic-alert-header{flex-direction:column}.reporting-cuts{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -95,6 +109,55 @@
         <h2 id="avisos-estudiantes">Avisos para estudiantes</h2>
         <p>Revisa los periodos, requisitos y medios de atención de cada aviso.</p>
       </div>
+
+      <article class="diagnostic-alert" aria-labelledby="diagnosticos-tercer-semestre">
+        <div class="diagnostic-alert-header">
+          <div>
+            <span class="alert-status">Aplicación obligatoria · 3.er semestre</span>
+            <h3 id="diagnosticos-tercer-semestre">Evaluaciones diagnósticas</h3>
+            <p>Responde cada evaluación dentro del horario de aplicación. Al terminar, reporta que ya contestaste tus exámenes para dar seguimiento a la participación del grupo.</p>
+          </div>
+        </div>
+
+        <div class="diagnostic-dates">
+          <section class="diagnostic-day">
+            <h4>Lunes 17 de agosto de 2026</h4>
+            <ul>
+              <li><strong>7:20 a. m.–8:00 p. m.</strong> Geometría Analítica</li>
+              <li><strong>8:00 a. m.–8:00 p. m.</strong> Manejo de Datos y Comunicaciones</li>
+              <li><strong>8:50 a. m.–8:00 p. m.</strong> Historia de la Identidad Mexicana</li>
+            </ul>
+          </section>
+          <section class="diagnostic-day">
+            <h4>Martes 18 de agosto de 2026</h4>
+            <ul>
+              <li><strong>7:20 a. m.–8:00 p. m.</strong> Biología I: del A. al H.</li>
+              <li><strong>8:00 a. m.–8:00 p. m.</strong> Psicología Educativa: Vocacional</li>
+              <li><strong>8:00 a. m.–8:00 p. m.</strong> Lenguaje y Procesos, Esc. Inv.</li>
+            </ul>
+          </section>
+          <section class="diagnostic-day">
+            <h4>Miércoles 19 de agosto de 2026</h4>
+            <ul>
+              <li><strong>7:20 a. m.–8:00 p. m.</strong> Lengua Extranjera III / Francés III</li>
+              <li><strong>8:00 a. m.–8:00 p. m.</strong> Cultura Física III</li>
+              <li><strong>7:20 a. m.–8:00 p. m.</strong> Fundamentos del Arte</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="reporting-cuts" aria-label="Horarios de seguimiento diario">
+          <div class="reporting-cut">
+            <strong>Primer corte · 12:00 p. m.</strong>
+            <span>A más tardar a esta hora, reporta cuáles evaluaciones ya respondiste.</span>
+          </div>
+          <div class="reporting-cut final">
+            <strong>Segundo corte · 3:00 p. m.</strong>
+            <span>A esta hora deberá estar confirmado el 100 % de participación del grupo.</span>
+          </div>
+        </div>
+        <p class="responsibility-note"><strong>Importante:</strong> no esperes hasta el cierre de la plataforma. Contesta las evaluaciones con anticipación y conserva evidencia de que fueron enviadas correctamente.</p>
+      </article>
 
       <div class="student-alerts-grid">
         <article class="student-alert-card">
@@ -275,6 +338,5 @@
     <p>Profe Charly · Tutoría III · Preparatoria Amozoc BUAP</p>
     <p><a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p>
   </footer>
-  <!-- Actualización de publicación: 11-08-2026 -->
 </body>
 </html>
