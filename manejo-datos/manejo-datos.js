@@ -12,6 +12,10 @@
   const descripcionVideo = document.querySelector("#descripcion-video-sesion");
   const reproductorVideo = document.querySelector("#reproductor-video-sesion");
   const abrirVideo = document.querySelector("#abrir-video-sesion");
+  const audio = document.querySelector("#audio-sesion");
+  const tituloAudio = document.querySelector("#titulo-audio-sesion");
+  const reproductorAudio = document.querySelector("#reproductor-audio-sesion");
+  const abrirAudio = document.querySelector("#abrir-audio-sesion");
 
   if (!menu || !Array.isArray(sesionesManejoDatos) || sesionesManejoDatos.length === 0) return;
 
@@ -27,6 +31,24 @@
     visor.title = `Sesión ${sesion.numero}: ${sesion.titulo}`;
     abrir.href = sesion.abrir || sesion.pdf;
     descargar.href = sesion.descargar || enlaceDescarga(sesion.pdf);
+
+    if (audio && tituloAudio && reproductorAudio && abrirAudio) {
+      const recursoAudio = Array.isArray(audiosManejoDatos)
+        ? audiosManejoDatos.find((elemento) => elemento.numero === sesion.numero)
+        : null;
+
+      audio.hidden = !recursoAudio;
+
+      if (recursoAudio) {
+        tituloAudio.textContent = recursoAudio.titulo;
+        reproductorAudio.src = recursoAudio.spotify;
+        reproductorAudio.title = `Podcast de la sesión ${sesion.numero}: ${recursoAudio.titulo}`;
+        abrirAudio.href = recursoAudio.abrir;
+      } else {
+        reproductorAudio.removeAttribute("src");
+        abrirAudio.href = "#";
+      }
+    }
 
     if (materiales && listaMateriales) {
       const recursos = Array.isArray(sesion.materiales) ? sesion.materiales : [];
@@ -92,48 +114,4 @@
   });
 
   mostrarSesion(0);
-})();
-
-(() => {
-  const menu = document.querySelector("#menu-audios");
-  const numero = document.querySelector("#numero-audio");
-  const titulo = document.querySelector("#titulo-audio");
-  const reproductor = document.querySelector("#reproductor-spotify");
-  const abrir = document.querySelector("#abrir-audio");
-
-  if (
-    !menu ||
-    !Array.isArray(audiosManejoDatos) ||
-    audiosManejoDatos.length === 0
-  ) return;
-
-  function mostrarAudio(indice) {
-    const audio = audiosManejoDatos[indice];
-
-    numero.textContent = `Sesión ${audio.numero}`;
-    titulo.textContent = audio.titulo;
-    reproductor.src = audio.spotify;
-    reproductor.title = `Audio de la sesión ${audio.numero}: ${audio.titulo}`;
-    abrir.href = audio.abrir;
-
-    [...menu.children].forEach((boton, i) => {
-      const activo = i === indice;
-      boton.classList.toggle("active", activo);
-      boton.setAttribute("aria-pressed", activo ? "true" : "false");
-    });
-  }
-
-  audiosManejoDatos.forEach((audio, indice) => {
-    const boton = document.createElement("button");
-    boton.type = "button";
-    boton.className = "session-menu-button";
-    boton.innerHTML =
-      `<span>Sesión ${audio.numero}</span>` +
-      `<strong>${audio.titulo}</strong>`;
-
-    boton.addEventListener("click", () => mostrarAudio(indice));
-    menu.appendChild(boton);
-  });
-
-  mostrarAudio(0);
 })();
