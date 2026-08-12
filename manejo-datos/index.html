@@ -19,7 +19,6 @@
     <nav aria-label="Navegación de la asignatura">
       <a href="#guia">Guía</a>
       <a href="#sesiones">Sesiones</a>
-      <a href="#audios">Audios</a>
       <a href="../index.html">Página principal</a>
     </nav>
   </header>
@@ -55,8 +54,8 @@
       <div class="section-shell">
         <div class="section-heading">
           <p class="eyebrow">Material de clase</p>
-          <h2 id="sesiones-titulo">Diapositivas por sesión</h2>
-          <p>Selecciona una sesión para consultar sus diapositivas directamente en la página.</p>
+          <h2 id="sesiones-titulo">Materiales por sesión</h2>
+          <p>Selecciona una sesión para consultar sus diapositivas, podcast, documentos y videos de apoyo.</p>
         </div>
 
         <div class="session-layout">
@@ -78,6 +77,20 @@
               <noscript><p>Activa JavaScript para seleccionar y visualizar las sesiones.</p></noscript>
             </div>
             <p class="viewer-help">Si el documento no aparece dentro de la página, utiliza “Abrir en otra pestaña”. Algunos navegadores o configuraciones institucionales pueden impedir la vista incrustada.</p>
+            <div class="session-audio" id="audio-sesion" hidden>
+              <div class="session-video-heading">
+                <p class="session-number">Podcast de la sesión</p>
+                <h4 id="titulo-audio-sesion"></h4>
+                <p>Escucha este audio para repasar los conceptos y puntos importantes de la sesión.</p>
+              </div>
+              <iframe
+                id="reproductor-audio-sesion"
+                title="Podcast de la sesión seleccionada"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+              <a id="abrir-audio-sesion" class="text-button" href="#" target="_blank" rel="noopener">Abrir en Spotify ↗</a>
+            </div>
             <div class="session-materials" id="materiales-sesion" hidden>
               <div class="session-materials-heading">
                 <p class="session-number">Recursos de apoyo</p>
@@ -101,61 +114,11 @@
         </div>
       </div>
     </section>
-
-    <section class="audio-section" id="audios" aria-labelledby="audios-titulo">
-  <div class="section-shell">
-    <div class="section-heading">
-      <p class="eyebrow">Podcast de las sesiones</p>
-      <h2 id="audios-titulo">Escucha y repasa</h2>
-      <p>Selecciona una sesión para escuchar su audio complementario.</p>
-    </div>
-
-    <div class="session-layout audio-layout">
-      <aside class="session-menu" aria-label="Audios disponibles">
-        <h3>Audios</h3>
-        <div id="menu-audios"></div>
-      </aside>
-
-      <article class="session-viewer audio-viewer">
-        <div class="session-viewer-header">
-          <div>
-            <p class="session-number" id="numero-audio"></p>
-            <h3 id="titulo-audio"></h3>
-          </div>
-
-          <a
-            id="abrir-audio"
-            class="text-button"
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            Abrir en Spotify ↗
-          </a>
-        </div>
-
-        <iframe
-          id="reproductor-spotify"
-          title="Audio de la sesión seleccionada"
-          loading="lazy"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        ></iframe>
-      </article>
-    </div>
-  </div>
-</section>
-
-    
-    <section class="coming-soon section-shell" aria-labelledby="proximamente-titulo">
-      <p class="eyebrow">Próximamente</p>
-      <h2 id="proximamente-titulo">Más recursos para aprender</h2>
-      <p>Este espacio crecerá con videos, actividades, evaluaciones y materiales complementarios.</p>
-    </section>
   </main>
 
   <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
-  <script src="sesiones.js?v=10"></script>
-  <script src="audios.js?v=10"></script>
-  <script src="manejo-datos.js?v=10"></script>
+  <script src="sesiones.js?v=11"></script>
+  <script src="audios.js?v=11"></script>
+  <script src="manejo-datos.js?v=11"></script>
 </body>
 </html>
