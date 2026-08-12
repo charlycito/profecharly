@@ -197,5 +197,44 @@ const sesionesManejoDatos = [
       youtube: "https://www.youtube-nocookie.com/embed/xfpok0kI2S8",
       abrir: "https://www.youtube.com/watch?v=xfpok0kI2S8"
     }
+  },
+  {
+    numero: 8,
+    titulo: "Comunicar resultados con responsabilidad",
+    pdf: "https://drive.google.com/file/d/1ihcF1g12o9zJqiCUdkubCyMz3sIgGeu2/preview",
+    abrir: "https://drive.google.com/file/d/1ihcF1g12o9zJqiCUdkubCyMz3sIgGeu2/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1ihcF1g12o9zJqiCUdkubCyMz3sIgGeu2",
+    materiales: [
+      {
+        tipo: "Bitácora de trabajo",
+        titulo: "Bitácora del Analista No. 7: Integración y comunicación del informe final",
+        descripcion: "Documento para integrar los resultados del equipo, redactar conclusiones y comunicar el informe final con responsabilidad.",
+        abrir: "https://drive.google.com/file/d/1qKC4RjC-E6I-f9F5s_5H4vJVZV6aKUNm/view?usp=sharing"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 7: Integramos y comunicamos el análisis final",
+        descripcion: "Guía para organizar los hallazgos, comparar resultados y presentar conclusiones claras, verificables y responsables.",
+        abrir: "https://drive.google.com/file/d/1t0ag2ERG08BXPlzTddX5EGGn8OfkOIeA/view?usp=sharing"
+      },
+      {
+        tipo: "Guía práctica",
+        titulo: "Guía Práctica No. 7: Integramos y comunicamos el análisis final",
+        descripcion: "Material de consulta rápida para revisar cómo se integran los resultados y cómo se comunican sin alterar el sentido de los datos.",
+        abrir: "https://drive.google.com/file/d/1p9jveOipu5CpKfib1uUCnJ9ySApsllfy/view?usp=sharing"
+      },
+      {
+        tipo: "Lista de comprobación",
+        titulo: "Lista de Comprobación No. 7: Revisión final de la Evidencia 1.3",
+        descripcion: "Instrumento final para verificar que el informe incluya evidencias, comparaciones, interpretaciones, conclusiones y los elementos solicitados.",
+        abrir: "https://drive.google.com/file/d/11XdF06C33t6YOXKA4mtwaBj-LCtrS-wl/view?usp=sharing"
+      },
+      {
+        tipo: "Ruta de trabajo",
+        titulo: "Ruta de Trabajo del Estudiante: Integramos y comunicamos nuestro análisis",
+        descripcion: "Secuencia de actividades, recursos y productos que orienta el cierre del análisis y la integración del informe final.",
+        abrir: "https://drive.google.com/file/d/1iySAXcGY5WGgPycO-hbBL7yLq5wMtU-B/view?usp=sharing"
+      }
+    ]
   }
 ];
