@@ -40,5 +40,11 @@ const audiosManejoDatos = [
     titulo: "Análisis estadístico y correlación",
     spotify: "https://open.spotify.com/embed/episode/417oJl1dmei6ksj2ylPsJy",
     abrir: "https://open.spotify.com/episode/417oJl1dmei6ksj2ylPsJy"
+  },
+  {
+    numero: 8,
+    titulo: "Comunicar resultados con responsabilidad",
+    spotify: "https://open.spotify.com/embed/episode/1i6An6DWOn9WWxnQqcmVfB",
+    abrir: "https://open.spotify.com/episode/1i6An6DWOn9WWxnQqcmVfB?si=Efxe2r06Sq-4ub4cXqvEzg"
   }
 ];
