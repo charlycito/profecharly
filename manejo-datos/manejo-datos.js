@@ -25,10 +25,10 @@
 
   function mostrarSesion(indice) {
     const sesion = sesionesManejoDatos[indice];
-    numero.textContent = `Sesión ${sesion.numero}`;
+    numero.textContent = `Semana ${sesion.numero}`;
     titulo.textContent = sesion.titulo;
     visor.src = sesion.pdf;
-    visor.title = `Sesión ${sesion.numero}: ${sesion.titulo}`;
+    visor.title = `Semana ${sesion.numero}: ${sesion.titulo}`;
     abrir.href = sesion.abrir || sesion.pdf;
     descargar.href = sesion.descargar || enlaceDescarga(sesion.pdf);
 
@@ -42,7 +42,7 @@
       if (recursoAudio) {
         tituloAudio.textContent = recursoAudio.titulo;
         reproductorAudio.src = recursoAudio.spotify;
-        reproductorAudio.title = `Podcast de la sesión ${sesion.numero}: ${recursoAudio.titulo}`;
+        reproductorAudio.title = `Podcast de la semana ${sesion.numero}: ${recursoAudio.titulo}`;
         abrirAudio.href = recursoAudio.abrir;
       } else {
         reproductorAudio.removeAttribute("src");
@@ -89,7 +89,7 @@
         tituloVideo.textContent = recursoVideo.titulo;
         descripcionVideo.textContent = recursoVideo.descripcion;
         reproductorVideo.src = recursoVideo.youtube;
-        reproductorVideo.title = `Sesión ${sesion.numero}: ${recursoVideo.titulo}`;
+        reproductorVideo.title = `Semana ${sesion.numero}: ${recursoVideo.titulo}`;
         abrirVideo.href = recursoVideo.abrir;
       } else {
         reproductorVideo.removeAttribute("src");
@@ -108,7 +108,7 @@
     const boton = document.createElement("button");
     boton.type = "button";
     boton.className = "session-menu-button";
-    boton.innerHTML = `<span>Sesión ${sesion.numero}</span><strong>${sesion.titulo}</strong>`;
+    boton.innerHTML = `<span>Semana ${sesion.numero}</span><strong>${sesion.titulo}</strong>`;
     boton.addEventListener("click", () => mostrarSesion(indice));
     menu.appendChild(boton);
   });
