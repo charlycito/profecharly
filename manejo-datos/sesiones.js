@@ -76,7 +76,7 @@ const sesionesManejoDatos = [
       {
         tipo: "Guía práctica",
         titulo: "10 errores que debes evitar al organizar y depurar una base de datos y conceptos que todo analista debe recordar",
-        descripcion: "Material de consulta rápida para reconocer errores frecuentes y recordar los conceptos esenciales de la sesión.",
+        descripcion: "Material de consulta rápida para reconocer errores frecuentes y recordar los conceptos esenciales de la semana.",
         abrir: "https://drive.google.com/file/d/1c3mMKvZWzau3Rxw0X1_i9UIPb0Ygsx00/view?usp=sharing"
       }
     ]
@@ -180,14 +180,14 @@ const sesionesManejoDatos = [
       },
       {
         tipo: "Lista de comprobación",
-        titulo: "Lista de Comprobación No. 6: Análisis estadístico y correlación — revisión del avance para continuar en la Sesión 8",
+        titulo: "Lista de Comprobación No. 6: Análisis estadístico y correlación — revisión del avance para continuar en la Semana 8",
         descripcion: "Instrumento para comprobar que los cálculos, gráficos, correlaciones e interpretaciones estén listos antes de continuar con la entrega final.",
         abrir: "https://drive.google.com/file/d/14GE-hatEq7DeMPqTKMM9HQPU_eomzkbU/view?usp=sharing"
       },
       {
         tipo: "Ruta de trabajo",
-        titulo: "Ruta de Trabajo del Estudiante — Sesión 7: Estadística básica y correlación",
-        descripcion: "Secuencia de actividades, recursos y productos que orienta el trabajo del estudiante durante la sesión.",
+        titulo: "Ruta de Trabajo del Estudiante — Semana 7: Estadística básica y correlación",
+        descripcion: "Secuencia de actividades, recursos y productos que orienta el trabajo del estudiante durante la semana.",
         abrir: "https://drive.google.com/file/d/12FTI2VmEKvEr7HW_EZi6eOJhY4EZ3g0_/view?usp=sharing"
       }
     ],
