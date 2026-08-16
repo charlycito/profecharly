@@ -185,6 +185,10 @@ footer { padding:34px 20px; text-align:center; color:#cfdfeb; background:#031728
 .project-detail>p { color:var(--muted); }
 .project-cover { margin:0 0 24px; overflow:hidden; border-radius:16px; background:#eaf0f5; }
 .project-cover img { display:block; width:100%; height:clamp(260px,42vw,520px); object-fit:cover; }
+@media (min-width:621px) {
+  .project-detail:nth-of-type(1) .project-cover img,
+  .project-detail:nth-of-type(3) .project-cover img { object-position:center 28%; }
+}
 .project-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:24px; }
 .project-gallery-four { grid-template-columns:repeat(4,1fr); }
 .project-gallery img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; background:#eaf0f5; transition:transform .2s ease,box-shadow .2s ease; }
