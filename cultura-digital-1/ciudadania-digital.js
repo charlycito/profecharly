@@ -89,6 +89,98 @@
     return fragmento;
   }
 
+  function crearMateriales(semana) {
+    const fragmento = document.createDocumentFragment();
+
+    const ruta = document.createElement("section");
+    ruta.className = "ordered-resource";
+    ruta.innerHTML = `
+      <span class="resource-step" aria-label="Paso ${semana.ruta.orden}">${semana.ruta.orden}</span>
+      <div>
+        <p class="eyebrow">Comienza aquí</p>
+        <h3>${semana.ruta.titulo}</h3>
+        <p>${semana.ruta.descripcion}</p>
+      </div>
+    `;
+    const abrirRuta = document.createElement("a");
+    abrirRuta.className = "primary-button";
+    abrirRuta.href = semana.ruta.abrir;
+    abrirRuta.target = "_blank";
+    abrirRuta.rel = "noopener noreferrer";
+    abrirRuta.textContent = "Abrir ruta de aprendizaje";
+    ruta.appendChild(abrirRuta);
+
+    const diapositivas = document.createElement("article");
+    diapositivas.className = "slides-card";
+    const cabecera = document.createElement("header");
+    cabecera.className = "slides-card-header";
+    cabecera.innerHTML = `
+      <div class="slides-heading">
+        <span class="resource-step" aria-label="Paso ${semana.diapositivas.orden}">${semana.diapositivas.orden}</span>
+        <div>
+          <p class="eyebrow">Presentación de clase</p>
+          <h3>${semana.diapositivas.titulo}</h3>
+          <p>${semana.diapositivas.descripcion}</p>
+        </div>
+      </div>
+    `;
+    const abrirDiapositivas = document.createElement("a");
+    abrirDiapositivas.className = "primary-button";
+    abrirDiapositivas.href = semana.diapositivas.abrir;
+    abrirDiapositivas.target = "_blank";
+    abrirDiapositivas.rel = "noopener noreferrer";
+    abrirDiapositivas.textContent = "Abrir en otra pestaña";
+    cabecera.appendChild(abrirDiapositivas);
+
+    const marco = document.createElement("div");
+    marco.className = "slides-frame";
+    const visor = document.createElement("iframe");
+    visor.src = semana.diapositivas.pdf;
+    visor.title = `Diapositivas de la Semana ${semana.numero}: ${semana.diapositivas.titulo}`;
+    visor.loading = "lazy";
+    visor.setAttribute("allowfullscreen", "");
+    marco.appendChild(visor);
+
+    const ayuda = document.createElement("p");
+    ayuda.className = "slides-help";
+    ayuda.textContent = "Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.";
+    diapositivas.append(cabecera, marco, ayuda);
+
+    fragmento.append(ruta, diapositivas);
+
+    semana.materiales.forEach((recurso) => {
+      const tarjeta = document.createElement("article");
+      tarjeta.className = "week-resource-card";
+      tarjeta.innerHTML = `
+        <span class="resource-step" aria-label="Paso ${recurso.orden}">${recurso.orden}</span>
+        <div>
+          <p class="eyebrow">${recurso.tipo}</p>
+          <h3>${recurso.titulo}</h3>
+          <p>${recurso.descripcion}</p>
+        </div>
+      `;
+
+      const enlace = document.createElement("a");
+      enlace.className = "primary-button";
+      enlace.href = recurso.abrir;
+      enlace.target = "_blank";
+      enlace.rel = "noopener noreferrer";
+      enlace.textContent = recurso.boton;
+      tarjeta.appendChild(enlace);
+
+      if (recurso.nota) {
+        const nota = document.createElement("p");
+        nota.className = "resource-note";
+        nota.textContent = recurso.nota;
+        tarjeta.appendChild(nota);
+      }
+
+      fragmento.appendChild(tarjeta);
+    });
+
+    return fragmento;
+  }
+
   function mostrarSemana(indice) {
     const semana = semanasCiudadania[indice];
     numero.textContent = `Semana ${semana.numero}`;
@@ -98,6 +190,10 @@
 
     if (semana.tipo === "formulario" && semana.formulario) {
       contenido.appendChild(crearFormulario(semana));
+    }
+
+    if (semana.tipo === "materiales" && semana.ruta && semana.diapositivas) {
+      contenido.appendChild(crearMateriales(semana));
     }
 
     [...menu.children].forEach((boton, posicion) => {
