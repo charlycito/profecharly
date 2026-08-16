@@ -44,6 +44,17 @@ const semanasInnovacion = [
     materiales: [
       {
         orden: 3,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes: Ecosistema digital móvil",
+        descripcion: "Conserva este material como el apunte principal de la Semana 2 para repasar los conceptos y relaciones del ecosistema digital móvil.",
+        nota: "Puedes transcribir los apuntes o imprimirlos y pegarlos, pero deben estar completos en tu libreta.",
+        claseNota: "print",
+        boton: "Abrir apuntes de libreta",
+        abrir: "https://drive.google.com/file/d/1mKOaTC_RivvM_dUt4aoKxM2j3it94qnY/view?usp=sharing"
+      },
+      {
+        orden: 4,
         icono: "📘",
         tipo: "Manual de apoyo",
         titulo: "Manual visual del Explorador Digital",
@@ -52,7 +63,7 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1R5D24QLg0DW8W_lPrx0CcnSkfWeTWbfl/view?usp=sharing"
       },
       {
-        orden: 4,
+        orden: 5,
         icono: "📝",
         tipo: "Trabajo individual",
         titulo: "Bitácora del Explorador Digital",
@@ -63,7 +74,7 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1X8T2hpsmdM06fpfdf07rNWINE2YpF3eh/view?usp=sharing"
       },
       {
-        orden: 5,
+        orden: 6,
         icono: "✅",
         tipo: "Criterios de evaluación",
         titulo: "Lista de comprobación de la primera evidencia",
