@@ -61,8 +61,27 @@
     .qr-card .primary-button{width:100%;text-align:center}
     .privacy-note{margin:24px auto 0;padding:17px 20px;border-left:5px solid var(--gold);border-radius:12px;color:var(--muted);background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.06)}
     .privacy-note strong{color:var(--navy)}
+    .ordered-resource{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-bottom:20px;padding:22px 24px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+    .resource-step{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;color:#fff;background:var(--blue);font:700 1.05rem "Poppins",sans-serif}
+    .ordered-resource .eyebrow{margin:0 0 4px}
+    .ordered-resource h3{margin:0 0 6px;color:var(--navy);font-size:1.18rem}
+    .ordered-resource p:last-child{margin:0;color:var(--muted)}
+    .slides-card{overflow:hidden;margin-bottom:20px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+    .slides-card-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 27px;border-bottom:1px solid var(--border)}
+    .slides-heading{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+    .slides-card-header h3{margin:4px 0 6px;color:var(--navy);font-size:clamp(1.3rem,2.5vw,1.7rem)}
+    .slides-card-header p{margin:0;color:var(--muted)}
+    .slides-frame{height:720px;background:#dfe6eb}
+    .slides-frame iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+    .slides-help{margin:0;padding:15px 24px;color:var(--muted);background:#f8fafc;font-size:.85rem}
+    .week-resource-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;padding:24px;border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+    .week-resource-card .eyebrow{margin:0 0 4px}
+    .week-resource-card h3{margin:0 0 7px;color:var(--navy);font-size:1.18rem}
+    .week-resource-card p{margin:0;color:var(--muted)}
+    .resource-note{grid-column:2/4;margin:0;padding:13px 14px;border-left:4px solid #8b1d17;border-radius:9px;color:#65302c;background:#fff1f0;font-size:.92rem;font-weight:600;line-height:1.5}
     @media(max-width:900px){.welcome-grid,.week-layout,.diagnostic-layout{grid-template-columns:1fr}.teacher-card,.qr-card{max-width:520px;width:100%;margin:auto}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:210px}}
-    @media(max-width:620px){.welcome-card{padding:25px 21px}.subject-pillars{grid-template-columns:1fr}.week-viewer-header{padding:21px 18px}.diagnostic-card-header{padding:21px 20px 17px}.diagnostic-frame{height:620px}.diagnostic-actions{padding:16px 18px 21px}.diagnostic-actions .primary-button{display:block;width:100%}}
+    @media(max-width:760px){.ordered-resource,.week-resource-card{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button,.week-resource-card .primary-button,.resource-note{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
+    @media(max-width:620px){.welcome-card{padding:25px 21px}.subject-pillars{grid-template-columns:1fr}.week-viewer-header,.ordered-resource,.week-resource-card,.slides-card-header{padding:21px 18px}.diagnostic-card-header{padding:21px 20px 17px}.diagnostic-frame{height:620px}.diagnostic-actions{padding:16px 18px 21px}.diagnostic-actions .primary-button{display:block;width:100%}.slides-frame{height:460px}}
   </style>
 </head>
 <body id="inicio">
@@ -144,7 +163,7 @@
     <p>Ciudadanía Digital | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p>
     <a href="#inicio">Volver al inicio ↑</a>
   </footer>
-  <script src="semanas.js?v=1"></script>
-  <script src="ciudadania-digital.js?v=1"></script>
+  <script src="semanas.js?v=2"></script>
+  <script src="ciudadania-digital.js?v=2"></script>
 </body>
 </html>
