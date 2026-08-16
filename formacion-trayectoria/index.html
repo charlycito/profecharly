@@ -19,14 +19,17 @@
     .catalog-section{padding-bottom:70px}
     .catalog-toolbar{grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr);align-items:start;margin-bottom:18px}
     .result-count{grid-column:1/-1;display:inline-flex;align-items:center;justify-content:center;justify-self:start;min-height:42px;margin:0;padding:9px 15px;border:1px solid #b8d9ed;border-radius:999px;color:var(--navy);background:var(--blue-light);font-weight:800;box-shadow:0 4px 12px rgba(5,42,74,.08)}
-    .catalog-workspace{display:grid;grid-template-columns:minmax(315px,390px) minmax(0,1fr);gap:20px;align-items:start}
+    .catalog-workspace{display:grid;grid-template-columns:minmax(340px,430px) minmax(0,1fr);gap:20px;align-items:start}
     .certificate-list-panel,.viewer-shell{border:1px solid var(--border);border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
     .certificate-list-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border-bottom:1px solid var(--border)}
     .certificate-list-heading h3{margin:0;color:var(--navy);font-size:1rem}
     .certificate-list-heading span{color:var(--muted);font-size:.78rem}
-    .certificate-grid{display:flex;flex-direction:column;gap:10px;height:min(690px,calc(100vh - 170px));min-height:470px;padding:14px;overflow-y:auto;scrollbar-gutter:stable}
-    .certificate-card{min-height:0;padding:16px;border-radius:14px;box-shadow:none;transition:border-color .2s,background .2s,transform .2s}
-    .certificate-card:hover{border-color:#9fc9e3;background:#fbfdff;transform:translateY(-1px)}
+    .certificate-grid{display:flex;flex-direction:column;gap:12px;height:min(690px,calc(100vh - 170px));min-height:470px;padding:14px;overflow-y:auto;scrollbar-gutter:stable}
+    .certificate-grid::-webkit-scrollbar{width:10px}
+    .certificate-grid::-webkit-scrollbar-track{border-radius:999px;background:#edf3f7}
+    .certificate-grid::-webkit-scrollbar-thumb{border:2px solid #edf3f7;border-radius:999px;background:#8ba6b8}
+    .certificate-card{min-height:0;padding:16px;border-radius:14px;box-shadow:none;transition:border-color .2s,background .2s}
+    .certificate-card:hover{border-color:#9fc9e3;background:#fbfdff;transform:none}
     .certificate-card.is-selected{border-color:var(--blue);background:#eef8ff;box-shadow:inset 4px 0 var(--gold)}
     .certificate-card h3{margin:10px 0 8px;font-size:.94rem;line-height:1.38}
     .certificate-card p{display:none}
@@ -42,6 +45,15 @@
     .certificate-frame{height:min(650px,calc(100vh - 205px));min-height:470px}
     .viewer-placeholder{min-height:min(650px,calc(100vh - 205px))}
     .professional-note{margin-bottom:0}
+
+    @media(min-width:901px){
+      .certificate-card{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"tag year" "title title" "button button";flex:0 0 auto;align-items:center;column-gap:12px;min-height:132px}
+      .certificate-card .category-tag{grid-area:tag;justify-self:start}
+      .certificate-card h3{grid-area:title;margin:11px 0 13px;font-size:.94rem;line-height:1.42}
+      .certificate-card .certificate-meta{grid-area:year;justify-self:end;margin:0}
+      .certificate-card .certificate-meta span:nth-child(2){display:none}
+      .certificate-card button{grid-area:button;position:relative;z-index:1;width:100%;margin:0;cursor:pointer}
+    }
 
     @media(max-width:900px){
       body.viewer-modal-open{overflow:hidden}
