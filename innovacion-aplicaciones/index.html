@@ -21,9 +21,10 @@
     .innovation-card h3{margin:6px 0 9px;color:var(--navy);font-size:1.2rem}
     .innovation-card>p:not(.eyebrow):not(.resource-note){margin:0 0 20px;color:var(--muted)}
     .innovation-card .primary-button{align-self:flex-start;margin-top:auto}
+    html,body{max-width:100%;overflow-x:hidden}
     .weeks-section{padding-block:0 72px}
-    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start}
-    .week-menu{position:sticky;top:90px;padding:20px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start;width:100%;min-width:0;max-width:100%}
+    .week-menu{position:sticky;top:90px;width:100%;min-width:0;max-width:100%;padding:20px;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:0 8px 24px rgba(5,42,74,.07)}
     .week-menu h3{margin:0 0 14px;color:var(--navy);font-size:1.05rem}
     #menu-semanas{display:grid;gap:10px}
     .week-menu-button{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
@@ -33,7 +34,8 @@
     .week-menu-button:hover,.week-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light)}
     .week-menu-button.active{border-color:var(--blue);color:var(--white);background:var(--blue)}
     .week-menu-button.active span{color:#ffe08a}
-    .week-viewer{min-width:0}
+    .week-viewer,#materiales-semana{width:100%;min-width:0;max-width:100%}
+    .week-viewer h2,.week-viewer h3,.week-viewer h4,.week-viewer p,.week-menu-button strong{overflow-wrap:anywhere}
     .week-viewer-header{margin-bottom:20px;padding:24px 26px;border:1px solid #d8e7f2;border-left:6px solid var(--blue);border-radius:18px;background:linear-gradient(135deg,var(--blue-light),var(--white));box-shadow:0 8px 24px rgba(5,42,74,.07)}
     .week-viewer-header .eyebrow{margin:0 0 4px}
     .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
@@ -57,7 +59,7 @@
     .resource-note{margin:0 0 20px;padding:13px 14px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a;font-size:.9rem;line-height:1.5}
     .resource-note.evaluation{border-left-color:#8b1d17;background:#fff1f0;color:#65302c}
     @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}}
-    @media(max-width:760px){.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
+    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
     @media(max-width:480px){.slides-heading{grid-template-columns:1fr}.slides-frame{height:460px}.week-viewer-header,.ordered-resource,.slides-card-header{padding:21px 18px}}
   </style>
 </head>
