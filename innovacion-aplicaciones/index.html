@@ -8,32 +8,57 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../images/favicon.ico">
   <style>
-    .innovation-intro { padding-block: 54px 26px; }
-    .innovation-intro .section-heading { margin-bottom: 0; }
-    .week-section { padding-block: 20px 72px; }
-    .week-section > .section-heading { padding:24px 26px; border:1px solid #d8e7f2; border-left:6px solid var(--blue); border-radius:18px; background:linear-gradient(135deg,var(--blue-light),var(--white)); box-shadow:0 8px 24px rgba(5,42,74,.07); }
-    .week-section > .section-heading .eyebrow { margin-bottom:4px; }
-    .resource-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-bottom:30px; }
-    .innovation-card { display:flex; flex-direction:column; padding:26px; border:1px solid var(--border); border-top:4px solid var(--gold); border-radius:18px; background:var(--white); box-shadow:var(--shadow); }
-    .innovation-card-icon { display:grid; place-items:center; width:56px; height:56px; margin-bottom:17px; border-radius:15px; color:var(--blue); background:var(--blue-light); font-size:1.7rem; }
-    .innovation-card .eyebrow { margin:0; }
-    .innovation-card h3 { margin:6px 0 9px; color:var(--navy); font-size:1.2rem; }
-    .innovation-card > p:not(.eyebrow) { margin:0 0 20px; color:var(--muted); }
-    .innovation-card .primary-button { align-self:flex-start; margin-top:auto; }
-    .slides-card { overflow:hidden; border:1px solid var(--border); border-radius:18px; background:var(--white); box-shadow:var(--shadow); }
-    .slides-card-header { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:25px 27px; border-bottom:1px solid var(--border); }
-    .slides-card-header h2 { margin:5px 0 6px; color:var(--navy); font-size:clamp(1.35rem,2.5vw,1.75rem); }
-    .slides-card-header p { margin:0; color:var(--muted); }
-    .slides-frame { height:720px; background:#dfe6eb; }
-    .slides-frame iframe { display:block; width:100%; height:100%; border:0; background:var(--white); }
-    .slides-help { margin:0; padding:15px 24px; color:var(--muted); background:#f8fafc; font-size:.85rem; }
-    @media (max-width:760px) {
-      .resource-cards { grid-template-columns:1fr; }
-      .slides-card-header { align-items:flex-start; flex-direction:column; }
-      .slides-card-header .primary-button { width:100%; text-align:center; }
-      .slides-frame { height:520px; }
-    }
-    @media (max-width:420px) { .slides-frame { height:460px; } }
+    .innovation-intro{padding-block:54px 24px}
+    .innovation-intro .section-heading{margin-bottom:0}
+    .course-documents{padding-block:54px 8px}
+    .resource-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:30px}
+    .course-documents .resource-cards{margin-bottom:0}
+    .innovation-card{display:flex;flex-direction:column;padding:26px;border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .course-documents .innovation-card{border-top-color:var(--blue)}
+    .innovation-card-icon{display:grid;place-items:center;width:56px;height:56px;margin-bottom:17px;border-radius:15px;color:var(--blue);background:var(--blue-light);font-size:1.7rem}
+    .course-documents .innovation-card-icon{color:#725600;background:#fff1bd}
+    .innovation-card .eyebrow{margin:0}
+    .innovation-card h3{margin:6px 0 9px;color:var(--navy);font-size:1.2rem}
+    .innovation-card>p:not(.eyebrow):not(.resource-note){margin:0 0 20px;color:var(--muted)}
+    .innovation-card .primary-button{align-self:flex-start;margin-top:auto}
+    .weeks-section{padding-block:0 72px}
+    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start}
+    .week-menu{position:sticky;top:90px;padding:20px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-menu h3{margin:0 0 14px;color:var(--navy);font-size:1.05rem}
+    #menu-semanas{display:grid;gap:10px}
+    .week-menu-button{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
+    .week-menu-button span,.week-menu-button strong{display:block}
+    .week-menu-button span{margin-bottom:3px;color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .week-menu-button strong{font-size:.88rem;line-height:1.35}
+    .week-menu-button:hover,.week-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light)}
+    .week-menu-button.active{border-color:var(--blue);color:var(--white);background:var(--blue)}
+    .week-menu-button.active span{color:#ffe08a}
+    .week-viewer{min-width:0}
+    .week-viewer-header{margin-bottom:20px;padding:24px 26px;border:1px solid #d8e7f2;border-left:6px solid var(--blue);border-radius:18px;background:linear-gradient(135deg,var(--blue-light),var(--white));box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-viewer-header .eyebrow{margin:0 0 4px}
+    .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
+    .week-viewer-header p:last-child{margin:0;color:var(--muted)}
+    .ordered-resource{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-bottom:20px;padding:22px 24px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .resource-step{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;color:var(--white);background:var(--blue);font:700 1.05rem "Poppins",sans-serif}
+    .ordered-resource .eyebrow{margin:0 0 4px}
+    .ordered-resource h3{margin:0 0 6px;color:var(--navy);font-size:1.18rem}
+    .ordered-resource p:last-child{margin:0;color:var(--muted)}
+    .slides-card{overflow:hidden;margin-bottom:20px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .slides-card-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 27px;border-bottom:1px solid var(--border)}
+    .slides-heading{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+    .slides-card-header h3{margin:4px 0 6px;color:var(--navy);font-size:clamp(1.3rem,2.5vw,1.7rem)}
+    .slides-card-header p{margin:0;color:var(--muted)}
+    .slides-frame{height:720px;background:#dfe6eb}
+    .slides-frame iframe{display:block;width:100%;height:100%;border:0;background:var(--white)}
+    .slides-help{margin:0;padding:15px 24px;color:var(--muted);background:#f8fafc;font-size:.85rem}
+    .week-resources{margin-bottom:0}
+    .week-resources .innovation-card{position:relative}
+    .week-resources .resource-step{position:absolute;top:22px;right:22px;width:40px;height:40px}
+    .resource-note{margin:0 0 20px;padding:13px 14px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a;font-size:.9rem;line-height:1.5}
+    .resource-note.evaluation{border-left-color:#8b1d17;background:#fff1f0;color:#65302c}
+    @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}}
+    @media(max-width:760px){.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
+    @media(max-width:480px){.slides-heading{grid-template-columns:1fr}.slides-frame{height:460px}.week-viewer-header,.ordered-resource,.slides-card-header{padding:21px 18px}}
   </style>
 </head>
 <body>
@@ -43,7 +68,8 @@
     <a class="brand" href="../index.html">PROFE CHARLY <small>Informática BUAP</small></a>
     <nav aria-label="Navegación de la asignatura">
       <a href="../index.html">Inicio</a>
-      <a href="#semana-1">Semana 1</a>
+      <a href="#documentos-asignatura">Guía y manual</a>
+      <a href="#semanas">Semanas</a>
       <a href="../index.html#contacto">Contacto</a>
     </nav>
   </header>
@@ -58,53 +84,85 @@
       </div>
     </section>
 
-    <section class="section-shell innovation-intro" aria-labelledby="bienvenida">
+    <section class="section-shell course-documents" id="documentos-asignatura" aria-labelledby="titulo-documentos-asignatura">
       <div class="section-heading">
-        <p class="eyebrow">Materiales de clase</p>
-        <h2 id="bienvenida">Materiales por semana</h2>
-        <p>Cada semana reúne en un mismo lugar las actividades, rutas, presentaciones y recursos necesarios para avanzar en la asignatura.</p>
-      </div>
-    </section>
-
-    <section class="section-shell week-section" id="semana-1" aria-labelledby="titulo-semana-1">
-      <div class="section-heading">
-        <p class="eyebrow">Semana 1</p>
-        <h2 id="titulo-semana-1">De consumidores a creadores</h2>
-        <p>Consulta y descarga los materiales que utilizaremos durante esta semana.</p>
+        <p class="eyebrow">Consulta permanente</p>
+        <h2 id="titulo-documentos-asignatura">Documentos de la asignatura</h2>
+        <p>Consulta estos materiales generales antes de revisar los recursos correspondientes a cada semana.</p>
       </div>
 
       <div class="resource-cards">
         <article class="innovation-card">
-          <div class="innovation-card-icon" aria-hidden="true">🔎</div>
-          <p class="eyebrow">Actividad del estudiante</p>
-          <h3>Radiografía de una aplicación cotidiana</h3>
-          <p>Analiza una aplicación que utilizas, identifica qué necesidad resuelve y reconoce sus elementos principales.</p>
-          <a class="primary-button" href="https://drive.google.com/file/d/1yvy-QZaEbUC2gPwWWu_lQY2WmzDYYDLH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir radiografía</a>
+          <div class="innovation-card-icon" aria-hidden="true">📘</div>
+          <p class="eyebrow">Documento del curso</p>
+          <h3>Guía del estudiante</h3>
+          <p>Conoce el propósito de la asignatura, sus contenidos, actividades, productos y orientaciones para el periodo Otoño 2026.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1J4uA9LIX-7GHHnHHeDeNhr2_gT3RQgkr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar guía del estudiante</a>
         </article>
 
         <article class="innovation-card">
-          <div class="innovation-card-icon" aria-hidden="true">🧭</div>
-          <p class="eyebrow">Guía de la semana</p>
-          <h3>Ruta de aprendizaje</h3>
-          <p>Sigue el recorrido de la Semana 1, identifica sus momentos y revisa las actividades que realizarás.</p>
-          <a class="primary-button" href="https://drive.google.com/file/d/1l1ZmPLT_OQUh3gyYUoJVCTEkFQpK8GR6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir ruta de aprendizaje</a>
+          <div class="innovation-card-icon" aria-hidden="true">🧰</div>
+          <p class="eyebrow">Trabajo práctico</p>
+          <h3>Manual de prácticas</h3>
+          <p>Revisa las indicaciones, procedimientos y actividades prácticas que desarrollarás durante la asignatura en el periodo Otoño 2026.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1FjjxDWVh6ALRFKaAFBkHbTyM14D9Y0Hr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar manual de prácticas</a>
         </article>
       </div>
+    </section>
 
-      <article class="slides-card" aria-labelledby="titulo-diapositivas">
-        <header class="slides-card-header">
-          <div>
-            <p class="eyebrow">Presentación de clase</p>
-            <h2 id="titulo-diapositivas">Diapositivas: De consumidores a creadores</h2>
-            <p>Visualiza aquí la presentación completa de la Semana 1.</p>
-          </div>
-          <a class="primary-button" href="https://drive.google.com/file/d/1TGSOkLQXT-eXmss1ggY7qK_HrpfxYWfc/view?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a>
-        </header>
-        <div class="slides-frame">
-          <iframe src="https://drive.google.com/file/d/1TGSOkLQXT-eXmss1ggY7qK_HrpfxYWfc/preview" title="Diapositivas de la Semana 1: De consumidores a creadores" loading="lazy" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <p class="slides-help">Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.</p>
-      </article>
+    <section class="section-shell innovation-intro" id="semanas" aria-labelledby="bienvenida">
+      <div class="section-heading">
+        <p class="eyebrow">Materiales de clase</p>
+        <h2 id="bienvenida">Materiales por semana</h2>
+        <p>Selecciona una semana. Encontrarás sus materiales en el orden recomendado para trabajar en clase y preparar las evidencias.</p>
+      </div>
+    </section>
+
+    <section class="section-shell weeks-section" aria-label="Semanas disponibles de Innovación de Aplicaciones">
+      <div class="week-layout">
+        <aside class="week-menu" aria-label="Seleccionar semana">
+          <h3>Semanas</h3>
+          <div id="menu-semanas"></div>
+        </aside>
+
+        <article class="week-viewer" aria-live="polite">
+          <header class="week-viewer-header">
+            <p class="eyebrow" id="numero-semana"></p>
+            <h2 id="titulo-semana"></h2>
+            <p id="descripcion-semana"></p>
+          </header>
+
+          <section class="ordered-resource" aria-labelledby="titulo-ruta-semana">
+            <span class="resource-step" aria-label="Paso 1">1</span>
+            <div>
+              <p class="eyebrow">Comienza aquí</p>
+              <h3 id="titulo-ruta-semana"></h3>
+              <p id="descripcion-ruta-semana"></p>
+            </div>
+            <a class="primary-button" id="abrir-ruta-semana" href="#" target="_blank" rel="noopener noreferrer">Abrir ruta de aprendizaje</a>
+          </section>
+
+          <article class="slides-card" aria-labelledby="titulo-diapositivas">
+            <header class="slides-card-header">
+              <div class="slides-heading">
+                <span class="resource-step" aria-label="Paso 2">2</span>
+                <div>
+                  <p class="eyebrow">Presentación de clase</p>
+                  <h3 id="titulo-diapositivas"></h3>
+                  <p id="descripcion-diapositivas"></p>
+                </div>
+              </div>
+              <a class="primary-button" id="abrir-diapositivas" href="#" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a>
+            </header>
+            <div class="slides-frame">
+              <iframe id="visor-diapositivas" src="about:blank" title="Diapositivas de la semana seleccionada" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <p class="slides-help">Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.</p>
+          </article>
+
+          <div class="resource-cards week-resources" id="materiales-semana"></div>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -112,5 +170,7 @@
     <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
     <p>Innovación de Aplicaciones</p>
   </footer>
+  <script src="semanas.js?v=1"></script>
+  <script src="innovacion-aplicaciones.js?v=1"></script>
 </body>
 </html>
