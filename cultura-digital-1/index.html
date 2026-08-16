@@ -27,9 +27,10 @@
     .teacher-card p{margin:0;color:var(--muted)}
     .teacher-card a{color:var(--blue);font-weight:600}
     .weeks-intro{padding-bottom:20px}
+    html,body{max-width:100%;overflow-x:hidden}
     .weeks-section{padding:0 0 72px}
-    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start}
-    .week-menu{position:sticky;top:90px;padding:20px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start;width:100%;min-width:0;max-width:100%}
+    .week-menu{position:sticky;top:90px;width:100%;min-width:0;max-width:100%;padding:20px;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.07)}
     .week-menu h3{margin:0 0 14px;color:var(--navy);font-size:1.05rem}
     #menu-semanas{display:grid;gap:10px}
     .week-menu-button{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
@@ -39,7 +40,8 @@
     .week-menu-button:hover,.week-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light)}
     .week-menu-button.active{border-color:var(--blue);color:#fff;background:var(--blue)}
     .week-menu-button.active span{color:#ffe08a}
-    .week-viewer{min-width:0}
+    .week-viewer,#contenido-semana{width:100%;min-width:0;max-width:100%}
+    .week-viewer h2,.week-viewer h3,.week-viewer h4,.week-viewer p,.week-menu-button strong{overflow-wrap:anywhere}
     .week-viewer-header{margin-bottom:20px;padding:24px 26px;border:1px solid #d8e7f2;border-left:6px solid var(--blue);border-radius:18px;background:linear-gradient(135deg,var(--blue-light),#fff);box-shadow:0 8px 24px rgba(5,42,74,.07)}
     .week-viewer-header .eyebrow{margin:0 0 4px}
     .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
@@ -80,7 +82,7 @@
     .week-resource-card p{margin:0;color:var(--muted)}
     .resource-note{grid-column:2/4;margin:0;padding:13px 14px;border-left:4px solid #8b1d17;border-radius:9px;color:#65302c;background:#fff1f0;font-size:.92rem;font-weight:600;line-height:1.5}
     @media(max-width:900px){.welcome-grid,.week-layout,.diagnostic-layout{grid-template-columns:1fr}.teacher-card,.qr-card{max-width:520px;width:100%;margin:auto}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:210px}}
-    @media(max-width:760px){.ordered-resource,.week-resource-card{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button,.week-resource-card .primary-button,.resource-note{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
+    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.ordered-resource,.week-resource-card{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button,.week-resource-card .primary-button,.resource-note{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
     @media(max-width:620px){.welcome-card{padding:25px 21px}.subject-pillars{grid-template-columns:1fr}.week-viewer-header,.ordered-resource,.week-resource-card,.slides-card-header{padding:21px 18px}.diagnostic-card-header{padding:21px 20px 17px}.diagnostic-frame{height:620px}.diagnostic-actions{padding:16px 18px 21px}.diagnostic-actions .primary-button{display:block;width:100%}.slides-frame{height:460px}}
   </style>
 </head>
