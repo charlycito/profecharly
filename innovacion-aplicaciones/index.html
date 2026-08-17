@@ -40,6 +40,18 @@
     .week-viewer-header .eyebrow{margin:0 0 4px}
     .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
     .week-viewer-header p:last-child{margin:0;color:var(--muted)}
+    .preparation-alert{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;margin-bottom:20px;padding:24px 26px;border:2px solid #f1a208;border-left:8px solid #db5700;border-radius:18px;background:linear-gradient(135deg,#fff2bf 0%,#fffaf0 52%,#fff 100%);box-shadow:0 10px 28px rgba(166,81,0,.16)}
+    .preparation-alert[hidden]{display:none}
+    .preparation-icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;color:#8b3300;background:#ffd86f;font-size:2rem;box-shadow:inset 0 0 0 1px rgba(139,51,0,.14)}
+    .preparation-alert .eyebrow{margin:0 0 4px;color:#a03c00}
+    .preparation-alert h3{margin:0 0 7px;color:#622500;font-size:clamp(1.3rem,2.5vw,1.65rem)}
+    .preparation-alert p{margin:0;color:#654833}
+    .preparation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 18px;margin:14px 0;padding:0;list-style:none}
+    .preparation-list li{position:relative;padding-left:24px;color:#503523;font-size:.9rem;line-height:1.45}
+    .preparation-list li::before{position:absolute;left:0;content:"✓";color:#c64b00;font-weight:900}
+    .preparation-reminder{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.75);font-size:.88rem;font-weight:700;line-height:1.5}
+    .preparation-button{display:inline-block;padding:12px 17px;border-radius:10px;color:#fff;background:#c94c00;font-size:.9rem;font-weight:800;text-align:center;text-decoration:none;white-space:nowrap;box-shadow:0 7px 16px rgba(148,52,0,.22)}
+    .preparation-button:hover,.preparation-button:focus-visible{background:#a93f00;outline:3px solid rgba(201,76,0,.22);outline-offset:3px}
     .ordered-resource{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-bottom:20px;padding:22px 24px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
     .resource-step{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;color:var(--white);background:var(--blue);font:700 1.05rem "Poppins",sans-serif}
     .ordered-resource .eyebrow{margin:0 0 4px}
@@ -58,8 +70,8 @@
     .week-resources .resource-step{position:absolute;top:22px;right:22px;width:40px;height:40px}
     .resource-note{margin:0 0 20px;padding:13px 14px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a;font-size:.9rem;line-height:1.5}
     .resource-note.evaluation{border-left-color:#8b1d17;background:#fff1f0;color:#65302c}
-    @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}}
-    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
+    @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}.preparation-alert{grid-template-columns:auto minmax(0,1fr)}.preparation-button{grid-column:1/-1}}
+    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}.preparation-alert{grid-template-columns:1fr;padding:22px 20px}.preparation-icon{width:54px;height:54px}.preparation-list{grid-template-columns:1fr}.preparation-button{grid-column:auto;width:100%;white-space:normal}}
     @media(max-width:480px){.slides-heading{grid-template-columns:1fr}.slides-frame{height:460px}.week-viewer-header,.ordered-resource,.slides-card-header{padding:21px 18px}}
   </style>
 </head>
@@ -134,6 +146,18 @@
             <p id="descripcion-semana"></p>
           </header>
 
+          <section class="preparation-alert" id="preparacion-semana" aria-labelledby="titulo-preparacion-semana" hidden>
+            <div class="preparation-icon" aria-hidden="true">⚠️</div>
+            <div>
+              <p class="eyebrow">Preparación obligatoria para la próxima semana</p>
+              <h3 id="titulo-preparacion-semana"></h3>
+              <p id="descripcion-preparacion-semana"></p>
+              <ul class="preparation-list" id="lista-preparacion-semana"></ul>
+              <p class="preparation-reminder" id="nota-preparacion-semana"></p>
+            </div>
+            <a class="preparation-button" id="abrir-preparacion-semana" target="_blank" rel="noopener noreferrer"></a>
+          </section>
+
           <section class="ordered-resource" aria-labelledby="titulo-ruta-semana">
             <span class="resource-step" aria-label="Paso 1">1</span>
             <div>
@@ -172,7 +196,7 @@
     <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
     <p>Innovación de Aplicaciones</p>
   </footer>
-  <script src="semanas.js?v=2"></script>
-  <script src="innovacion-aplicaciones.js?v=1"></script>
+  <script src="semanas.js?v=3"></script>
+  <script src="innovacion-aplicaciones.js?v=2"></script>
 </body>
 </html>
