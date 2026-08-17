@@ -40,7 +40,7 @@
     .week-viewer-header .eyebrow{margin:0 0 4px}
     .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
     .week-viewer-header p:last-child{margin:0;color:var(--muted)}
-    .preparation-alert{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;margin-bottom:20px;padding:24px 26px;border:2px solid #f1a208;border-left:8px solid #db5700;border-radius:18px;background:linear-gradient(135deg,#fff2bf 0%,#fffaf0 52%,#fff 100%);box-shadow:0 10px 28px rgba(166,81,0,.16)}
+    .preparation-alert{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;margin:20px 0 0;padding:24px 26px;border:2px solid #f1a208;border-left:8px solid #db5700;border-radius:18px;background:linear-gradient(135deg,#fff2bf 0%,#fffaf0 52%,#fff 100%);box-shadow:0 10px 28px rgba(166,81,0,.16)}
     .preparation-alert[hidden]{display:none}
     .preparation-icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;color:#8b3300;background:#ffd86f;font-size:2rem;box-shadow:inset 0 0 0 1px rgba(139,51,0,.14)}
     .preparation-alert .eyebrow{margin:0 0 4px;color:#a03c00}
@@ -146,18 +146,6 @@
             <p id="descripcion-semana"></p>
           </header>
 
-          <section class="preparation-alert" id="preparacion-semana" aria-labelledby="titulo-preparacion-semana" hidden>
-            <div class="preparation-icon" aria-hidden="true">⚠️</div>
-            <div>
-              <p class="eyebrow">Preparación obligatoria para la próxima semana</p>
-              <h3 id="titulo-preparacion-semana"></h3>
-              <p id="descripcion-preparacion-semana"></p>
-              <ul class="preparation-list" id="lista-preparacion-semana"></ul>
-              <p class="preparation-reminder" id="nota-preparacion-semana"></p>
-            </div>
-            <a class="preparation-button" id="abrir-preparacion-semana" target="_blank" rel="noopener noreferrer"></a>
-          </section>
-
           <section class="ordered-resource" aria-labelledby="titulo-ruta-semana">
             <span class="resource-step" aria-label="Paso 1">1</span>
             <div>
@@ -187,6 +175,18 @@
           </article>
 
           <div class="resource-cards week-resources" id="materiales-semana"></div>
+
+          <section class="preparation-alert" id="preparacion-semana" aria-labelledby="titulo-preparacion-semana" hidden>
+            <div class="preparation-icon" aria-hidden="true">⚠️</div>
+            <div>
+              <p class="eyebrow">Prepárate con anticipación para la Semana 3</p>
+              <h3 id="titulo-preparacion-semana"></h3>
+              <p id="descripcion-preparacion-semana"></p>
+              <ul class="preparation-list" id="lista-preparacion-semana"></ul>
+              <p class="preparation-reminder" id="nota-preparacion-semana"></p>
+            </div>
+            <a class="preparation-button" id="abrir-preparacion-semana" target="_blank" rel="noopener noreferrer"></a>
+          </section>
         </article>
       </div>
     </section>
@@ -196,7 +196,7 @@
     <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
     <p>Innovación de Aplicaciones</p>
   </footer>
-  <script src="semanas.js?v=3"></script>
+  <script src="semanas.js?v=4"></script>
   <script src="innovacion-aplicaciones.js?v=2"></script>
 </body>
 </html>
