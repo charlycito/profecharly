@@ -31,16 +31,16 @@ const semanasInnovacion = [
     titulo: "Ecosistema digital móvil",
     descripcion: "Reconoce los componentes de un ecosistema digital móvil y organiza sus relaciones mediante un mapa conceptual.",
     preparacion: {
-      titulo: "¿Qué necesitas para la próxima semana?",
-      descripcion: "Revisa este documento con anticipación y prepara todo lo solicitado antes de la siguiente clase.",
+      titulo: "¿Qué necesitas para la Semana 3?",
+      descripcion: "Este documento reúne lo que deberás tener listo para trabajar durante la Semana 3. Revísalo con tiempo; no corresponde a la clase de la Semana 2.",
       lista: [
         "Cuenta de Google verificada: debes conocer tu correo y contraseña.",
         "TuAvatar.png: tu avatar digital creado con inteligencia artificial.",
         "Saludo.mp3: una grabación clara de entre 5 y 8 segundos.",
         "Sonido.mp3: un fragmento musical seguro de entre 5 y 10 segundos."
       ],
-      nota: "No lo dejes para el último momento. Comprueba que puedes iniciar sesión y que los tres archivos están guardados correctamente en Drive o en una memoria USB.",
-      boton: "Revisar lo que debo preparar",
+      nota: "No tienes que llevarlo de inmediato si aún estás cursando la Semana 2. Organízate para llegar preparado a la Semana 3 y comprueba que tus archivos estén guardados correctamente en Drive o en una memoria USB.",
+      boton: "Revisar preparación para la Semana 3",
       abrir: "https://drive.google.com/file/d/1ZxV6Rpigu2A_HJPgLl6sZHe-8C3T13zZ/view?usp=drivesdk"
     },
     ruta: {
