@@ -3,6 +3,12 @@
   const numero = document.querySelector("#numero-semana");
   const titulo = document.querySelector("#titulo-semana");
   const descripcion = document.querySelector("#descripcion-semana");
+  const preparacion = document.querySelector("#preparacion-semana");
+  const preparacionTitulo = document.querySelector("#titulo-preparacion-semana");
+  const preparacionDescripcion = document.querySelector("#descripcion-preparacion-semana");
+  const preparacionLista = document.querySelector("#lista-preparacion-semana");
+  const preparacionNota = document.querySelector("#nota-preparacion-semana");
+  const preparacionEnlace = document.querySelector("#abrir-preparacion-semana");
   const tituloRuta = document.querySelector("#titulo-ruta-semana");
   const descripcionRuta = document.querySelector("#descripcion-ruta-semana");
   const abrirRuta = document.querySelector("#abrir-ruta-semana");
@@ -64,6 +70,24 @@
     numero.textContent = `Semana ${semana.numero}`;
     titulo.textContent = semana.titulo;
     descripcion.textContent = semana.descripcion;
+
+    if (semana.preparacion) {
+      preparacion.hidden = false;
+      preparacionTitulo.textContent = semana.preparacion.titulo;
+      preparacionDescripcion.textContent = semana.preparacion.descripcion;
+      preparacionLista.replaceChildren(...semana.preparacion.lista.map(elemento => {
+        const item = document.createElement("li");
+        item.textContent = elemento;
+        return item;
+      }));
+      preparacionNota.textContent = semana.preparacion.nota;
+      preparacionEnlace.href = semana.preparacion.abrir;
+      preparacionEnlace.textContent = semana.preparacion.boton;
+    } else {
+      preparacion.hidden = true;
+      preparacionLista.replaceChildren();
+      preparacionEnlace.removeAttribute("href");
+    }
 
     tituloRuta.textContent = semana.ruta.titulo;
     descripcionRuta.textContent = semana.ruta.descripcion;
