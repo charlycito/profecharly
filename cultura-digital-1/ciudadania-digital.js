@@ -92,23 +92,26 @@
   function crearMateriales(semana) {
     const fragmento = document.createDocumentFragment();
 
-    const ruta = document.createElement("section");
-    ruta.className = "ordered-resource";
-    ruta.innerHTML = `
-      <span class="resource-step" aria-label="Paso ${semana.ruta.orden}">${semana.ruta.orden}</span>
-      <div>
-        <p class="eyebrow">Comienza aquí</p>
-        <h3>${semana.ruta.titulo}</h3>
-        <p>${semana.ruta.descripcion}</p>
-      </div>
-    `;
-    const abrirRuta = document.createElement("a");
-    abrirRuta.className = "primary-button";
-    abrirRuta.href = semana.ruta.abrir;
-    abrirRuta.target = "_blank";
-    abrirRuta.rel = "noopener noreferrer";
-    abrirRuta.textContent = "Abrir ruta de aprendizaje";
-    ruta.appendChild(abrirRuta);
+    if (semana.ruta) {
+      const ruta = document.createElement("section");
+      ruta.className = "ordered-resource";
+      ruta.innerHTML = `
+        <span class="resource-step" aria-label="Paso ${semana.ruta.orden}">${semana.ruta.orden}</span>
+        <div>
+          <p class="eyebrow">Comienza aquí</p>
+          <h3>${semana.ruta.titulo}</h3>
+          <p>${semana.ruta.descripcion}</p>
+        </div>
+      `;
+      const abrirRuta = document.createElement("a");
+      abrirRuta.className = "primary-button";
+      abrirRuta.href = semana.ruta.abrir;
+      abrirRuta.target = "_blank";
+      abrirRuta.rel = "noopener noreferrer";
+      abrirRuta.textContent = "Abrir ruta de aprendizaje";
+      ruta.appendChild(abrirRuta);
+      fragmento.appendChild(ruta);
+    }
 
     const diapositivas = document.createElement("article");
     diapositivas.className = "slides-card";
@@ -146,7 +149,7 @@
     ayuda.textContent = "Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.";
     diapositivas.append(cabecera, marco, ayuda);
 
-    fragmento.append(ruta, diapositivas);
+    fragmento.appendChild(diapositivas);
 
     semana.materiales.forEach((recurso) => {
       const tarjeta = document.createElement("article");
@@ -167,6 +170,17 @@
       enlace.rel = "noopener noreferrer";
       enlace.textContent = recurso.boton;
       tarjeta.appendChild(enlace);
+
+      if (recurso.spotify) {
+        tarjeta.classList.add("podcast-card");
+        const reproductor = document.createElement("iframe");
+        reproductor.className = "podcast-player";
+        reproductor.src = recurso.spotify;
+        reproductor.title = `Podcast de la Semana ${semana.numero}: ${recurso.titulo}`;
+        reproductor.loading = "lazy";
+        reproductor.setAttribute("allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
+        tarjeta.appendChild(reproductor);
+      }
 
       if (recurso.nota) {
         const nota = document.createElement("p");
@@ -192,7 +206,7 @@
       contenido.appendChild(crearFormulario(semana));
     }
 
-    if (semana.tipo === "materiales" && semana.ruta && semana.diapositivas) {
+    if (semana.tipo === "materiales" && semana.diapositivas) {
       contenido.appendChild(crearMateriales(semana));
     }
 
