@@ -98,5 +98,34 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/17H94D5C5WcsIUdfkD4tRyXwgGFQgQO7e/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 3,
+    titulo: "Mi Avatar",
+    descripcion: "Construye tu primera aplicación en MIT App Inventor integrando tu avatar, una grabación de voz y un fragmento musical.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Manual visual paso a paso",
+      encabezado: "Manual visual Mi Avatar",
+      titulo: "Manual visual Mi Avatar",
+      descripcion: "Mantén abierto este manual mientras elaboras la actividad en MIT App Inventor y avanza siguiendo cada indicación en orden.",
+      ayuda: "Consulta el manual dentro de este visor mientras trabajas. Si no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1KYcUfCnw92RxqgigkeXKssO1VQ_4_rfq/preview",
+      abrir: "https://drive.google.com/file/d/1KYcUfCnw92RxqgigkeXKssO1VQ_4_rfq/view?usp=sharing"
+    },
+    materiales: [
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: apuntes de la Semana 3",
+        descripcion: "Conserva en tu libreta los conceptos, procedimientos y reflexiones de la actividad Mi Avatar.",
+        nota: "Transcribe el contenido en tu libreta o imprime las páginas y pégalas. En cualquiera de las dos opciones, responde por escrito todas las reflexiones indicadas en el material.",
+        claseNota: "print",
+        boton: "Abrir Súper libreta",
+        abrir: "https://drive.google.com/file/d/1CXPrqVW0dh0vVrUVRz4bywSUjAoSFX_Y/view?usp=sharing"
+      }
+    ]
   }
 ];
