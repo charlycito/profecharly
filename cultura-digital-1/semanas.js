@@ -43,5 +43,48 @@ const semanasCiudadania = [
         abrir: "https://drive.google.com/file/d/1sPKuoT3MveZ31FolG7ObcBgs2j_DG5Po/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 3,
+    titulo: "¿De quién es el software?",
+    descripcion: "Distingue entre software libre y software gratuito, conoce sus libertades y analiza las opciones que utilizas todos los días.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "Misión: Software Libre",
+      descripcion: "Consulta la presentación de la Semana 3 para conocer la historia del software libre, el Proyecto GNU, a Richard Stallman y las cuatro libertades.",
+      pdf: "https://drive.google.com/file/d/12IVUO_YFmAwugVZW0UjjodQId35GnEN-/preview",
+      abrir: "https://drive.google.com/file/d/12IVUO_YFmAwugVZW0UjjodQId35GnEN-/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Actividad colaborativa",
+        titulo: "Minilaboratorio: ¿Libre o solo gratis?",
+        descripcion: "En equipos, investiguen dos programas y comparen si son gratuitos, si son software libre y qué libertades ofrecen.",
+        nota: "Puedes imprimir el minilaboratorio y resolverlo en la hoja, o realizar toda la actividad en tu libreta. En ambos casos, completa la tabla y la conclusión del equipo.",
+        boton: "Abrir minilaboratorio",
+        abrir: "https://drive.google.com/file/d/1D4iOMgrosXPtfYY3zTws9EQ15XL3QG53/view?usp=drivesdk"
+      },
+      {
+        orden: 3,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Notas: Software libre",
+        descripcion: "Conserva en tu libreta la historia del software libre, el Proyecto GNU, la diferencia entre libre y gratuito y las cuatro libertades.",
+        nota: "Puedes imprimir la hoja y pegarla en tu libreta o transcribirla completa. En cualquiera de las dos opciones, responde por escrito todas las reflexiones indicadas.",
+        boton: "Abrir notas para libreta",
+        abrir: "https://drive.google.com/file/d/1gtU75GhoBvntU7wfm0Ir34zkv97wrsWr/view?usp=drivesdk"
+      },
+      {
+        orden: 4,
+        tipo: "Podcast de apoyo",
+        titulo: "Podcast de la Semana 3",
+        descripcion: "Escucha el episodio para reforzar los conceptos principales de la Semana 3 y diferenciar libertad de gratuidad.",
+        boton: "Abrir en Spotify",
+        spotify: "https://open.spotify.com/embed/episode/7CElDxIbPg9cz36CqdXYgm",
+        abrir: "https://open.spotify.com/episode/7CElDxIbPg9cz36CqdXYgm?si=Ccs4G9dmSiqL5APKYywaCQ"
+      }
+    ]
   }
 ];
