@@ -136,7 +136,7 @@
         <p><strong>Correo:</strong> <a href="mailto:jcarlos.arellano@correo.buap.mx">jcarlos.arellano@correo.buap.mx</a></p>
         <p><strong>Cubículo:</strong> 213</p>
         <span class="resource-tag">Formación y actualización profesional</span>
-        <p>Conoce mi trayectoria académica, experiencias de actualización docente y un catálogo de <strong>70 constancias</strong> de formación continua (2023–2026).</p>
+        <p>Conoce mi trayectoria académica, experiencias de actualización docente y un catálogo de <strong><span id="homeCertificateCount">91</span> constancias</strong> de formación continua (<span id="homeCertificatePeriod">2022–2026</span>).</p>
         <a class="primary-button" href="formacion-trayectoria/index.html" style="color:#ffffff;">Ver mi formación y constancias →</a>
       </div>
     </section>
@@ -157,5 +157,62 @@
   <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
   <script src="avisos.js?v=2"></script>
   <script src="script.js"></script>
+  <script src="formacion-trayectoria/constancias-config.js?v=1"></script>
+  <script>
+    (() => {
+      const endpoint = String(window.PROFE_CHARLY_CONSTANCIAS_ENDPOINT || "").trim();
+      const countElement = document.querySelector("#homeCertificateCount");
+      const periodElement = document.querySelector("#homeCertificatePeriod");
+      const endpointPattern = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/;
+      if (!endpointPattern.test(endpoint) || !countElement || !periodElement) return;
+
+      const callback = "profeCharlyHomeConstancias" + Date.now();
+      const request = document.createElement("script");
+      let finished = false;
+      const cleanup = () => {
+        delete window[callback];
+        request.remove();
+      };
+      const timeout = window.setTimeout(() => {
+        if (finished) return;
+        finished = true;
+        cleanup();
+      }, 12000);
+
+      window[callback] = payload => {
+        if (finished) return;
+        finished = true;
+        window.clearTimeout(timeout);
+        cleanup();
+
+        const seen = new Set();
+        const items = (payload && payload.items || []).filter(item => {
+          const valid = item && /^\d{4}$/.test(String(item.year)) &&
+            /^[A-Za-z0-9_-]{10,}$/.test(String(item.id));
+          if (!valid || seen.has(item.id)) return false;
+          seen.add(item.id);
+          return true;
+        });
+        if (!(payload && payload.ok && items.length)) return;
+
+        const years = [...new Set(items.map(item => String(item.year)))]
+          .sort((a, b) => a.localeCompare(b, "es", {numeric: true}));
+        countElement.textContent = String(items.length);
+        periodElement.textContent = years[0] === years[years.length - 1]
+          ? years[0]
+          : years[0] + "–" + years[years.length - 1];
+      };
+
+      request.onerror = () => {
+        if (finished) return;
+        finished = true;
+        window.clearTimeout(timeout);
+        cleanup();
+      };
+      request.src = endpoint + (endpoint.includes("?") ? "&" : "?") +
+        "callback=" + encodeURIComponent(callback);
+      document.head.appendChild(request);
+    })();
+  </script>
 </body>
 </html>
