@@ -60,18 +60,6 @@
     .condonation-alert strong{color:#8b1d17}
     .student-alerts{padding-top:56px}
     .student-alerts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .parent-meeting-alert{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:22px;margin-bottom:20px;padding:28px;border:2px solid #0878c9;border-radius:20px;background:linear-gradient(135deg,#f1f9ff,#fff);box-shadow:0 10px 28px rgba(5,93,158,.12)}
-    .parent-meeting-alert h3{margin:9px 0 10px;color:var(--navy);font-size:1.45rem}
-    .parent-meeting-alert p{margin:0;color:var(--muted)}
-    .parent-meeting-status{display:inline-block;padding:6px 11px;border-radius:999px;color:#fff;background:var(--blue);font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-    .parent-meeting-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
-    .parent-meeting-detail{padding:15px 16px;border:1px solid #b9dcf2;border-radius:13px;background:#fff}
-    .parent-meeting-detail span{display:block;margin-bottom:3px;color:#0565ac;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-    .parent-meeting-detail strong{color:var(--navy);font-size:1rem}
-    .parent-meeting-reminders{display:flex;flex-direction:column;justify-content:center;padding:22px;border-radius:16px;color:#fff;background:linear-gradient(145deg,var(--navy),#075484)}
-    .parent-meeting-reminders h4{margin:0 0 12px;color:#ffe08a;font-size:1.05rem}
-    .parent-meeting-reminders ul{margin:0;padding-left:20px;font-size:.9rem;line-height:1.55}
-    .parent-meeting-reminders li+li{margin-top:12px}
     .book-sale-alert{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:22px;margin-bottom:20px;padding:28px;border:2px solid #b3261e;border-radius:20px;background:linear-gradient(135deg,#fff7f5,#fff);box-shadow:0 10px 28px rgba(139,29,23,.12)}
     .book-sale-alert h3{margin:9px 0 10px;color:var(--navy);font-size:1.45rem}
     .book-sale-alert p{margin:0;color:var(--muted)}
@@ -111,9 +99,9 @@
     .absence-limit{margin:18px 0 0;padding:18px 20px;border-left:5px solid var(--gold);border-radius:10px;background:#fffaf0;color:#4e493a}
     .absence-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
     .absence-actions p{margin:0;color:var(--muted);font-size:.9rem}
-    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}.parent-meeting-alert,.book-sale-alert{grid-template-columns:1fr}}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}.book-sale-alert{grid-template-columns:1fr}}
     @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}.absence-card-header{flex-direction:column}.absence-requirements{grid-template-columns:1fr}}
-    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}.parent-meeting-alert,.book-sale-alert{padding:22px 18px}.parent-meeting-details,.book-sale-details{grid-template-columns:1fr}.book-sale-highlight strong{font-size:1.75rem}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}.book-sale-alert{padding:22px 18px}.book-sale-details{grid-template-columns:1fr}.book-sale-highlight strong{font-size:1.75rem}}
   </style>
 </head>
 <body>
@@ -133,7 +121,6 @@
     <div class="section-shell page-jump-nav">
       <nav aria-label="Accesos rápidos de Tutoría III">
         <a href="#avisos-estudiantes">Avisos vigentes</a>
-        <a href="#junta-padres-2026">Junta con familias</a>
         <a href="#venta-libro-ingles">Libro de inglés</a>
         <a href="#reinscripcion-otono-2026">Reinscripción</a>
         <a href="#aviso-entrega">Ficha de identificación</a>
@@ -148,35 +135,6 @@
         <h2 id="avisos-estudiantes">Avisos para estudiantes</h2>
         <p>Revisa los periodos, requisitos y medios de atención de cada aviso.</p>
       </div>
-
-      <article class="parent-meeting-alert" id="junta-padres-2026" aria-labelledby="titulo-junta-padres">
-        <div>
-          <span class="parent-meeting-status">Reunión importante</span>
-          <h3 id="titulo-junta-padres">Junta con madres y padres de familia</h3>
-          <p>Se solicita la asistencia de madres, padres o personas tutoras para participar en la reunión y actividad programadas en el laboratorio.</p>
-          <div class="parent-meeting-details">
-            <div class="parent-meeting-detail">
-              <span>Fecha</span>
-              <strong>Lunes 24 de agosto de 2026</strong>
-            </div>
-            <div class="parent-meeting-detail">
-              <span>Hora</span>
-              <strong>10:30 a. m.</strong>
-            </div>
-            <div class="parent-meeting-detail">
-              <span>Lugar</span>
-              <strong>Laboratorio de Cómputo</strong>
-            </div>
-          </div>
-        </div>
-        <aside class="parent-meeting-reminders" aria-label="Recordatorios para la junta">
-          <h4>Antes de la junta</h4>
-          <ul>
-            <li>Presta a tu mamá, papá o persona tutora tu <strong>lapicera con colores</strong>; la utilizará durante una actividad en el laboratorio.</li>
-            <li><strong>Último día para entregar la ficha de identificación:</strong> lunes 24 de agosto, antes de que comience la junta.</li>
-          </ul>
-        </aside>
-      </article>
 
       <article class="book-sale-alert" aria-labelledby="venta-libro-ingles">
         <div>
@@ -194,7 +152,7 @@
             </div>
             <div class="book-sale-detail">
               <span>Horario</span>
-              <strong>Por confirmar</strong>
+              <strong>10:00 a 11:00 a. m.</strong>
             </div>
             <div class="book-sale-detail">
               <span>Turno</span>
@@ -205,7 +163,7 @@
         <div class="book-sale-highlight" aria-label="Precio del libro: 400 pesos">
           <small>Precio del libro</small>
           <strong>$400</strong>
-          <span>Considera llevar el importe. El horario se publicará en cuanto sea confirmado.</span>
+          <span>Considera llevar el importe y acudir dentro del horario indicado.</span>
         </div>
       </article>
 
