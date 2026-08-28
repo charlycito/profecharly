@@ -140,7 +140,7 @@ const semanasInnovacion = [
       titulo: "Actividad práctica IMC",
       descripcion: "Mantén abierta esta práctica en el visor mientras construyes la interfaz, programas los bloques, pruebas el cálculo y completas las condiciones de la aplicación.",
       ayuda: "Avanza página por página mientras trabajas en MIT App Inventor. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
-      pdf: "https://drive.google.com/file/d/1Q1yhMyvGQZlb3xYhhVXHfXUSrKF0nFuV/view?usp=drivesdk",
+      pdf: "https://drive.google.com/file/d/1Q1yhMyvGQZlb3xYhhVXHfXUSrKF0nFuV/preview",
       abrir: "https://drive.google.com/file/d/1Q1yhMyvGQZlb3xYhhVXHfXUSrKF0nFuV/view?usp=drivesdk"
     },
     materiales: [
