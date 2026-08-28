@@ -117,7 +117,7 @@ const semanasCiudadania = [
         descripcion: "Abre el documento, descarga una copia y edítala durante la clase con las respuestas de tu equipo a las cuatro estaciones y al reto integrador.",
         nota: "Al terminar, lleva contigo el archivo modificado: guárdalo en tu nube o en una memoria USB libre de virus. No dejes la única copia en la computadora de la escuela.",
         boton: "Abrir actividad en Word",
-        abrir: "https://docs.google.com/document/d/1DnVnuhDSR7qpEFK3_towkSWteb5iJtWs/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
+        abrir: "https://docs.google.com/document/d/166oeHhWaSIh-IV3jP4Sq-8vM5lREqOLz/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
       },
       {
         orden: 4,
