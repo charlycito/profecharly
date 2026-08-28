@@ -127,5 +127,34 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1CXPrqVW0dh0vVrUVRz4bywSUjAoSFX_Y/view?usp=sharing"
       }
     ]
+  },
+  {
+    numero: 4,
+    titulo: "IMC: condiciones y decisiones",
+    descripcion: "Construye en MIT App Inventor una aplicación que calcule el índice de masa corporal y utilice condiciones para mostrar el resultado correspondiente.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Actividad práctica paso a paso",
+      encabezado: "Práctica IMC en MIT App Inventor",
+      titulo: "Actividad práctica IMC",
+      descripcion: "Mantén abierta esta práctica en el visor mientras construyes la interfaz, programas los bloques, pruebas el cálculo y completas las condiciones de la aplicación.",
+      ayuda: "Avanza página por página mientras trabajas en MIT App Inventor. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1Q1yhMyvGQZlb3xYhhVXHfXUSrKF0nFuV/view?usp=drivesdk",
+      abrir: "https://drive.google.com/file/d/1Q1yhMyvGQZlb3xYhhVXHfXUSrKF0nFuV/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: condiciones y operadores del IMC",
+        descripcion: "Conserva en tu libreta la explicación de la fórmula del IMC, los operadores matemáticos y lógicos, y las condiciones utilizadas para tomar decisiones en la aplicación.",
+        nota: "Transcribe todo el contenido en tu libreta o imprime las dos páginas y pégalas. En cualquiera de las dos opciones, responde por escrito las preguntas y reflexiones indicadas en el material.",
+        claseNota: "print",
+        boton: "Abrir Súper libreta",
+        abrir: "https://drive.google.com/file/d/1nudq-EY8g_E-6OZrYX0yXuB58Pu-h2LH/view?usp=drivesdk"
+      }
+    ]
   }
 ];
