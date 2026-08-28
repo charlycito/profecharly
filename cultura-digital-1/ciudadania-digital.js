@@ -182,6 +182,19 @@
         tarjeta.appendChild(reproductor);
       }
 
+      if (recurso.youtube) {
+        tarjeta.classList.add("video-card");
+        const reproductor = document.createElement("iframe");
+        reproductor.className = "video-player";
+        reproductor.src = recurso.youtube;
+        reproductor.title = `Video de la Semana ${semana.numero}: ${recurso.titulo}`;
+        reproductor.loading = "lazy";
+        reproductor.referrerPolicy = "strict-origin-when-cross-origin";
+        reproductor.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        reproductor.setAttribute("allowfullscreen", "");
+        tarjeta.appendChild(reproductor);
+      }
+
       if (recurso.nota) {
         const nota = document.createElement("p");
         nota.className = "resource-note";
