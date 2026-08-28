@@ -86,5 +86,48 @@ const semanasCiudadania = [
         abrir: "https://open.spotify.com/episode/7CElDxIbPg9cz36CqdXYgm?si=Ccs4G9dmSiqL5APKYywaCQ"
       }
     ]
+  },
+  {
+    numero: 4,
+    titulo: "¿Qué puedo hacer con este recurso digital?",
+    descripcion: "Analiza las condiciones de uso de los recursos digitales, distingue sistemas y navegadores, reconoce los niveles de acceso digital y relaciona unidades de almacenamiento, red y procesamiento.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "¿Qué puedo hacer con este recurso digital?",
+      descripcion: "Consulta la presentación de la Semana 4 para trabajar licencias digitales, Creative Commons, acceso digital, sistemas operativos, navegadores y unidades digitales.",
+      pdf: "https://drive.google.com/file/d/1xoflihrqATsViS0j6j3fENRnpIBySQhM/preview",
+      abrir: "https://drive.google.com/file/d/1xoflihrqATsViS0j6j3fENRnpIBySQhM/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes de la Semana 4",
+        descripcion: "Conserva las dos páginas con las ideas esenciales sobre licencias, software, Creative Commons, acceso digital y unidades de almacenamiento, red y procesamiento.",
+        nota: "Debes imprimir las dos páginas y pegarlas en tu libreta, o bien transcribirlas completas en tu libreta.",
+        boton: "Abrir apuntes para libreta",
+        abrir: "https://drive.google.com/file/d/1ZWRi2JA1sURyrI4kdVxWGWmcDF-peuUO/view?usp=drivesdk"
+      },
+      {
+        orden: 3,
+        tipo: "Actividad editable para clase",
+        titulo: "Detective Digital: trabajo por estaciones",
+        descripcion: "Abre el documento, descarga una copia y edítala durante la clase con las respuestas de tu equipo a las cuatro estaciones y al reto integrador.",
+        nota: "Al terminar, lleva contigo el archivo modificado: guárdalo en tu nube o en una memoria USB libre de virus. No dejes la única copia en la computadora de la escuela.",
+        boton: "Abrir actividad en Word",
+        abrir: "https://docs.google.com/document/d/1DnVnuhDSR7qpEFK3_towkSWteb5iJtWs/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
+      },
+      {
+        orden: 4,
+        tipo: "Video de apoyo",
+        titulo: "Detective Digital: CC, SO y navegadores",
+        descripcion: "Refuerza Creative Commons, sistemas operativos y navegadores, escalas de almacenamiento, transmisión y procesamiento.",
+        boton: "Abrir en YouTube",
+        youtube: "https://www.youtube.com/embed/OWnaZUsuBfw?si=vlp1qsLPKBnTPCJ6",
+        abrir: "https://www.youtube.com/watch?v=OWnaZUsuBfw"
+      }
+    ]
   }
 ];
