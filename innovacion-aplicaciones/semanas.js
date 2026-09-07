@@ -156,5 +156,34 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1nudq-EY8g_E-6OZrYX0yXuB58Pu-h2LH/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    numero: 5,
+    titulo: "Índice de Broca: reto sin guía",
+    descripcion: "Aplica lo aprendido para crear en MIT App Inventor una aplicación que estime un peso de referencia mediante el Índice de Broca.",
+    ruta: null,
+    diapositivas: null,
+    materiales: [
+      {
+        orden: 1,
+        icono: "📱",
+        tipo: "Reto de programación",
+        titulo: "Crea la app del Índice de Broca",
+        descripcion: "El Índice de Broca es una fórmula sencilla que utiliza la estatura en centímetros para estimar un peso de referencia: estatura − 100. La aplicación deberá recibir la estatura, realizar la resta y mostrar el resultado.",
+        nota: "Esta vez no hay una guía paso a paso. Diseña la interfaz y programa los bloques en MIT App Inventor utilizando lo aprendido en las actividades anteriores. Tú debes decidir qué componentes necesitas y cómo conectarlos.",
+        claseNota: "evaluation"
+      },
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: Índice de Broca",
+        descripcion: "Repasa la secuencia entrada → proceso → salida, identifica los bloques necesarios y utiliza estos apuntes como apoyo para resolver el reto.",
+        nota: "Transcribe todo el contenido en tu libreta o imprime las dos páginas y pégalas. En cualquiera de las dos opciones, responde por escrito la actividad “Piensa y responde”.",
+        claseNota: "print",
+        boton: "Abrir Súper libreta",
+        abrir: "https://drive.google.com/file/d/1NXif5U2RbRZJqImpKir8Kaf04XHOdI0b/view?usp=drivesdk"
+      }
+    ]
   }
 ];
