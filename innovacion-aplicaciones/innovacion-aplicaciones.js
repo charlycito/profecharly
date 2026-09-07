@@ -13,6 +13,7 @@
   const tituloRuta = document.querySelector("#titulo-ruta-semana");
   const descripcionRuta = document.querySelector("#descripcion-ruta-semana");
   const abrirRuta = document.querySelector("#abrir-ruta-semana");
+  const recursoPrincipalContenedor = document.querySelector("#recurso-principal-semana");
   const pasoRecursoPrincipal = document.querySelector("#paso-recurso-principal");
   const etiquetaRecursoPrincipal = document.querySelector("#etiqueta-recurso-principal");
   const tituloDiapositivas = document.querySelector("#titulo-diapositivas");
@@ -57,13 +58,15 @@
       tarjeta.appendChild(nota);
     }
 
-    const enlace = document.createElement("a");
-    enlace.className = "primary-button";
-    enlace.href = recurso.abrir;
-    enlace.target = "_blank";
-    enlace.rel = "noopener noreferrer";
-    enlace.textContent = recurso.boton;
-    tarjeta.appendChild(enlace);
+    if (recurso.abrir && recurso.boton) {
+      const enlace = document.createElement("a");
+      enlace.className = "primary-button";
+      enlace.href = recurso.abrir;
+      enlace.target = "_blank";
+      enlace.rel = "noopener noreferrer";
+      enlace.textContent = recurso.boton;
+      tarjeta.appendChild(enlace);
+    }
 
     return tarjeta;
   }
@@ -106,16 +109,24 @@
     }
 
     const recursoPrincipal = semana.diapositivas;
-    const ordenRecursoPrincipal = recursoPrincipal.orden || 2;
-    pasoRecursoPrincipal.textContent = ordenRecursoPrincipal;
-    pasoRecursoPrincipal.setAttribute("aria-label", `Paso ${ordenRecursoPrincipal}`);
-    etiquetaRecursoPrincipal.textContent = recursoPrincipal.etiqueta || "Presentación de clase";
-    tituloDiapositivas.textContent = recursoPrincipal.encabezado || `Diapositivas: ${recursoPrincipal.titulo}`;
-    descripcionDiapositivas.textContent = recursoPrincipal.descripcion;
-    visorDiapositivas.src = recursoPrincipal.pdf;
-    visorDiapositivas.title = `${recursoPrincipal.etiqueta || "Diapositivas"} de la Semana ${semana.numero}: ${recursoPrincipal.titulo}`;
-    abrirDiapositivas.href = recursoPrincipal.abrir;
-    ayudaRecursoPrincipal.textContent = recursoPrincipal.ayuda || "Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.";
+    if (recursoPrincipal) {
+      recursoPrincipalContenedor.hidden = false;
+      const ordenRecursoPrincipal = recursoPrincipal.orden || 2;
+      pasoRecursoPrincipal.textContent = ordenRecursoPrincipal;
+      pasoRecursoPrincipal.setAttribute("aria-label", `Paso ${ordenRecursoPrincipal}`);
+      etiquetaRecursoPrincipal.textContent = recursoPrincipal.etiqueta || "Presentación de clase";
+      tituloDiapositivas.textContent = recursoPrincipal.encabezado || `Diapositivas: ${recursoPrincipal.titulo}`;
+      descripcionDiapositivas.textContent = recursoPrincipal.descripcion;
+      visorDiapositivas.src = recursoPrincipal.pdf;
+      visorDiapositivas.title = `${recursoPrincipal.etiqueta || "Diapositivas"} de la Semana ${semana.numero}: ${recursoPrincipal.titulo}`;
+      abrirDiapositivas.href = recursoPrincipal.abrir;
+      ayudaRecursoPrincipal.textContent = recursoPrincipal.ayuda || "Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.";
+    } else {
+      recursoPrincipalContenedor.hidden = true;
+      visorDiapositivas.src = "about:blank";
+      visorDiapositivas.title = "Recurso principal no disponible para esta semana";
+      abrirDiapositivas.removeAttribute("href");
+    }
 
     materiales.replaceChildren(...semana.materiales.map(crearMaterial));
 
