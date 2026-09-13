@@ -35,43 +35,9 @@
     .student-guide-viewer-header h3{margin:4px 0 7px;color:var(--navy);font-size:1.35rem}
     .student-guide-viewer-header p{max-width:720px;margin:0;color:var(--muted)}
     .student-guide-frame{display:block;width:100%;height:720px;border:1px solid var(--border);border-radius:12px;background:#f3f6f8}
-    .reenrollment{padding-top:56px}
-    .reenrollment-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px;padding:24px 26px;border-radius:18px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--blue));box-shadow:var(--shadow)}
-    .reenrollment-banner h2{margin:4px 0 7px;color:#fff;font-size:1.55rem}
-    .reenrollment-banner p{margin:0;color:rgba(255,255,255,.88)}
-    .deadline{flex:0 0 auto;padding:13px 18px;border:1px solid rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.12);text-align:center}
-    .deadline strong{display:block;color:#fff;font-size:1.08rem}
-    .deadline span{font-size:.8rem}
-    .reenrollment-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .reenrollment-step{padding:25px 24px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
-    .step-heading{display:flex;align-items:center;gap:13px;margin-bottom:14px}
-    .step-number{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;color:#fff;background:var(--blue);font:700 1.08rem "Poppins",sans-serif}
-    .reenrollment-step h3{margin:0;color:var(--navy);font-size:1.12rem}
-    .step-date{display:block;margin-top:2px;color:var(--blue);font-size:.82rem;font-weight:700}
-    .reenrollment-step ol,.reenrollment-step ul{margin:0;padding-left:20px;color:var(--muted)}
-    .reenrollment-step li+li{margin-top:8px}
-    .period-box{margin:13px 0;padding:12px 14px;border-left:4px solid var(--gold);border-radius:8px;background:#fffaf0;color:#4e493a;font-size:.9rem}
     .autoservices-button{display:inline-block;margin-top:16px}
-    .reenrollment-notes{margin-top:22px;padding:25px;border:1px solid #ead58d;border-radius:18px;background:#fffaf0}
-    .reenrollment-notes h3{margin:0 0 12px;color:var(--navy)}
-    .reenrollment-notes ul{margin:0;padding-left:20px;color:#4e493a}
-    .reenrollment-notes li+li{margin-top:9px}
-    .condonation-alert{margin-top:18px;padding:18px 20px;border-left:5px solid #b3261e;border-radius:10px;background:#fff1f0;color:#65302c}
-    .condonation-alert strong{color:#8b1d17}
     .student-alerts{padding-top:56px}
-    .student-alerts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .book-sale-alert{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:22px;margin-bottom:20px;padding:28px;border:2px solid #b3261e;border-radius:20px;background:linear-gradient(135deg,#fff7f5,#fff);box-shadow:0 10px 28px rgba(139,29,23,.12)}
-    .book-sale-alert h3{margin:9px 0 10px;color:var(--navy);font-size:1.45rem}
-    .book-sale-alert p{margin:0;color:var(--muted)}
-    .book-sale-status{display:inline-block;padding:6px 11px;border-radius:999px;color:#fff;background:#b3261e;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-    .book-sale-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
-    .book-sale-detail{padding:15px 16px;border:1px solid #efc7c3;border-radius:13px;background:#fff}
-    .book-sale-detail span{display:block;margin-bottom:3px;color:#8b1d17;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-    .book-sale-detail strong{color:var(--navy);font-size:1rem}
-    .book-sale-highlight{display:flex;flex-direction:column;justify-content:center;padding:22px;border-radius:16px;color:#fff;background:linear-gradient(145deg,#8b1d17,#b3261e);text-align:center}
-    .book-sale-highlight small{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .book-sale-highlight strong{display:block;margin:7px 0 4px;color:#ffe08a;font-size:2rem;line-height:1}
-    .book-sale-highlight span{font-size:.9rem;line-height:1.45}
+    .student-alerts-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
     .student-alert-card{overflow:hidden;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(5,42,74,.08)}
     .student-alert-card-content{padding:25px 24px}
     .student-alert-card h3{margin:10px 0;color:var(--navy);font-size:1.22rem}
@@ -99,9 +65,9 @@
     .absence-limit{margin:18px 0 0;padding:18px 20px;border-left:5px solid var(--gold);border-radius:10px;background:#fffaf0;color:#4e493a}
     .absence-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
     .absence-actions p{margin:0;color:var(--muted);font-size:.9rem}
-    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}.book-sale-alert{grid-template-columns:1fr}}
-    @media(max-width:760px){.reenrollment-banner{align-items:stretch;flex-direction:column}.deadline{text-align:left}.reenrollment-steps{grid-template-columns:1fr}.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}.absence-card-header{flex-direction:column}.absence-requirements{grid-template-columns:1fr}}
-    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.reenrollment-banner,.reenrollment-step,.reenrollment-notes{padding:22px 19px}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}.book-sale-alert{padding:22px 18px}.book-sale-details{grid-template-columns:1fr}.book-sale-highlight strong{font-size:1.75rem}}
+    @media(max-width:950px){.delivery-list{grid-template-columns:1fr}.guidance-layout{grid-template-columns:1fr}.tutoring-resource-grid{grid-template-columns:1fr}.student-alerts-grid{grid-template-columns:1fr}}
+    @media(max-width:760px){.student-guide-viewer{padding:21px 16px}.student-guide-viewer-header{align-items:stretch;flex-direction:column}.student-guide-viewer-header .primary-button{text-align:center}.student-guide-frame{height:580px}.absence-card-header{flex-direction:column}.absence-requirements{grid-template-columns:1fr}}
+    @media(max-width:620px){.tutoring-notice{grid-template-columns:1fr;margin-top:-18px;padding:24px 20px}.tutoring-notice-icon{margin:auto}.tutoring-notice h2,.tutoring-notice>div>p{text-align:center}.tutoring-resource-grid{grid-template-columns:1fr}.tutoring-resource-card:first-child{grid-column:auto}.tutoring-resource-card{padding:24px 21px}.student-guide-frame{height:500px}}
   </style>
 </head>
 <body>
@@ -120,9 +86,7 @@
   <main id="contenido">
     <div class="section-shell page-jump-nav">
       <nav aria-label="Accesos rápidos de Tutoría III">
-        <a href="#avisos-estudiantes">Avisos vigentes</a>
-        <a href="#venta-libro-ingles">Libro de inglés</a>
-        <a href="#reinscripcion-otono-2026">Reinscripción</a>
+        <a href="#avisos-estudiantes">Apoyo estudiantil</a>
         <a href="#aviso-entrega">Ficha de identificación</a>
         <a href="#justificacion-inasistencias">Justificar inasistencias</a>
         <a href="#recursos-tutoria">Guía y normativa</a>
@@ -131,59 +95,12 @@
 
     <section class="section-shell student-alerts" aria-labelledby="avisos-estudiantes">
       <div class="section-heading">
-        <p class="eyebrow">Información vigente</p>
-        <h2 id="avisos-estudiantes">Avisos para estudiantes</h2>
-        <p>Revisa los periodos, requisitos y medios de atención de cada aviso.</p>
+        <p class="eyebrow">Servicios de apoyo</p>
+        <h2 id="avisos-estudiantes">Apoyo para estudiantes</h2>
+        <p>Consulta los medios de atención disponibles para acompañar tu bienestar.</p>
       </div>
 
-      <article class="book-sale-alert" aria-labelledby="venta-libro-ingles">
-        <div>
-          <span class="book-sale-status">Venta reprogramada</span>
-          <h3 id="venta-libro-ingles">Venta del libro de Inglés III</h3>
-          <p>Información para estudiantes de <strong>tercer semestre del turno matutino</strong>. Por situaciones de aduana, la venta fue reprogramada. El libro será el material de trabajo de un solo semestre.</p>
-          <div class="book-sale-details">
-            <div class="book-sale-detail">
-              <span>Libro</span>
-              <strong>VOLUME UP 3</strong>
-            </div>
-            <div class="book-sale-detail">
-              <span>Fecha</span>
-              <strong>Lunes 31 de agosto de 2026</strong>
-            </div>
-            <div class="book-sale-detail">
-              <span>Horario</span>
-              <strong>10:00 a 11:00 a. m.</strong>
-            </div>
-            <div class="book-sale-detail">
-              <span>Turno</span>
-              <strong>Matutino</strong>
-            </div>
-          </div>
-        </div>
-        <div class="book-sale-highlight" aria-label="Precio del libro: 400 pesos">
-          <small>Precio del libro</small>
-          <strong>$400</strong>
-          <span>Considera llevar el importe y acudir dentro del horario indicado.</span>
-        </div>
-      </article>
-
       <div class="student-alerts-grid">
-        <article class="student-alert-card">
-          <div class="student-alert-card-content">
-            <span class="alert-status">Vigente hasta el 9 de septiembre</span>
-            <h3>Permisos Temporales Otoño 2026</h3>
-            <p>Si necesitas solicitar un permiso temporal, realiza el procedimiento únicamente a través de Autoservicios BUAP.</p>
-            <ul>
-              <li><strong>Periodo de solicitud:</strong> del 11 de agosto al 9 de septiembre de 2026.</li>
-              <li>El permiso se solicita por <strong>todo el semestre o cuatrimestre</strong>; no puede pedirse por días, semanas o periodos parciales.</li>
-              <li>Recibirás en tu correo institucional la autorización o el rechazo. También podrás consultar el estatus en Autoservicios.</li>
-              <li>Los permisos autorizados se reflejarán en Autoservicios.</li>
-            </ul>
-            <a class="primary-button" href="https://www.autoservicios.buap.mx" target="_blank" rel="noopener noreferrer">Ir a Autoservicios BUAP</a>
-            <p class="responsibility-note"><strong>Importante:</strong> el uso y resguardo de tu cuenta de Autoservicios es tu responsabilidad. Toda solicitud realizada desde ella se considera oficial.</p>
-          </div>
-        </article>
-
         <article class="student-alert-card">
           <img class="student-alert-image" src="https://drive.google.com/thumbnail?id=1UaEgRvKlnyx5nYYVWpVFuYuEqKGIj27e&amp;sz=w1200" alt="Información de Atención Psicológica Estudiantil en la Preparatoria Amozoc" loading="lazy">
           <div class="student-alert-card-content">
@@ -198,91 +115,9 @@
       </div>
     </section>
 
-    <section class="section-shell reenrollment" aria-labelledby="reinscripcion-otono-2026">
-      <div class="reenrollment-banner">
-        <div>
-          <p class="eyebrow" style="color:#ffe08a">Dirección de Administración Escolar BUAP</p>
-          <h2 id="reinscripcion-otono-2026">Reinscripción Otoño 2026</h2>
-          <p>Nivel Medio Superior · Preparatorias y Bachilleratos</p>
-        </div>
-        <div class="deadline">
-          <span>Fecha límite de pago</span>
-          <strong>31 de agosto de 2026</strong>
-          <span>¡No habrá prórroga!</span>
-        </div>
-      </div>
-
-      <div class="reenrollment-steps">
-        <article class="reenrollment-step">
-          <div class="step-heading">
-            <span class="step-number">1</span>
-            <div><h3>Verifica tu contraseña (NIP)</h3><span class="step-date">Desde el 10 de julio de 2026</span></div>
-          </div>
-          <ol>
-            <li>Ingresa a <strong>Estudiantes y Docentes BUAP</strong> con tu matrícula y contraseña para verificar el acceso.</li>
-            <li>Si no puedes ingresar, solicita el reinicio de tu NIP con tu Secretaria/o Académica/o.</li>
-          </ol>
-          <a class="primary-button autoservices-button" href="https://www.autoservicios.buap.mx" target="_blank" rel="noopener noreferrer">Ir a Autoservicios BUAP</a>
-        </article>
-
-        <article class="reenrollment-step">
-          <div class="step-heading">
-            <span class="step-number">2</span>
-            <div><h3>Consulta tus materias</h3><span class="step-date">A partir del 10 de agosto de 2026</span></div>
-          </div>
-          <ol>
-            <li>Entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
-            <li>Elige el periodo que te corresponda.</li>
-          </ol>
-          <div class="period-box"><strong>Plan semestral:</strong> Otoño 2026 Nivel Medio Superior.<br><strong>Plan anual:</strong> Ciclo Escolar 2026-2027 Nivel Medio Superior.</div>
-          <ol start="3">
-            <li>Abre <strong>Horario inscrito por semana → Horario detalle → Impresión de horario</strong>.</li>
-            <li>Imprime tu horario y verifica que tengas todas las materias de tu grupo. Informa de inmediato cualquier inconsistencia a tu Secretaria/o Académica/o.</li>
-          </ol>
-        </article>
-
-        <article class="reenrollment-step">
-          <div class="step-heading">
-            <span class="step-number">3</span>
-            <div><h3>Imprime y paga tu póliza</h3><span class="step-date">Del 21 al 31 de agosto de 2026</span></div>
-          </div>
-          <ol>
-            <li>En Autoservicios, entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
-            <li>Elige el periodo correspondiente.</li>
-            <li>Selecciona <strong>Impresión de póliza de reinscripción</strong>.</li>
-            <li>Paga la póliza antes de la fecha límite indicada.</li>
-          </ol>
-        </article>
-
-        <article class="reenrollment-step">
-          <div class="step-heading">
-            <span class="step-number">4</span>
-            <div><h3>Verifica tu pago</h3><span class="step-date">Al siguiente día hábil bancario</span></div>
-          </div>
-          <ol>
-            <li>Entra a <strong>Servicios al alumno → Inscripción vía web</strong>.</li>
-            <li>Selecciona el <strong>módulo de verificación de pago de reinscripción</strong>.</li>
-            <li>Comprueba que tu pago se haya aplicado correctamente.</li>
-          </ol>
-          <div class="period-box"><strong>Si pagas en fin de semana:</strong> verifica la aplicación del pago a partir del martes siguiente.</div>
-        </article>
-      </div>
-
-      <div class="reenrollment-notes">
-        <h3>Información importante</h3>
-        <ul>
-          <li>Para cursar el periodo correspondiente es indispensable contar con las materias asignadas y realizar el pago de la aportación de reinscripción.</li>
-          <li>Para estudiantes del plan anual que se reinscriben a tercer año, la póliza incluirá el derecho al Certificado de Generación.</li>
-          <li>Si al concluir la fecha límite el pago no aparece reflejado en Autoservicios BUAP, las materias asignadas serán dadas de baja.</li>
-          <li>Si tienes dificultades durante la reinscripción o al imprimir la póliza, contacta a tu Secretaria/o Académica/o.</li>
-        </ul>
-        <p class="condonation-alert"><strong>Estudiantes con condonación:</strong> también deben imprimir su póliza. Si no lo hacen, el trámite y la condonación no tendrán efecto y las materias serán dadas de baja. El incumplimiento del pago en tiempo y forma también condiciona la participación en programas de becas institucionales y externas.</p>
-      </div>
-    </section>
-
     <section class="section-shell tutoring-resources" aria-labelledby="aviso-entrega">
       <div class="section-heading">
-        <p class="eyebrow">Para la próxima sesión</p>
+        <p class="eyebrow">Expediente de Tutoría III</p>
         <h2 id="aviso-entrega">Ficha de identificación del estudiante</h2>
         <p>Prepara este documento para integrar correctamente tu expediente de Tutoría III.</p>
       </div>
@@ -292,7 +127,7 @@
         <div>
           <p class="eyebrow">Documento para entregar</p>
           <h2>Descarga, completa e imprime tu ficha</h2>
-          <p>Llénala con <strong>datos verídicos</strong> y entrégala durante la próxima sesión con las siguientes características:</p>
+          <p>Llénala con <strong>datos verídicos</strong> y entrégala al profesor tutor con las siguientes características:</p>
           <ul class="delivery-list">
             <li><strong>Impresa y llena</strong>Revisa que no falte ningún dato solicitado.</li>
             <li><strong>Fotografía reciente</strong>Colócala en el espacio correspondiente de la ficha.</li>
