@@ -185,5 +185,34 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1NXif5U2RbRZJqImpKir8Kaf04XHOdI0b/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    numero: 6,
+    titulo: "Tablas de multiplicar: ciclo para",
+    descripcion: "Construye en MIT App Inventor una aplicación que genere tablas de multiplicar utilizando el ciclo para y operadores matemáticos.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Manual visual paso a paso",
+      encabezado: "Práctica: Tablas de multiplicar en MIT App Inventor",
+      titulo: "Manual visual de Tablas de multiplicar",
+      descripcion: "Mantén abierto este manual en el visor mientras construyes la interfaz, programas el ciclo para y pruebas las tablas de multiplicar en tu aplicación.",
+      ayuda: "Consulta el manual página por página mientras trabajas en MIT App Inventor. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1G-16N9U44VwLG8485NrZe38GS5GjiYGf/preview",
+      abrir: "https://drive.google.com/file/d/1G-16N9U44VwLG8485NrZe38GS5GjiYGf/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: ciclo para y operadores",
+        descripcion: "Conserva en tu libreta los apuntes sobre el ciclo para y los operadores utilizados en la actividad de Tablas de multiplicar.",
+        nota: "Transcribe todo el contenido en tu libreta o imprime las páginas y pégalas. En cualquiera de las dos opciones, los apuntes deben quedar completos en tu libreta.",
+        claseNota: "print",
+        boton: "Abrir Súper libreta",
+        abrir: "https://drive.google.com/file/d/1lZ7Ltxw7TRgjKUwSuywLikjWPNmlXLyn/view?usp=drivesdk"
+      }
+    ]
   }
 ];
