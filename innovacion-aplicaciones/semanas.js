@@ -214,5 +214,45 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1lZ7Ltxw7TRgjKUwSuywLikjWPNmlXLyn/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    numero: 7,
+    titulo: "HidraApp",
+    descripcion: "Construye HidraApp en MIT App Inventor siguiendo la guía visual y utilizando los recursos preparados para la actividad.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Guía visual paso a paso",
+      encabezado: "Práctica HidraApp en MIT App Inventor",
+      titulo: "Guía visual HidraApp",
+      descripcion: "Mantén abierta esta guía en el visor mientras construyes y programas HidraApp en MIT App Inventor. Avanza en el mismo orden que indica el documento.",
+      ayuda: "Consulta la guía página por página mientras realizas la práctica. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1ySZ7ire716JIs9qIKFVkZ3G1lWELX9-i/preview",
+      abrir: "https://drive.google.com/file/d/1ySZ7ire716JIs9qIKFVkZ3G1lWELX9-i/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: HidraApp",
+        descripcion: "Conserva en tu libreta los conceptos y bloques utilizados durante la construcción de HidraApp.",
+        nota: "Transcribe todo el contenido en tu libreta o imprime las páginas y pégalas. En cualquiera de las dos opciones, los apuntes deben quedar completos.",
+        claseNota: "print",
+        boton: "Abrir Súper libreta",
+        abrir: "https://drive.google.com/file/d/1o7iMcm4DuQpeycGF13ODN2sn6TWMQ4aF/view?usp=drivesdk"
+      },
+      {
+        orden: 3,
+        icono: "📦",
+        tipo: "Archivos para la práctica",
+        titulo: "Recursos de la actividad HidraApp",
+        descripcion: "Descarga el archivo comprimido que contiene los recursos necesarios para realizar la actividad.",
+        nota: "Importante: después de descargar el archivo ZIP, debes descomprimirlo antes de comenzar. Trabaja con los archivos que encontrarás dentro de la carpeta extraída.",
+        claseNota: "evaluation",
+        boton: "Descargar recursos HidraApp",
+        abrir: "https://drive.google.com/file/d/1OisqucGcSLMmXke7Jqc7J81bkp9oeluD/view?usp=drivesdk"
+      }
+    ]
   }
 ];
