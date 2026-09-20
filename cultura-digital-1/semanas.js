@@ -129,5 +129,39 @@ const semanasCiudadania = [
         abrir: "https://www.youtube.com/watch?v=OWnaZUsuBfw"
       }
     ]
+  },
+  {
+    numero: 5,
+    titulo: "Decodificando la economía de la atención",
+    descripcion: "Analiza cómo las aplicaciones compiten por tu atención, reconoce las estrategias que utilizan y reflexiona sobre tus hábitos digitales.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "Decoding the Attention Economy",
+      descripcion: "Consulta la presentación de la Semana 5 para comprender qué es la economía de la atención y reconocer cómo las aplicaciones buscan mantenerte conectado.",
+      pdf: "https://drive.google.com/file/d/172ZtixtjlZQvh28-73eQl6zvsxR6PTpL/preview",
+      abrir: "https://drive.google.com/file/d/172ZtixtjlZQvh28-73eQl6zvsxR6PTpL/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes: Economía de la atención",
+        descripcion: "Conserva en tu libreta las ideas esenciales de la Semana 5 para reconocer las estrategias que buscan captar y mantener tu atención.",
+        nota: "Debes imprimir el material y pegarlo en tu libreta, o bien transcribirlo completo en tu libreta.",
+        boton: "Abrir apuntes para libreta",
+        abrir: "https://drive.google.com/file/d/1Dk1rHTZCrlliyLyqPjyuvejq8buRM7v_/view?usp=drivesdk"
+      },
+      {
+        orden: 3,
+        tipo: "Actividad editable en Word",
+        titulo: "Radiografía de una app",
+        descripcion: "Descarga el documento de Word y complétalo como parte de la actividad de la Semana 5, analizando una aplicación y las estrategias que utiliza para captar tu atención.",
+        nota: "Importante: descarga una copia del archivo antes de comenzar, complétala y guarda el documento con tus respuestas para entregarlo por el medio indicado por el profesor.",
+        boton: "Abrir y descargar actividad",
+        abrir: "https://docs.google.com/document/d/1GLcb5pAQApKnJVsBMhW9UVCQ9uxYuS-u/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
+      }
+    ]
   }
 ];
