@@ -155,6 +155,15 @@ const semanasCiudadania = [
       },
       {
         orden: 3,
+        tipo: "Manual de apoyo paso a paso",
+        titulo: "Cómo llenar la Radiografía de una app",
+        descripcion: "Consulta esta explicación para saber cómo llenar cada apartado del formato, identificar mecanismos de atención, insertar capturas de pantalla, guardar tu trabajo y cerrar correctamente la sesión.",
+        nota: "Revisa el manual antes de comenzar y mantenlo disponible mientras completas el formato.",
+        boton: "Abrir manual de llenado",
+        abrir: "https://drive.google.com/file/d/1MXPRu_0TGKmESKIhBK2mb9wjhI9ApIxL/view?usp=drivesdk"
+      },
+      {
+        orden: 4,
         tipo: "Actividad editable en Word",
         titulo: "Radiografía de una app",
         descripcion: "Descarga el documento de Word y complétalo como parte de la actividad de la Semana 5, analizando una aplicación y las estrategias que utiliza para captar tu atención.",
