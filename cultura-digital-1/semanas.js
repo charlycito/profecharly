@@ -172,5 +172,45 @@ const semanasCiudadania = [
         abrir: "https://docs.google.com/document/d/1GLcb5pAQApKnJVsBMhW9UVCQ9uxYuS-u/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
       }
     ]
+  },
+  {
+    numero: 6,
+    titulo: "El Detective Digital: ¿qué sabe una app de mí?",
+    descripcion: "Identifica de dónde obtiene sus datos una aplicación, distingue datos de inferencias y analiza posibles usos, beneficios, riesgos y decisiones de protección.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "El Detective Digital",
+      descripcion: "Consulta la presentación de la Semana 6 para reconocer los datos que proporcionas, los que se generan al usar una aplicación y los que provienen del dispositivo o del contexto.",
+      pdf: "https://drive.google.com/file/d/1VH4aWoXJ3MFRhelXBc8V4IbB4KevVUMT/preview",
+      abrir: "https://drive.google.com/file/d/1VH4aWoXJ3MFRhelXBc8V4IbB4KevVUMT/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "Tipos de datos e inferencias",
+        descripcion: "Conserva este resumen sobre los datos que proporciona una persona, los que se generan al usar una app, los que provienen del dispositivo y la diferencia entre dato, inferencia y certeza.",
+        nota: "Debes imprimir la imagen y pegarla en tu libreta, o bien transcribir completa la información en tu libreta.",
+        boton: "Abrir apunte en tamaño completo",
+        abrir: "https://drive.google.com/file/d/1iTEMrPiT163ktFh51k_I6rG09VzNBaMi/view?usp=drivesdk",
+        imagen: "https://drive.google.com/thumbnail?id=1iTEMrPiT163ktFh51k_I6rG09VzNBaMi&sz=w1600",
+        imagenAlt: "Apunte de Ciudadanía Digital de la Semana 6 sobre tipos de datos, inferencias y decisiones de protección"
+      },
+      {
+        orden: 3,
+        tipo: "Evidencia 2 · Actividad editable en Word",
+        titulo: "¿Qué sabe esta app de mí? — Caso CONECTA+",
+        descripcion: "Descarga el documento de Word y completa en equipo el análisis del caso ficticio CONECTA+: clasifica los datos, explica posibles usos, beneficios y riesgos, analiza inferencias y propone decisiones concretas de protección.",
+        nota: "Descarga primero el archivo, responde todas las secciones únicamente con la información del caso y guarda el documento terminado para entregarlo por el medio indicado por el profesor.",
+        boton: "Descargar evidencia en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1UOdCOkl6K9FJW7e5Nzp07V8KbYCr2RS0",
+        alternativo: {
+          boton: "Abrir vista previa en Drive",
+          abrir: "https://docs.google.com/document/d/1UOdCOkl6K9FJW7e5Nzp07V8KbYCr2RS0/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
+        }
+      }
+    ]
   }
 ];
