@@ -163,13 +163,47 @@
         </div>
       `;
 
+      const acciones = document.createElement("div");
+      acciones.className = "resource-actions";
+
       const enlace = document.createElement("a");
       enlace.className = "primary-button";
       enlace.href = recurso.abrir;
       enlace.target = "_blank";
       enlace.rel = "noopener noreferrer";
       enlace.textContent = recurso.boton;
-      tarjeta.appendChild(enlace);
+      acciones.appendChild(enlace);
+
+      if (recurso.alternativo) {
+        const alternativo = document.createElement("a");
+        alternativo.className = "text-button";
+        alternativo.href = recurso.alternativo.abrir;
+        alternativo.target = "_blank";
+        alternativo.rel = "noopener noreferrer";
+        alternativo.textContent = recurso.alternativo.boton;
+        acciones.appendChild(alternativo);
+      }
+
+      tarjeta.appendChild(acciones);
+
+      if (recurso.imagen) {
+        tarjeta.classList.add("notebook-image-card");
+        const figura = document.createElement("figure");
+        figura.className = "notebook-preview";
+        const enlaceImagen = document.createElement("a");
+        enlaceImagen.href = recurso.abrir;
+        enlaceImagen.target = "_blank";
+        enlaceImagen.rel = "noopener noreferrer";
+        const imagen = document.createElement("img");
+        imagen.src = recurso.imagen;
+        imagen.alt = recurso.imagenAlt || recurso.titulo;
+        imagen.loading = "lazy";
+        enlaceImagen.appendChild(imagen);
+        const pie = document.createElement("figcaption");
+        pie.textContent = "Apunte de la Semana " + semana.numero + ". Selecciona la imagen para verla en tamaño completo.";
+        figura.append(enlaceImagen, pie);
+        tarjeta.appendChild(figura);
+      }
 
       if (recurso.spotify) {
         tarjeta.classList.add("podcast-card");
