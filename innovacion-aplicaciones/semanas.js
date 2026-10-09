@@ -254,5 +254,22 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/file/d/1OisqucGcSLMmXke7Jqc7J81bkp9oeluD/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    numero: 8,
+    titulo: "Múltiples ventanas",
+    descripcion: "Construye en MIT App Inventor una aplicación con varias pantallas y aprende a navegar entre ellas.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Manual visual paso a paso",
+      encabezado: "Práctica: Múltiples ventanas en MIT App Inventor",
+      titulo: "Manual visual Múltiples ventanas",
+      descripcion: "Mantén abierta esta guía en el visor mientras creas las pantallas, agregas sus componentes y programas la navegación de la aplicación en MIT App Inventor.",
+      ayuda: "Consulta el manual página por página mientras realizas la práctica. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1JDdmibbE2mmjh5wRmXGUuv5CPq95KFvO/preview",
+      abrir: "https://drive.google.com/file/d/1JDdmibbE2mmjh5wRmXGUuv5CPq95KFvO/view?usp=drivesdk"
+    },
+    materiales: []
   }
 ];
