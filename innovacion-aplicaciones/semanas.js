@@ -270,6 +270,29 @@ const semanasInnovacion = [
       pdf: "https://drive.google.com/file/d/1JDdmibbE2mmjh5wRmXGUuv5CPq95KFvO/preview",
       abrir: "https://drive.google.com/file/d/1JDdmibbE2mmjh5wRmXGUuv5CPq95KFvO/view?usp=drivesdk"
     },
-    materiales: []
+    materiales: [
+      {
+        orden: 2,
+        icono: "📒",
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Súper libreta: Múltiples ventanas",
+        descripcion: "Conserva en tu libreta los apuntes sobre el uso de varias pantallas, sus ventajas y los componentes principales empleados en la actividad.",
+        nota: "Imprime el material y pégalo en tu libreta o transcribe todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos.",
+        claseNota: "print",
+        boton: "Abrir o imprimir Súper libreta",
+        abrir: "https://drive.google.com/file/d/10O1z5iCe7sH3xm1QygKM8vOd1qpPiSyG/view?usp=drivesdk"
+      },
+      {
+        orden: 3,
+        icono: "📝",
+        tipo: "Formato de evidencia",
+        titulo: "Reporte de la actividad Múltiples ventanas",
+        descripcion: "Descarga el formato de Word, complétalo con la información y las evidencias solicitadas durante la práctica, y guarda tus cambios antes de entregarlo.",
+        nota: "Descarga primero el archivo en tu computadora. No trabajes directamente sobre la vista previa de Drive, porque necesitas conservar una copia editable en formato Word.",
+        claseNota: "evaluation",
+        boton: "Descargar formato en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1KqMFgbQpkVTsAnzUMWMDKpjCwXbH5ybK"
+      }
+    ]
   }
 ];
