@@ -1,5 +1,7 @@
 (() => {
+  const menuParciales = document.querySelector("#menu-parciales");
   const menu = document.querySelector("#menu-sesiones");
+  const tituloMenu = document.querySelector("#titulo-menu-sesiones");
   const numero = document.querySelector("#numero-sesion");
   const titulo = document.querySelector("#titulo-sesion");
   const visor = document.querySelector("#visor-pdf");
@@ -17,23 +19,32 @@
   const reproductorAudio = document.querySelector("#reproductor-audio-sesion");
   const abrirAudio = document.querySelector("#abrir-audio-sesion");
 
-  if (!menu || !Array.isArray(sesionesManejoDatos) || sesionesManejoDatos.length === 0) return;
+  if (!menuParciales || !menu || !Array.isArray(sesionesManejoDatos) || sesionesManejoDatos.length === 0) return;
+
+  function parcialDe(sesion) {
+    return sesion.parcial || 1;
+  }
+
+  function etiquetaDe(sesion) {
+    return sesion.etiqueta || "Semana";
+  }
 
   function enlaceDescarga(url) {
     return `${url}${url.includes("?") ? "&" : "?"}download=1`;
   }
 
-  function mostrarSesion(indice) {
-    const sesion = sesionesManejoDatos[indice];
-    numero.textContent = `Semana ${sesion.numero}`;
+  function mostrarSesion(sesion, indice) {
+    const parcial = parcialDe(sesion);
+    const etiqueta = etiquetaDe(sesion);
+    numero.textContent = `${etiqueta} ${sesion.numero} · Parcial ${parcial}`;
     titulo.textContent = sesion.titulo;
     visor.src = sesion.pdf;
-    visor.title = `Semana ${sesion.numero}: ${sesion.titulo}`;
+    visor.title = `${etiqueta} ${sesion.numero} del Parcial ${parcial}: ${sesion.titulo}`;
     abrir.href = sesion.abrir || sesion.pdf;
     descargar.href = sesion.descargar || enlaceDescarga(sesion.pdf);
 
     if (audio && tituloAudio && reproductorAudio && abrirAudio) {
-      const recursoAudio = Array.isArray(audiosManejoDatos)
+      const recursoAudio = parcial === 1 && Array.isArray(audiosManejoDatos)
         ? audiosManejoDatos.find((elemento) => elemento.numero === sesion.numero)
         : null;
 
@@ -42,7 +53,7 @@
       if (recursoAudio) {
         tituloAudio.textContent = recursoAudio.titulo;
         reproductorAudio.src = recursoAudio.spotify;
-        reproductorAudio.title = `Podcast de la semana ${sesion.numero}: ${recursoAudio.titulo}`;
+        reproductorAudio.title = `Podcast de la ${etiqueta.toLowerCase()} ${sesion.numero}: ${recursoAudio.titulo}`;
         abrirAudio.href = recursoAudio.abrir;
       } else {
         reproductorAudio.removeAttribute("src");
@@ -69,14 +80,23 @@
         const descripcion = document.createElement("p");
         descripcion.textContent = recurso.descripcion;
 
+        tarjeta.append(tipo, encabezado, descripcion);
+
+        if (recurso.nota) {
+          const nota = document.createElement("p");
+          nota.className = "session-material-note";
+          nota.textContent = recurso.nota;
+          tarjeta.appendChild(nota);
+        }
+
         const enlace = document.createElement("a");
         enlace.className = "text-button";
         enlace.href = recurso.abrir;
         enlace.target = "_blank";
-        enlace.rel = "noopener";
-        enlace.textContent = "Abrir documento ↗";
+        enlace.rel = "noopener noreferrer";
+        enlace.textContent = recurso.boton || "Abrir documento ↗";
 
-        tarjeta.append(tipo, encabezado, descripcion, enlace);
+        tarjeta.appendChild(enlace);
         listaMateriales.appendChild(tarjeta);
       });
     }
@@ -89,7 +109,7 @@
         tituloVideo.textContent = recursoVideo.titulo;
         descripcionVideo.textContent = recursoVideo.descripcion;
         reproductorVideo.src = recursoVideo.youtube;
-        reproductorVideo.title = `Semana ${sesion.numero}: ${recursoVideo.titulo}`;
+        reproductorVideo.title = `${etiqueta} ${sesion.numero}: ${recursoVideo.titulo}`;
         abrirVideo.href = recursoVideo.abrir;
       } else {
         reproductorVideo.removeAttribute("src");
@@ -104,14 +124,48 @@
     });
   }
 
-  sesionesManejoDatos.forEach((sesion, indice) => {
+  const parciales = [...new Set(sesionesManejoDatos.map(parcialDe))].sort((a, b) => a - b);
+
+  function mostrarParcial(parcial) {
+    const sesiones = sesionesManejoDatos.filter((sesion) => parcialDe(sesion) === parcial);
+    menu.replaceChildren();
+
+    if (tituloMenu) {
+      tituloMenu.textContent = parcial === 1 ? "Semanas del Parcial 1" : `Sesiones del Parcial ${parcial}`;
+    }
+
+    sesiones.forEach((sesion, indice) => {
+      const boton = document.createElement("button");
+      const etiqueta = etiquetaDe(sesion);
+      boton.type = "button";
+      boton.className = "session-menu-button";
+      boton.innerHTML = `<span>${etiqueta} ${sesion.numero}</span><strong>${sesion.titulo}</strong>`;
+      boton.addEventListener("click", () => mostrarSesion(sesion, indice));
+      menu.appendChild(boton);
+    });
+
+    [...menuParciales.children].forEach((boton) => {
+      const activo = Number(boton.dataset.parcial) === parcial;
+      boton.classList.toggle("active", activo);
+      boton.setAttribute("aria-pressed", activo ? "true" : "false");
+    });
+
+    if (sesiones.length > 0) mostrarSesion(sesiones[0], 0);
+  }
+
+  parciales.forEach((parcial) => {
+    const cantidad = sesionesManejoDatos.filter((sesion) => parcialDe(sesion) === parcial).length;
     const boton = document.createElement("button");
     boton.type = "button";
-    boton.className = "session-menu-button";
-    boton.innerHTML = `<span>Semana ${sesion.numero}</span><strong>${sesion.titulo}</strong>`;
-    boton.addEventListener("click", () => mostrarSesion(indice));
-    menu.appendChild(boton);
+    boton.className = "partial-menu-button";
+    boton.dataset.parcial = parcial;
+    const resumen = parcial === 1
+      ? "Semanas 1–8"
+      : `${cantidad} ${cantidad === 1 ? "sesión disponible" : "sesiones disponibles"}`;
+    boton.innerHTML = `<span>Parcial ${parcial}</span><strong>${resumen}</strong>`;
+    boton.addEventListener("click", () => mostrarParcial(parcial));
+    menuParciales.appendChild(boton);
   });
 
-  mostrarSesion(0);
+  mostrarParcial(parciales[0]);
 })();
