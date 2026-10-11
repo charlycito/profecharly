@@ -236,5 +236,39 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1iySAXcGY5WGgPycO-hbBL7yLq5wMtU-B/view?usp=sharing"
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 1,
+    etiqueta: "Sesión",
+    titulo: "Del problema científico a las variables",
+    pdf: "https://drive.google.com/file/d/1pONgZATfARmVB5o9wMm0uOEbPrNvyt3l/preview",
+    abrir: "https://drive.google.com/file/d/1pONgZATfARmVB5o9wMm0uOEbPrNvyt3l/view?usp=drivesdk",
+    descargar: "https://drive.google.com/uc?export=download&id=1pONgZATfARmVB5o9wMm0uOEbPrNvyt3l",
+    materiales: [
+      {
+        tipo: "Bitácora editable · Word",
+        titulo: "Bitácora del Analista No. 1",
+        descripcion: "Descarga este documento y complétalo durante la sesión para identificar el problema científico, formular preguntas y reconocer las variables de la investigación.",
+        nota: "Guarda una copia editable con tus respuestas y revisa que no queden apartados incompletos antes de entregarla.",
+        boton: "Descargar bitácora en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1Bc-VyKYZ2f19Nfre60_zXeoMpgjjpWzj"
+      },
+      {
+        tipo: "Manual de apoyo",
+        titulo: "Manual del Analista No. 1",
+        descripcion: "Consulta este manual para comprender los conceptos y ejemplos que te ayudarán a responder correctamente la bitácora.",
+        boton: "Abrir manual ↗",
+        abrir: "https://drive.google.com/file/d/19xVI7ktcmmJ7HQJXstNnP3I6e01tHrmA/view?usp=drivesdk"
+      },
+      {
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "Guía Práctica No. 1",
+        descripcion: "Utiliza esta guía como apunte de estudio sobre el problema científico y las variables.",
+        nota: "Imprime la guía y pégala en tu libreta o transcribe todo su contenido. En cualquiera de las dos opciones, el apunte debe quedar completo.",
+        boton: "Abrir o imprimir apunte ↗",
+        abrir: "https://drive.google.com/file/d/1NFMssEGPbw-6ENnWYsov57gph-pCNjHK/view?usp=drivesdk"
+      }
+    ]
   }
 ];
