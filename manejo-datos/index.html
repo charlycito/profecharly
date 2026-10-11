@@ -10,6 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css?v=6">
   <link rel="icon" href="../images/favicon.ico">
+  <style>
+    .partial-selector{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px;padding:22px 24px;border:1px solid #cfe2ef;border-radius:17px;background:#fff;box-shadow:0 7px 22px rgba(5,42,74,.07)}
+    .partial-selector h3{margin:4px 0 0;color:var(--navy);font-size:1.15rem}
+    .partial-menu{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:12px;min-width:min(100%,430px)}
+    .partial-menu-button{padding:13px 17px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
+    .partial-menu-button span,.partial-menu-button strong{display:block}
+    .partial-menu-button span{color:var(--blue);font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .partial-menu-button strong{margin-top:2px;font-size:.88rem}
+    .partial-menu-button:hover,.partial-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light);outline:none}
+    .partial-menu-button.active{border-color:var(--blue);color:#fff;background:var(--blue);box-shadow:0 8px 18px rgba(8,120,201,.2)}
+    .partial-menu-button.active span{color:#ffe48b}
+    .session-material-note{padding:10px 12px;border-left:4px solid var(--gold);border-radius:7px;background:#fff8df;color:#5f4a0b!important;font-size:.82rem!important}
+    @media(max-width:760px){.partial-selector{align-items:stretch;flex-direction:column}.partial-menu{width:100%;min-width:0}}
+    @media(max-width:480px){.partial-menu{grid-template-columns:1fr}}
+  </style>
 </head>
 <body id="inicio">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -18,7 +33,7 @@
     <a class="brand" href="../index.html">💻 <span>PROFE CHARLY</span><small>Informática</small></a>
     <nav aria-label="Navegación de la asignatura">
       <a href="#guia">Guía</a>
-      <a href="#sesiones">Semanas</a>
+      <a href="#sesiones">Parciales</a>
       <a href="../index.html">Página principal</a>
     </nav>
   </header>
@@ -54,13 +69,21 @@
       <div class="section-shell">
         <div class="section-heading">
           <p class="eyebrow">Material de clase</p>
-          <h2 id="sesiones-titulo">Materiales por semana</h2>
-          <p>Selecciona una semana para consultar sus diapositivas, podcast, documentos y videos de apoyo.</p>
+          <h2 id="sesiones-titulo">Materiales por parcial</h2>
+          <p>Selecciona un parcial y después la semana o sesión que deseas consultar.</p>
+        </div>
+
+        <div class="partial-selector">
+          <div>
+            <p class="eyebrow">Organización del curso</p>
+            <h3>Selecciona un parcial</h3>
+          </div>
+          <div class="partial-menu" id="menu-parciales" aria-label="Parciales disponibles"></div>
         </div>
 
         <div class="session-layout">
-          <aside class="session-menu" aria-label="Semanas disponibles">
-            <h3>Semanas</h3>
+          <aside class="session-menu" aria-label="Semanas o sesiones disponibles">
+            <h3 id="titulo-menu-sesiones">Semanas del Parcial 1</h3>
             <div id="menu-sesiones"></div>
           </aside>
 
@@ -117,8 +140,8 @@
   </main>
 
   <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
-  <script src="sesiones.js?v=12"></script>
+  <script src="sesiones.js?v=13"></script>
   <script src="audios.js?v=12"></script>
-  <script src="manejo-datos.js?v=12"></script>
+  <script src="manejo-datos.js?v=13"></script>
 </body>
 </html>
