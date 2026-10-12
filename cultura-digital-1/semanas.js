@@ -212,5 +212,43 @@ const semanasCiudadania = [
         }
       }
     ]
+  },
+  {
+    numero: 7,
+    titulo: "Multiverso digital: busca una alternativa",
+    descripcion: "Explora la diversidad de herramientas y servicios digitales, compara diferentes opciones y elige alternativas de manera crítica según tus necesidades.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "Digital Multiverse",
+      descripcion: "Consulta la presentación de la Semana 7 para reconocer que existen distintas alternativas digitales y analizar sus características antes de elegir una herramienta o servicio.",
+      pdf: "https://drive.google.com/file/d/161pXNCAszsdssVOnfVKgB16qNDAuJ74d/preview",
+      abrir: "https://drive.google.com/file/d/161pXNCAszsdssVOnfVKgB16qNDAuJ74d/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Actividad editable en Word",
+        titulo: "Busca una alternativa",
+        descripcion: "Descarga el formato de Word y complétalo durante la actividad para investigar, comparar y justificar la elección de una alternativa digital.",
+        nota: "Descarga primero el archivo, responde todos los apartados y guarda el documento con tus cambios antes de entregarlo por el medio indicado por el profesor.",
+        boton: "Descargar actividad en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1iK_EkMWfCEW_XYu40zpo4HSz55GHAiuM",
+        alternativo: {
+          boton: "Abrir vista previa en Drive",
+          abrir: "https://docs.google.com/document/d/1iK_EkMWfCEW_XYu40zpo4HSz55GHAiuM/edit?usp=drivesdk&ouid=110141638610296970108&rtpof=true&sd=true"
+        }
+      },
+      {
+        orden: 3,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes de la Semana 7",
+        descripcion: "Conserva en tu libreta las ideas esenciales sobre el multiverso digital, la comparación de alternativas y los criterios para elegir herramientas y servicios.",
+        nota: "Imprime las dos páginas y pégalas en tu libreta o transcribe todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos.",
+        boton: "Abrir o imprimir apuntes",
+        abrir: "https://drive.google.com/file/d/1pMG61iNvJw5K_gKwIoc_MNMGbCkm033d/view?usp=drivesdk"
+      }
+    ]
   }
 ];
