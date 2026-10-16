@@ -25,6 +25,10 @@
 
   if (!menu || !Array.isArray(semanasInnovacion) || semanasInnovacion.length === 0) return;
 
+  function etiquetaDe(semana) {
+    return semana.etiqueta || `Semana ${semana.numero}`;
+  }
+
   function crearMaterial(recurso) {
     const tarjeta = document.createElement("article");
     tarjeta.className = "innovation-card";
@@ -73,8 +77,9 @@
 
   function mostrarSemana(indice) {
     const semana = semanasInnovacion[indice];
+    const etiqueta = etiquetaDe(semana);
 
-    numero.textContent = `Semana ${semana.numero}`;
+    numero.textContent = etiqueta;
     titulo.textContent = semana.titulo;
     descripcion.textContent = semana.descripcion;
 
@@ -118,7 +123,7 @@
       tituloDiapositivas.textContent = recursoPrincipal.encabezado || `Diapositivas: ${recursoPrincipal.titulo}`;
       descripcionDiapositivas.textContent = recursoPrincipal.descripcion;
       visorDiapositivas.src = recursoPrincipal.pdf;
-      visorDiapositivas.title = `${recursoPrincipal.etiqueta || "Diapositivas"} de la Semana ${semana.numero}: ${recursoPrincipal.titulo}`;
+      visorDiapositivas.title = `${recursoPrincipal.etiqueta || "Diapositivas"} de ${etiqueta}: ${recursoPrincipal.titulo}`;
       abrirDiapositivas.href = recursoPrincipal.abrir;
       ayudaRecursoPrincipal.textContent = recursoPrincipal.ayuda || "Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.";
     } else {
@@ -141,7 +146,7 @@
     const boton = document.createElement("button");
     boton.type = "button";
     boton.className = "week-menu-button";
-    boton.innerHTML = `<span>Semana ${semana.numero}</span><strong>${semana.titulo}</strong>`;
+    boton.innerHTML = `<span>${etiquetaDe(semana)}</span><strong>${semana.titulo}</strong>`;
     boton.addEventListener("click", () => mostrarSemana(indice));
     menu.appendChild(boton);
   });
