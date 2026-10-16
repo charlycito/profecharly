@@ -3,38 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Materiales semanales de Manejo de Datos y Comunicaciones, Otoño 2026.">
-  <title>Manejo de Datos y Comunicaciones | Profe Charly</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=6">
+  <meta name="description" content="Materiales semanales de Innovación de Aplicaciones con el Profe Charly.">
+  <title>Innovación de Aplicaciones | Profe Charly</title>
+  <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../images/favicon.ico">
   <style>
-    .partial-selector{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px;padding:22px 24px;border:1px solid #cfe2ef;border-radius:17px;background:#fff;box-shadow:0 7px 22px rgba(5,42,74,.07)}
-    .partial-selector h3{margin:4px 0 0;color:var(--navy);font-size:1.15rem}
-    .partial-menu{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:12px;min-width:min(100%,430px)}
-    .partial-menu-button{padding:13px 17px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
-    .partial-menu-button span,.partial-menu-button strong{display:block}
-    .partial-menu-button span{color:var(--blue);font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-    .partial-menu-button strong{margin-top:2px;font-size:.88rem}
-    .partial-menu-button:hover,.partial-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light);outline:none}
-    .partial-menu-button.active{border-color:var(--blue);color:#fff;background:var(--blue);box-shadow:0 8px 18px rgba(8,120,201,.2)}
-    .partial-menu-button.active span{color:#ffe48b}
-    .session-material-note{padding:10px 12px;border-left:4px solid var(--gold);border-radius:7px;background:#fff8df;color:#5f4a0b!important;font-size:.82rem!important}
-    @media(max-width:760px){.partial-selector{align-items:stretch;flex-direction:column}.partial-menu{width:100%;min-width:0}}
-    @media(max-width:480px){.partial-menu{grid-template-columns:1fr}}
+    .innovation-intro{padding-block:54px 24px}
+    .innovation-intro .section-heading{margin-bottom:0}
+    .course-documents{padding-block:54px 8px}
+    .resource-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:30px}
+    .course-documents .resource-cards{margin-bottom:0}
+    .innovation-card{display:flex;flex-direction:column;padding:26px;border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .course-documents .innovation-card{border-top-color:var(--blue)}
+    .innovation-card-icon{display:grid;place-items:center;width:56px;height:56px;margin-bottom:17px;border-radius:15px;color:var(--blue);background:var(--blue-light);font-size:1.7rem}
+    .course-documents .innovation-card-icon{color:#725600;background:#fff1bd}
+    .innovation-card .eyebrow{margin:0}
+    .innovation-card h3{margin:6px 0 9px;color:var(--navy);font-size:1.2rem}
+    .innovation-card>p:not(.eyebrow):not(.resource-note){margin:0 0 20px;color:var(--muted)}
+    .innovation-card .primary-button{align-self:flex-start;margin-top:auto}
+    html,body{max-width:100%;overflow-x:hidden}
+    .weeks-section{padding-block:0 72px}
+    .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start;width:100%;min-width:0;max-width:100%}
+    .week-menu{position:sticky;top:90px;width:100%;min-width:0;max-width:100%;padding:20px;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-menu h3{margin:0 0 14px;color:var(--navy);font-size:1.05rem}
+    #menu-semanas{display:grid;gap:10px}
+    .week-menu-button{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
+    .week-menu-button span,.week-menu-button strong{display:block}
+    .week-menu-button span{margin-bottom:3px;color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .week-menu-button strong{font-size:.88rem;line-height:1.35}
+    .week-menu-button:hover,.week-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light)}
+    .week-menu-button.active{border-color:var(--blue);color:var(--white);background:var(--blue)}
+    .week-menu-button.active span{color:#ffe08a}
+    .week-viewer,#materiales-semana{width:100%;min-width:0;max-width:100%}
+    .week-viewer h2,.week-viewer h3,.week-viewer h4,.week-viewer p,.week-menu-button strong{overflow-wrap:anywhere}
+    .week-viewer-header{margin-bottom:20px;padding:24px 26px;border:1px solid #d8e7f2;border-left:6px solid var(--blue);border-radius:18px;background:linear-gradient(135deg,var(--blue-light),var(--white));box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .week-viewer-header .eyebrow{margin:0 0 4px}
+    .week-viewer-header h2{margin:0 0 8px;color:var(--navy);font-size:clamp(1.4rem,2.5vw,1.9rem)}
+    .week-viewer-header p:last-child{margin:0;color:var(--muted)}
+    .preparation-alert{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;margin:20px 0 0;padding:24px 26px;border:2px solid #f1a208;border-left:8px solid #db5700;border-radius:18px;background:linear-gradient(135deg,#fff2bf 0%,#fffaf0 52%,#fff 100%);box-shadow:0 10px 28px rgba(166,81,0,.16)}
+    .preparation-alert[hidden]{display:none}
+    .preparation-icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;color:#8b3300;background:#ffd86f;font-size:2rem;box-shadow:inset 0 0 0 1px rgba(139,51,0,.14)}
+    .preparation-alert .eyebrow{margin:0 0 4px;color:#a03c00}
+    .preparation-alert h3{margin:0 0 7px;color:#622500;font-size:clamp(1.3rem,2.5vw,1.65rem)}
+    .preparation-alert p{margin:0;color:#654833}
+    .preparation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 18px;margin:14px 0;padding:0;list-style:none}
+    .preparation-list li{position:relative;padding-left:24px;color:#503523;font-size:.9rem;line-height:1.45}
+    .preparation-list li::before{position:absolute;left:0;content:"✓";color:#c64b00;font-weight:900}
+    .preparation-reminder{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.75);font-size:.88rem;font-weight:700;line-height:1.5}
+    .preparation-button{display:inline-block;padding:12px 17px;border-radius:10px;color:#fff;background:#c94c00;font-size:.9rem;font-weight:800;text-align:center;text-decoration:none;white-space:nowrap;box-shadow:0 7px 16px rgba(148,52,0,.22)}
+    .preparation-button:hover,.preparation-button:focus-visible{background:#a93f00;outline:3px solid rgba(201,76,0,.22);outline-offset:3px}
+    .ordered-resource{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-bottom:20px;padding:22px 24px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .ordered-resource[hidden]{display:none}
+    .resource-step{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;color:var(--white);background:var(--blue);font:700 1.05rem "Poppins",sans-serif}
+    .ordered-resource .eyebrow{margin:0 0 4px}
+    .ordered-resource h3{margin:0 0 6px;color:var(--navy);font-size:1.18rem}
+    .ordered-resource p:last-child{margin:0;color:var(--muted)}
+    .slides-card{overflow:hidden;margin-bottom:20px;border:1px solid var(--border);border-radius:18px;background:var(--white);box-shadow:var(--shadow)}
+    .slides-card-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 27px;border-bottom:1px solid var(--border)}
+    .slides-heading{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+    .slides-card-header h3{margin:4px 0 6px;color:var(--navy);font-size:clamp(1.3rem,2.5vw,1.7rem)}
+    .slides-card-header p{margin:0;color:var(--muted)}
+    .slides-frame{height:720px;background:#dfe6eb}
+    .slides-frame iframe{display:block;width:100%;height:100%;border:0;background:var(--white)}
+    .slides-help{margin:0;padding:15px 24px;color:var(--muted);background:#f8fafc;font-size:.85rem}
+    .week-resources{margin-bottom:0}
+    .week-resources .innovation-card{position:relative}
+    .week-resources .resource-step{position:absolute;top:22px;right:22px;width:40px;height:40px}
+    .resource-note{margin:0 0 20px;padding:13px 14px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a;font-size:.9rem;line-height:1.5}
+    .resource-note.evaluation{border-left-color:#8b1d17;background:#fff1f0;color:#65302c}
+    @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}.preparation-alert{grid-template-columns:auto minmax(0,1fr)}.preparation-button{grid-column:1/-1}}
+    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}.preparation-alert{grid-template-columns:1fr;padding:22px 20px}.preparation-icon{width:54px;height:54px}.preparation-list{grid-template-columns:1fr}.preparation-button{grid-column:auto;width:100%;white-space:normal}}
+    @media(max-width:480px){.slides-heading{grid-template-columns:1fr}.slides-frame{height:460px}.week-viewer-header,.ordered-resource,.slides-card-header{padding:21px 18px}}
   </style>
 </head>
-<body id="inicio">
+<body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="site-header subject-header">
-    <a class="brand" href="../index.html">💻 <span>PROFE CHARLY</span><small>Informática</small></a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">PROFE CHARLY <small>Informática BUAP</small></a>
     <nav aria-label="Navegación de la asignatura">
-      <a href="#guia">Guía</a>
-      <a href="#sesiones">Parciales</a>
-      <a href="../index.html">Página principal</a>
+      <a href="../index.html">Inicio</a>
+      <a href="#documentos-asignatura">Guía y manual</a>
+      <a href="#semanas">Semanas</a>
+      <a href="../index.html#contacto">Contacto</a>
     </nav>
   </header>
 
@@ -42,106 +93,111 @@
     <section class="subject-hero">
       <div class="section-shell subject-hero-content">
         <p class="period-badge">Periodo Otoño 2026</p>
-        <h1>Manejo de Datos y Comunicaciones</h1>
-        <p>Analiza, organiza y representa datos mediante herramientas digitales para comunicar información y apoyar la toma de decisiones.</p>
+        <h1>Innovación de Aplicaciones</h1>
+        <p>Pasaremos de utilizar aplicaciones a comprenderlas, analizarlas y crear soluciones propias con creatividad, pensamiento lógico y MIT App Inventor.</p>
         <a class="back-link" href="../index.html">← Volver a la página principal</a>
       </div>
     </section>
 
-    <section class="section-shell guide-section" id="guia" aria-labelledby="guia-titulo">
-      <div class="guide-card">
-        <span class="document-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 13h6M9 17h6"/></svg>
-        </span>
-        <div>
+    <section class="section-shell course-documents" id="documentos-asignatura" aria-labelledby="titulo-documentos-asignatura">
+      <div class="section-heading">
+        <p class="eyebrow">Consulta permanente</p>
+        <h2 id="titulo-documentos-asignatura">Documentos de la asignatura</h2>
+        <p>Consulta estos materiales generales antes de revisar los recursos correspondientes a cada semana.</p>
+      </div>
+
+      <div class="resource-cards">
+        <article class="innovation-card">
+          <div class="innovation-card-icon" aria-hidden="true">📘</div>
           <p class="eyebrow">Documento del curso</p>
-          <h2 id="guia-titulo">Guía de aprendizaje</h2>
-          <p>Consulta o descarga la guía que orientará el trabajo de la asignatura durante el periodo.</p>
-        </div>
-        <div class="guide-actions">
-          <a class="primary-button" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/IQArqe_TA96ZSo64jCjjmZSvAT6ksejBxHZmbf1M9ZqHxxw?e=YUh8LO&amp;download=1" target="_blank" rel="noopener">Descargar guía en PDF</a>
-          <a class="text-button" href="https://correobuap-my.sharepoint.com/:b:/g/personal/jcarlos_arellano_correo_buap_mx/IQArqe_TA96ZSo64jCjjmZSvAT6ksejBxHZmbf1M9ZqHxxw?e=YUh8LO" target="_blank" rel="noopener">Ver en OneDrive ↗</a>
-        </div>
+          <h3>Guía del estudiante</h3>
+          <p>Conoce el propósito de la asignatura, sus contenidos, actividades, productos y orientaciones para el periodo Otoño 2026.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1J4uA9LIX-7GHHnHHeDeNhr2_gT3RQgkr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar guía del estudiante</a>
+        </article>
+
+        <article class="innovation-card">
+          <div class="innovation-card-icon" aria-hidden="true">🧰</div>
+          <p class="eyebrow">Trabajo práctico</p>
+          <h3>Manual de prácticas</h3>
+          <p>Revisa las indicaciones, procedimientos y actividades prácticas que desarrollarás durante la asignatura en el periodo Otoño 2026.</p>
+          <a class="primary-button" href="https://drive.google.com/file/d/1FjjxDWVh6ALRFKaAFBkHbTyM14D9Y0Hr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Consultar manual de prácticas</a>
+        </article>
       </div>
     </section>
 
-    <section class="sessions-section" id="sesiones" aria-labelledby="sesiones-titulo">
-      <div class="section-shell">
-        <div class="section-heading">
-          <p class="eyebrow">Material de clase</p>
-          <h2 id="sesiones-titulo">Materiales por parcial</h2>
-          <p>Selecciona un parcial y después la semana o sesión que deseas consultar.</p>
-        </div>
+    <section class="section-shell innovation-intro" id="semanas" aria-labelledby="bienvenida">
+      <div class="section-heading">
+        <p class="eyebrow">Materiales de clase</p>
+        <h2 id="bienvenida">Materiales por semana</h2>
+        <p>Selecciona una semana. Encontrarás sus materiales en el orden recomendado para trabajar en clase y preparar las evidencias.</p>
+      </div>
+    </section>
 
-        <div class="partial-selector">
-          <div>
-            <p class="eyebrow">Organización del curso</p>
-            <h3>Selecciona un parcial</h3>
-          </div>
-          <div class="partial-menu" id="menu-parciales" aria-label="Parciales disponibles"></div>
-        </div>
+    <section class="section-shell weeks-section" aria-label="Semanas disponibles de Innovación de Aplicaciones">
+      <div class="week-layout">
+        <aside class="week-menu" aria-label="Seleccionar semana">
+          <h3>Semanas</h3>
+          <div id="menu-semanas"></div>
+        </aside>
 
-        <div class="session-layout">
-          <aside class="session-menu" aria-label="Semanas o sesiones disponibles">
-            <h3 id="titulo-menu-sesiones">Semanas del Parcial 1</h3>
-            <div id="menu-sesiones"></div>
-          </aside>
+        <article class="week-viewer" aria-live="polite">
+          <header class="week-viewer-header">
+            <p class="eyebrow" id="numero-semana"></p>
+            <h2 id="titulo-semana"></h2>
+            <p id="descripcion-semana"></p>
+          </header>
 
-          <article class="session-viewer">
-            <div class="session-viewer-header">
-              <div><p class="session-number" id="numero-sesion"></p><h3 id="titulo-sesion"></h3></div>
-              <div class="viewer-actions">
-                <a id="abrir-sesion" class="text-button" href="#" target="_blank" rel="noopener">Abrir en otra pestaña ↗</a>
-                <a id="descargar-sesion" class="text-button" href="#" target="_blank" rel="noopener">Descargar PDF</a>
-              </div>
+          <section class="ordered-resource" id="recurso-ruta-semana" aria-labelledby="titulo-ruta-semana">
+            <span class="resource-step" aria-label="Paso 1">1</span>
+            <div>
+              <p class="eyebrow">Comienza aquí</p>
+              <h3 id="titulo-ruta-semana"></h3>
+              <p id="descripcion-ruta-semana"></p>
             </div>
-            <div class="pdf-frame-wrap">
-              <iframe id="visor-pdf" title="Diapositivas de la semana seleccionada" loading="lazy"></iframe>
-              <noscript><p>Activa JavaScript para seleccionar y visualizar las semanas.</p></noscript>
-            </div>
-            <p class="viewer-help">Si el documento no aparece dentro de la página, utiliza “Abrir en otra pestaña”. Algunos navegadores o configuraciones institucionales pueden impedir la vista incrustada.</p>
-            <div class="session-audio" id="audio-sesion" hidden>
-              <div class="session-video-heading">
-                <p class="session-number">Podcast de la semana</p>
-                <h4 id="titulo-audio-sesion"></h4>
-                <p>Escucha este audio para repasar los conceptos y puntos importantes de la semana.</p>
+            <a class="primary-button" id="abrir-ruta-semana" href="#" target="_blank" rel="noopener noreferrer">Abrir ruta de aprendizaje</a>
+          </section>
+
+          <article class="slides-card" id="recurso-principal-semana" aria-labelledby="titulo-diapositivas">
+            <header class="slides-card-header">
+              <div class="slides-heading">
+                <span class="resource-step" id="paso-recurso-principal" aria-label="Paso 2">2</span>
+                <div>
+                  <p class="eyebrow" id="etiqueta-recurso-principal">Presentación de clase</p>
+                  <h3 id="titulo-diapositivas"></h3>
+                  <p id="descripcion-diapositivas"></p>
+                </div>
               </div>
-              <iframe
-                id="reproductor-audio-sesion"
-                title="Podcast de la semana seleccionada"
-                loading="lazy"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              ></iframe>
-              <a id="abrir-audio-sesion" class="text-button" href="#" target="_blank" rel="noopener">Abrir en Spotify ↗</a>
+              <a class="primary-button" id="abrir-diapositivas" href="#" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a>
+            </header>
+            <div class="slides-frame">
+              <iframe id="visor-diapositivas" src="about:blank" title="Diapositivas de la semana seleccionada" loading="lazy" allow="autoplay" allowfullscreen></iframe>
             </div>
-            <div class="session-materials" id="materiales-sesion" hidden>
-              <div class="session-materials-heading">
-                <p class="session-number">Recursos de apoyo</p>
-                <h4>Materiales para la actividad</h4>
-                <p>Consulta los documentos necesarios para realizar el trabajo de esta semana.</p>
-              </div>
-              <div class="session-materials-grid" id="lista-materiales-sesion"></div>
-            </div>
-            <div class="session-video" id="video-sesion" hidden>
-              <div class="session-video-heading">
-                <p class="session-number">Video de orientación</p>
-                <h4 id="titulo-video-sesion"></h4>
-                <p id="descripcion-video-sesion"></p>
-              </div>
-              <div class="session-video-frame">
-                <iframe id="reproductor-video-sesion" title="Video de orientación de la semana seleccionada" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-              <a id="abrir-video-sesion" class="text-button" href="#" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
-            </div>
+            <p class="slides-help" id="ayuda-recurso-principal">Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.</p>
           </article>
-        </div>
+
+          <div class="resource-cards week-resources" id="materiales-semana"></div>
+
+          <section class="preparation-alert" id="preparacion-semana" aria-labelledby="titulo-preparacion-semana" hidden>
+            <div class="preparation-icon" aria-hidden="true">⚠️</div>
+            <div>
+              <p class="eyebrow">Prepárate con anticipación para la Semana 3</p>
+              <h3 id="titulo-preparacion-semana"></h3>
+              <p id="descripcion-preparacion-semana"></p>
+              <ul class="preparation-list" id="lista-preparacion-semana"></ul>
+              <p class="preparation-reminder" id="nota-preparacion-semana"></p>
+            </div>
+            <a class="preparation-button" id="abrir-preparacion-semana" target="_blank" rel="noopener noreferrer"></a>
+          </section>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
-  <script src="sesiones.js?v=13"></script>
-  <script src="audios.js?v=12"></script>
-  <script src="manejo-datos.js?v=13"></script>
+  <footer>
+    <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
+    <p>Innovación de Aplicaciones</p>
+  </footer>
+  <script src="semanas.js?v=13"></script>
+  <script src="innovacion-aplicaciones.js?v=5"></script>
 </body>
 </html>
