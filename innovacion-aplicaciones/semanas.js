@@ -294,5 +294,35 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/uc?export=download&id=1KqMFgbQpkVTsAnzUMWMDKpjCwXbH5ybK"
       }
     ]
+  },
+  {
+    numero: 9,
+    etiqueta: "Proyecto final",
+    titulo: "Proyecto final del Bloque I",
+    descripcion: "Desarrolla y documenta una aplicación móvil, genera su archivo APK y prepara los enlaces y evidencias necesarios para la entrega final del bloque.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Guía visual de la evidencia final",
+      encabezado: "Proyecto final del Bloque I",
+      titulo: "Desarrollo y documentación de una aplicación móvil",
+      descripcion: "Mantén abierta esta guía en el visor para preparar el reporte, generar el APK de tu aplicación, subirlo a la nube, configurar correctamente los permisos y comprobar los elementos antes de entregar.",
+      ayuda: "Consulta la guía página por página mientras preparas la evidencia. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1sRZNs-hemC4FEZ4fnVVy-nObikbD0TA2/preview",
+      abrir: "https://drive.google.com/file/d/1sRZNs-hemC4FEZ4fnVVy-nObikbD0TA2/view?usp=drivesdk"
+    },
+    materiales: [
+      {
+        orden: 2,
+        icono: "📝",
+        tipo: "Formato editable de entrega",
+        titulo: "Reporte de la evidencia final del Bloque I",
+        descripcion: "Descarga el formato de Word y complétalo con la descripción del problema que resuelve tu aplicación, su funcionamiento y las evidencias solicitadas.",
+        nota: "Descarga primero el archivo y trabaja sobre tu propia copia. Guarda tus cambios y convierte el reporte terminado a PDF antes de realizar la entrega final.",
+        claseNota: "evaluation",
+        boton: "Descargar formato en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1fzqaCIszjAEKzBdzcuawMDwcs-bf1W_0"
+      }
+    ]
   }
 ];
