@@ -250,5 +250,45 @@ const semanasCiudadania = [
         abrir: "https://drive.google.com/file/d/1pMG61iNvJw5K_gKwIoc_MNMGbCkm033d/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    numero: 8,
+    titulo: "CiberDetectives: decisiones seguras en el mundo digital",
+    descripcion: "Analiza situaciones de seguridad digital, identifica señales de alerta y riesgos, y propone acciones concretas para proteger cuentas, datos, personas y trabajos escolares.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "CiberDetectives",
+      descripcion: "Consulta la presentación de la Semana 8 para reconocer riesgos digitales, valorar sus posibles consecuencias y tomar decisiones seguras y responsables.",
+      pdf: "https://drive.google.com/file/d/1AoRkToPmv-vOocZZAZt3Srr-quAqMBqq/preview",
+      abrir: "https://drive.google.com/file/d/1AoRkToPmv-vOocZZAZt3Srr-quAqMBqq/view?usp=sharing"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "CiberDetectives: guía de seguridad digital",
+        descripcion: "Conserva esta guía con recomendaciones para reconocer señales de alerta y actuar de manera segura ante situaciones digitales de riesgo.",
+        nota: "Debes imprimir la imagen y pegarla en tu libreta, o bien transcribir completa la información. En cualquiera de las dos opciones, el apunte debe quedar completo en la libreta.",
+        boton: "Abrir apunte en tamaño completo",
+        abrir: "https://drive.google.com/file/d/1_rXQkA5_EzXQZ7MX27imXCPPD1BHofB_/view?usp=sharing",
+        imagen: "https://drive.google.com/thumbnail?id=1_rXQkA5_EzXQZ7MX27imXCPPD1BHofB_&sz=w1600",
+        imagenAlt: "Guía de seguridad digital CiberDetectives para los apuntes de la Semana 8"
+      },
+      {
+        orden: 3,
+        tipo: "Evidencia 3 · Actividad editable en Word",
+        titulo: "CiberDetectives: expedientes de seguridad digital",
+        descripcion: "Descarga el formato de Word y complétalo durante la actividad. En equipo analizarán cuatro expedientes, identificarán señales y riesgos, propondrán acciones seguras y justificarán sus decisiones; al final realizarás una comprobación individual.",
+        nota: "Descarga primero el archivo, completa todos los apartados y guarda el documento con tus cambios antes de entregarlo por el medio indicado por el profesor.",
+        boton: "Descargar actividad en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1vVdDfdhbGJkQBcjlMZq_3R5jZY1Xlf9X",
+        alternativo: {
+          boton: "Abrir vista previa en Drive",
+          abrir: "https://drive.google.com/file/d/1vVdDfdhbGJkQBcjlMZq_3R5jZY1Xlf9X/view?usp=sharing"
+        }
+      }
+    ]
   }
 ];
