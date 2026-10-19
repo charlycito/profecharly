@@ -270,5 +270,40 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1NFMssEGPbw-6ENnWYsov57gph-pCNjHK/view?usp=drivesdk"
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 2,
+    etiqueta: "Sesión",
+    titulo: "Regresión lineal en Excel",
+    pdf: "https://drive.google.com/file/d/1MRrNUMCNjQQ04g2ejoNHU7ZR-7Z5CiYi/preview",
+    abrir: "https://drive.google.com/file/d/1MRrNUMCNjQQ04g2ejoNHU7ZR-7Z5CiYi/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1MRrNUMCNjQQ04g2ejoNHU7ZR-7Z5CiYi",
+    materiales: [
+      {
+        tipo: "Bitácora editable · Word",
+        titulo: "Bitácora del Analista No. 2",
+        descripcion: "Descarga este formato en Word y complétalo durante la práctica de regresión lineal en Excel.",
+        nota: "Trabaja directamente en el archivo, guarda tus avances y comprueba que todas las respuestas y evidencias solicitadas estén completas antes de entregarlo.",
+        boton: "Descargar bitácora en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1Jm6aPXHLmeNuBb1nfTxqZ-JoPr4WxaZ5"
+      },
+      {
+        tipo: "Manual de apoyo con ejemplo",
+        titulo: "Manual del Analista No. 2",
+        descripcion: "Consulta el ejemplo y las explicaciones del manual para comprender el procedimiento y responder correctamente la bitácora.",
+        nota: "Mantén abierto el manual mientras realizas la práctica; es un recurso de consulta y no sustituye la bitácora que debes completar.",
+        boton: "Abrir manual ↗",
+        abrir: "https://drive.google.com/file/d/11UnnoHX_GNjbydGLb5tJ7COP84T7QeXe/view?usp=sharing"
+      },
+      {
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "Guía Práctica Visual: Regresión lineal",
+        descripcion: "Utiliza esta guía visual como apunte de estudio sobre la regresión lineal y su aplicación en Excel.",
+        nota: "Puedes imprimirla y pegarla en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, el apunte debe quedar completo en la libreta.",
+        boton: "Abrir o imprimir apunte ↗",
+        abrir: "https://drive.google.com/file/d/1peyL29dMbvTZxjnFst1W5XAks2-2rCBu/view?usp=sharing"
+      }
+    ]
   }
 ];
