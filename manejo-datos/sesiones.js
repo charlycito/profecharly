@@ -305,5 +305,32 @@ const sesionesManejoDatos = [
         abrir: "https://drive.google.com/file/d/1peyL29dMbvTZxjnFst1W5XAks2-2rCBu/view?usp=sharing"
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 3,
+    etiqueta: "Sesión",
+    titulo: "Construcción y validación del modelo de regresión lineal",
+    pdf: "https://drive.google.com/file/d/1qWKYs0XHELyQOA_3tasgSQU8TNlGmHQu/preview",
+    abrir: "https://drive.google.com/file/d/1qWKYs0XHELyQOA_3tasgSQU8TNlGmHQu/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1qWKYs0XHELyQOA_3tasgSQU8TNlGmHQu",
+    materiales: [
+      {
+        tipo: "Manual de apoyo con ejemplo",
+        titulo: "Manual del Analista No. 3",
+        descripcion: "Consulta el ejemplo para construir y validar tu modelo de regresión lineal en Excel, revisar los pares de datos, crear el gráfico de dispersión e interpretar la ecuación y el valor de R².",
+        nota: "Los datos del manual son ilustrativos. Utiliza tus propias variables, fuente y resultados para elaborar la evidencia.",
+        boton: "Abrir manual ↗",
+        abrir: "https://drive.google.com/file/d/19dm9YwiAfCFtwOqN_f13PMZb6VmglLyk/view?usp=sharing"
+      },
+      {
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "Apuntes del estudiante: Modelado de regresión lineal",
+        descripcion: "Conserva estos apuntes sobre la validación de pares de datos, el gráfico de dispersión, la ecuación lineal, R², las estimaciones y los límites del modelo.",
+        nota: "Puedes imprimir las cuatro páginas y pegarlas en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos en la libreta.",
+        boton: "Abrir o imprimir apuntes ↗",
+        abrir: "https://drive.google.com/file/d/1u13IWuwKK0ZkL2exon48oCi3yE3XMfNy/view?usp=sharing"
+      }
+    ]
   }
 ];
