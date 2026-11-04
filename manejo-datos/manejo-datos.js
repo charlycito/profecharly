@@ -4,6 +4,7 @@
   const tituloMenu = document.querySelector("#titulo-menu-sesiones");
   const numero = document.querySelector("#numero-sesion");
   const titulo = document.querySelector("#titulo-sesion");
+  const descripcionVisor = document.querySelector("#descripcion-visor-sesion");
   const visor = document.querySelector("#visor-pdf");
   const abrir = document.querySelector("#abrir-sesion");
   const descargar = document.querySelector("#descargar-sesion");
@@ -38,6 +39,10 @@
     const etiqueta = etiquetaDe(sesion);
     numero.textContent = `${etiqueta} ${sesion.numero} · Parcial ${parcial}`;
     titulo.textContent = sesion.titulo;
+    if (descripcionVisor) {
+      descripcionVisor.textContent = sesion.descripcionVisor || "";
+      descripcionVisor.hidden = !sesion.descripcionVisor;
+    }
     visor.src = sesion.pdf;
     visor.title = `${etiqueta} ${sesion.numero} del Parcial ${parcial}: ${sesion.titulo}`;
     abrir.href = sesion.abrir || sesion.pdf;
