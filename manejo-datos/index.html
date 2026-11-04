@@ -21,6 +21,7 @@
     .partial-menu-button:hover,.partial-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light);outline:none}
     .partial-menu-button.active{border-color:var(--blue);color:#fff;background:var(--blue);box-shadow:0 8px 18px rgba(8,120,201,.2)}
     .partial-menu-button.active span{color:#ffe48b}
+    .session-viewer-description{max-width:680px;margin:7px 0 0;color:#49657b;font-size:.88rem;line-height:1.55}
     .session-material-note{padding:10px 12px;border-left:4px solid var(--gold);border-radius:7px;background:#fff8df;color:#5f4a0b!important;font-size:.82rem!important}
     @media(max-width:760px){.partial-selector{align-items:stretch;flex-direction:column}.partial-menu{width:100%;min-width:0}}
     @media(max-width:480px){.partial-menu{grid-template-columns:1fr}}
@@ -89,7 +90,11 @@
 
           <article class="session-viewer">
             <div class="session-viewer-header">
-              <div><p class="session-number" id="numero-sesion"></p><h3 id="titulo-sesion"></h3></div>
+              <div>
+                <p class="session-number" id="numero-sesion"></p>
+                <h3 id="titulo-sesion"></h3>
+                <p class="session-viewer-description" id="descripcion-visor-sesion" hidden></p>
+              </div>
               <div class="viewer-actions">
                 <a id="abrir-sesion" class="text-button" href="#" target="_blank" rel="noopener">Abrir en otra pestaña ↗</a>
                 <a id="descargar-sesion" class="text-button" href="#" target="_blank" rel="noopener">Descargar PDF</a>
@@ -140,8 +145,8 @@
   </main>
 
   <footer><p>© 2026 Juan Carlos Arellano Ponce</p><p>Informática | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p><a href="#inicio">Volver al inicio ↑</a></footer>
-  <script src="sesiones.js?v=15"></script>
+  <script src="sesiones.js?v=17"></script>
   <script src="audios.js?v=12"></script>
-  <script src="manejo-datos.js?v=14"></script>
+  <script src="manejo-datos.js?v=15"></script>
 </body>
 </html>
