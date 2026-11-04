@@ -316,6 +316,14 @@ const sesionesManejoDatos = [
     descargar: "https://drive.google.com/uc?export=download&id=1qWKYs0XHELyQOA_3tasgSQU8TNlGmHQu",
     materiales: [
       {
+        tipo: "Bitácora editable · Word",
+        titulo: "Bitácora del Analista No. 3",
+        descripcion: "Descarga el formato en Word y complétalo de manera individual mientras construyes y validas tu modelo de regresión lineal en Excel.",
+        nota: "Cada estudiante debe descargar su propia copia. Guarda el archivo con tus datos y conserva los cambios para entregarlo junto con la evidencia solicitada.",
+        boton: "Descargar mi bitácora en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1NZdg_XMW3_t0VJx3OzfljJOJjMyL1FhG"
+      },
+      {
         tipo: "Manual de apoyo con ejemplo",
         titulo: "Manual del Analista No. 3",
         descripcion: "Consulta el ejemplo para construir y validar tu modelo de regresión lineal en Excel, revisar los pares de datos, crear el gráfico de dispersión e interpretar la ecuación y el valor de R².",
@@ -330,6 +338,34 @@ const sesionesManejoDatos = [
         nota: "Puedes imprimir las cuatro páginas y pegarlas en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos en la libreta.",
         boton: "Abrir o imprimir apuntes ↗",
         abrir: "https://drive.google.com/file/d/1u13IWuwKK0ZkL2exon48oCi3yE3XMfNy/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    parcial: 2,
+    numero: 4,
+    etiqueta: "Sesión",
+    titulo: "De Excel a GNU Octave",
+    descripcionVisor: "El Manual del Analista No. 4 se muestra en este visor. Consúltalo como ejemplo y apoyo para llenar correctamente tu bitácora.",
+    pdf: "https://drive.google.com/file/d/1oLXz1RsNcja2rLnwqJVJYv8dQEXNhLXp/preview",
+    abrir: "https://drive.google.com/file/d/1oLXz1RsNcja2rLnwqJVJYv8dQEXNhLXp/view?usp=sharing",
+    descargar: "https://drive.google.com/uc?export=download&id=1oLXz1RsNcja2rLnwqJVJYv8dQEXNhLXp",
+    materiales: [
+      {
+        tipo: "Bitácora editable · Word",
+        titulo: "Bitácora del Analista No. 4",
+        descripcion: "Descarga el formato en Word y complétalo de manera individual durante la práctica De Excel a GNU Octave.",
+        nota: "Cada estudiante debe descargar su propia copia, escribir sus datos y guardar los cambios. Utiliza el Manual del Analista No. 4 del visor como apoyo para llenar cada apartado.",
+        boton: "Descargar mi bitácora en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1hJBu1JHukomtiVmVp8F77vbnSj44Fb36"
+      },
+      {
+        tipo: "Apunte obligatorio de libreta",
+        titulo: "Guía práctica No. 4: De Excel a GNU Octave",
+        descripcion: "Conserva esta guía práctica como apunte de la sesión para consultar los pasos y conceptos utilizados en la actividad.",
+        nota: "Puedes imprimirla y pegarla en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, el apunte debe quedar completo en la libreta.",
+        boton: "Abrir o imprimir apunte ↗",
+        abrir: "https://drive.google.com/file/d/1_2PVCXuWV-rajkorvumT3ATE16nvvNni/view?usp=sharing"
       }
     ]
   }
