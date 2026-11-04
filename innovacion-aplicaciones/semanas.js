@@ -324,5 +324,45 @@ const semanasInnovacion = [
         abrir: "https://drive.google.com/uc?export=download&id=1fzqaCIszjAEKzBdzcuawMDwcs-bf1W_0"
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 1,
+    etiqueta: "Sesión 1",
+    titulo: "Gráficos polares",
+    descripcion: "Construye una aplicación en MIT App Inventor que represente información mediante gráficos polares, siguiendo la guía visual y el video de apoyo.",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      etiqueta: "Guía visual paso a paso",
+      encabezado: "Práctica: Gráficos polares en MIT App Inventor",
+      titulo: "Guía visual de Gráficos polares — Bloque II",
+      descripcion: "Mantén abierta esta guía en el visor mientras realizas la práctica en MIT App Inventor. Avanza página por página y comprueba cada parte de la aplicación antes de continuar.",
+      ayuda: "El PDF se consulta directamente desde Google Drive; no está almacenado en esta página. Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.",
+      pdf: "https://drive.google.com/file/d/1pW5HDKKgX1WhC-YHhlmBc4A112besYAF/preview",
+      abrir: "https://drive.google.com/file/d/1pW5HDKKgX1WhC-YHhlmBc4A112besYAF/view?usp=sharing"
+    },
+    video: {
+      orden: 2,
+      etiqueta: "Video corto de apoyo",
+      titulo: "Gráficos polares en acción",
+      descripcion: "Observa el video como apoyo visual para reconocer el resultado esperado y relacionarlo con los pasos de la guía.",
+      embed: "https://www.youtube-nocookie.com/embed/25w0mYVKG-o?rel=0",
+      abrir: "https://www.youtube.com/shorts/25w0mYVKG-o",
+      ayuda: "El video está integrado en formato vertical. Si YouTube no permite reproducirlo dentro de la página, utiliza el botón “Abrir en YouTube”."
+    },
+    materiales: [
+      {
+        orden: 3,
+        icono: "📝",
+        tipo: "Formato editable de entrega",
+        titulo: "Reporte de la práctica Gráficos polares",
+        descripcion: "Descarga el formato en Word y complétalo con tus datos, explicaciones, pruebas y capturas legibles de la aplicación realizada en MIT App Inventor.",
+        nota: "Trabaja sobre tu propia copia. Guarda frecuentemente los cambios y entrega en TEAMS el archivo completo con el nombre Apellido_Nombre_Grupo_GraficosPolares.docx.",
+        claseNota: "evaluation",
+        boton: "Descargar formato en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1Mjfr6fiNzxhY91lr-lFXdcpsFz5WJQ3O"
+      }
+    ]
   }
 ];
