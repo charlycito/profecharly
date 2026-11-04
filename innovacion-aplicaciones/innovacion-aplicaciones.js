@@ -1,5 +1,7 @@
 (() => {
   const menu = document.querySelector("#menu-semanas");
+  const menuParciales = document.querySelector("#menu-parciales");
+  const tituloMenuSesiones = document.querySelector("#titulo-menu-sesiones");
   const numero = document.querySelector("#numero-semana");
   const titulo = document.querySelector("#titulo-semana");
   const descripcion = document.querySelector("#descripcion-semana");
@@ -21,12 +23,24 @@
   const visorDiapositivas = document.querySelector("#visor-diapositivas");
   const abrirDiapositivas = document.querySelector("#abrir-diapositivas");
   const ayudaRecursoPrincipal = document.querySelector("#ayuda-recurso-principal");
+  const recursoVideoContenedor = document.querySelector("#recurso-video-semana");
+  const pasoVideo = document.querySelector("#paso-video");
+  const etiquetaVideo = document.querySelector("#etiqueta-video");
+  const tituloVideo = document.querySelector("#titulo-video");
+  const descripcionVideo = document.querySelector("#descripcion-video");
+  const visorVideo = document.querySelector("#visor-video");
+  const abrirVideo = document.querySelector("#abrir-video");
+  const ayudaVideo = document.querySelector("#ayuda-video");
   const materiales = document.querySelector("#materiales-semana");
 
   if (!menu || !Array.isArray(semanasInnovacion) || semanasInnovacion.length === 0) return;
 
   function etiquetaDe(semana) {
     return semana.etiqueta || `Semana ${semana.numero}`;
+  }
+
+  function parcialDe(semana) {
+    return semana.parcial || 1;
   }
 
   function crearMaterial(recurso) {
@@ -75,11 +89,10 @@
     return tarjeta;
   }
 
-  function mostrarSemana(indice) {
-    const semana = semanasInnovacion[indice];
+  function mostrarSemana(semana, indice) {
     const etiqueta = etiquetaDe(semana);
 
-    numero.textContent = etiqueta;
+    numero.textContent = `Parcial ${parcialDe(semana)} · ${etiqueta}`;
     titulo.textContent = semana.titulo;
     descripcion.textContent = semana.descripcion;
 
@@ -133,6 +146,26 @@
       abrirDiapositivas.removeAttribute("href");
     }
 
+    const video = semana.video;
+    if (video) {
+      recursoVideoContenedor.hidden = false;
+      const ordenVideo = video.orden || 2;
+      pasoVideo.textContent = ordenVideo;
+      pasoVideo.setAttribute("aria-label", `Paso ${ordenVideo}`);
+      etiquetaVideo.textContent = video.etiqueta || "Video de apoyo";
+      tituloVideo.textContent = video.titulo;
+      descripcionVideo.textContent = video.descripcion;
+      visorVideo.src = video.embed;
+      visorVideo.title = `${video.titulo} — ${etiqueta}`;
+      abrirVideo.href = video.abrir;
+      ayudaVideo.textContent = video.ayuda || "Si el reproductor no aparece, utiliza el botón “Abrir en YouTube”.";
+    } else {
+      recursoVideoContenedor.hidden = true;
+      visorVideo.src = "about:blank";
+      visorVideo.title = "Video no disponible para esta semana";
+      abrirVideo.removeAttribute("href");
+    }
+
     materiales.replaceChildren(...semana.materiales.map(crearMaterial));
 
     [...menu.children].forEach((boton, posicion) => {
@@ -142,14 +175,34 @@
     });
   }
 
-  semanasInnovacion.forEach((semana, indice) => {
-    const boton = document.createElement("button");
-    boton.type = "button";
-    boton.className = "week-menu-button";
-    boton.innerHTML = `<span>${etiquetaDe(semana)}</span><strong>${semana.titulo}</strong>`;
-    boton.addEventListener("click", () => mostrarSemana(indice));
-    menu.appendChild(boton);
+  function mostrarParcial(parcial) {
+    const sesiones = semanasInnovacion.filter(semana => parcialDe(semana) === parcial);
+    menu.replaceChildren();
+    tituloMenuSesiones.textContent = `Parcial ${parcial}`;
+
+    sesiones.forEach((semana, indice) => {
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "week-menu-button";
+      boton.innerHTML = `<span>${etiquetaDe(semana)}</span><strong>${semana.titulo}</strong>`;
+      boton.addEventListener("click", () => mostrarSemana(semana, indice));
+      menu.appendChild(boton);
+    });
+
+    [...menuParciales.querySelectorAll(".partial-button")].forEach(boton => {
+      const activo = Number(boton.dataset.parcial) === parcial;
+      boton.classList.toggle("active", activo);
+      boton.setAttribute("aria-pressed", activo ? "true" : "false");
+    });
+
+    if (sesiones.length > 0) mostrarSemana(sesiones[0], 0);
+  }
+
+  menuParciales.addEventListener("click", evento => {
+    const boton = evento.target.closest(".partial-button");
+    if (!boton) return;
+    mostrarParcial(Number(boton.dataset.parcial));
   });
 
-  mostrarSemana(0);
+  mostrarParcial(1);
 })();
