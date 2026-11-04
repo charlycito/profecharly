@@ -10,6 +10,10 @@
   <style>
     .innovation-intro{padding-block:54px 24px}
     .innovation-intro .section-heading{margin-bottom:0}
+    .partial-selector{display:flex;gap:12px;margin:0 0 22px;padding:8px;border:1px solid var(--border);border-radius:16px;background:var(--white);box-shadow:0 8px 24px rgba(5,42,74,.07)}
+    .partial-button{flex:1;padding:14px 18px;border:1px solid transparent;border-radius:11px;color:var(--navy);background:#f2f6f9;font:700 .95rem "Poppins",sans-serif;cursor:pointer}
+    .partial-button:hover,.partial-button:focus-visible{border-color:var(--blue);background:var(--blue-light)}
+    .partial-button.active{color:var(--white);background:var(--blue)}
     .course-documents{padding-block:54px 8px}
     .resource-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:30px}
     .course-documents .resource-cards{margin-bottom:0}
@@ -66,13 +70,17 @@
     .slides-frame{height:720px;background:#dfe6eb}
     .slides-frame iframe{display:block;width:100%;height:100%;border:0;background:var(--white)}
     .slides-help{margin:0;padding:15px 24px;color:var(--muted);background:#f8fafc;font-size:.85rem}
+    .video-card[hidden]{display:none}
+    .shorts-stage{padding:24px;background:linear-gradient(135deg,#061b2c,#0c3856)}
+    .shorts-frame{width:min(100%,390px);margin-inline:auto;overflow:hidden;border-radius:18px;aspect-ratio:9/16;background:#000;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+    .shorts-frame iframe{display:block;width:100%;height:100%;border:0}
     .week-resources{margin-bottom:0}
     .week-resources .innovation-card{position:relative}
     .week-resources .resource-step{position:absolute;top:22px;right:22px;width:40px;height:40px}
     .resource-note{margin:0 0 20px;padding:13px 14px;border-left:4px solid var(--gold);border-radius:9px;background:#fffaf0;color:#4e493a;font-size:.9rem;line-height:1.5}
     .resource-note.evaluation{border-left-color:#8b1d17;background:#fff1f0;color:#65302c}
     @media(max-width:950px){.week-layout{grid-template-columns:1fr}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:220px}.preparation-alert{grid-template-columns:auto minmax(0,1fr)}.preparation-button{grid-column:1/-1}}
-    @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}.preparation-alert{grid-template-columns:1fr;padding:22px 20px}.preparation-icon{width:54px;height:54px}.preparation-list{grid-template-columns:1fr}.preparation-button{grid-column:auto;width:100%;white-space:normal}}
+    @media(max-width:760px){.partial-selector{flex-direction:column}.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.resource-cards{grid-template-columns:1fr}.ordered-resource{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button{grid-column:1/-1;text-align:center}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}.preparation-alert{grid-template-columns:1fr;padding:22px 20px}.preparation-icon{width:54px;height:54px}.preparation-list{grid-template-columns:1fr}.preparation-button{grid-column:auto;width:100%;white-space:normal}}
     @media(max-width:480px){.slides-heading{grid-template-columns:1fr}.slides-frame{height:460px}.week-viewer-header,.ordered-resource,.slides-card-header{padding:21px 18px}}
   </style>
 </head>
@@ -84,7 +92,7 @@
     <nav aria-label="Navegación de la asignatura">
       <a href="../index.html">Inicio</a>
       <a href="#documentos-asignatura">Guía y manual</a>
-      <a href="#semanas">Semanas</a>
+      <a href="#semanas">Parciales</a>
       <a href="../index.html#contacto">Contacto</a>
     </nav>
   </header>
@@ -128,15 +136,19 @@
     <section class="section-shell innovation-intro" id="semanas" aria-labelledby="bienvenida">
       <div class="section-heading">
         <p class="eyebrow">Materiales de clase</p>
-        <h2 id="bienvenida">Materiales por semana</h2>
-        <p>Selecciona una semana. Encontrarás sus materiales en el orden recomendado para trabajar en clase y preparar las evidencias.</p>
+        <h2 id="bienvenida">Materiales por parcial y sesión</h2>
+        <p>Primero selecciona el parcial y después la semana o sesión. Encontrarás los materiales en el orden recomendado para trabajar en clase y preparar las evidencias.</p>
       </div>
     </section>
 
-    <section class="section-shell weeks-section" aria-label="Semanas disponibles de Innovación de Aplicaciones">
+    <section class="section-shell weeks-section" aria-label="Parciales y sesiones disponibles de Innovación de Aplicaciones">
+      <nav class="partial-selector" id="menu-parciales" aria-label="Seleccionar parcial">
+        <button class="partial-button active" type="button" data-parcial="1" aria-pressed="true">Parcial 1</button>
+        <button class="partial-button" type="button" data-parcial="2" aria-pressed="false">Parcial 2</button>
+      </nav>
       <div class="week-layout">
         <aside class="week-menu" aria-label="Seleccionar semana">
-          <h3>Semanas</h3>
+          <h3 id="titulo-menu-sesiones">Parcial 1</h3>
           <div id="menu-semanas"></div>
         </aside>
 
@@ -175,6 +187,26 @@
             <p class="slides-help" id="ayuda-recurso-principal">Si el visor no aparece en tu dispositivo, utiliza el botón “Abrir en otra pestaña”.</p>
           </article>
 
+          <article class="slides-card video-card" id="recurso-video-semana" aria-labelledby="titulo-video" hidden>
+            <header class="slides-card-header">
+              <div class="slides-heading">
+                <span class="resource-step" id="paso-video" aria-label="Paso 2">2</span>
+                <div>
+                  <p class="eyebrow" id="etiqueta-video">Video corto de apoyo</p>
+                  <h3 id="titulo-video"></h3>
+                  <p id="descripcion-video"></p>
+                </div>
+              </div>
+              <a class="primary-button" id="abrir-video" href="#" target="_blank" rel="noopener noreferrer">Abrir en YouTube</a>
+            </header>
+            <div class="shorts-stage">
+              <div class="shorts-frame">
+                <iframe id="visor-video" src="about:blank" title="Video corto de la sesión seleccionada" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="slides-help" id="ayuda-video">Si el reproductor no aparece, utiliza el botón “Abrir en YouTube”.</p>
+          </article>
+
           <div class="resource-cards week-resources" id="materiales-semana"></div>
 
           <section class="preparation-alert" id="preparacion-semana" aria-labelledby="titulo-preparacion-semana" hidden>
@@ -197,7 +229,7 @@
     <p>© 2026 Profe Charly | Preparatoria Amozoc · Complejo Regional Centro · BUAP</p>
     <p>Innovación de Aplicaciones</p>
   </footer>
-  <script src="semanas.js?v=13"></script>
-  <script src="innovacion-aplicaciones.js?v=5"></script>
+  <script src="semanas.js?v=15"></script>
+  <script src="innovacion-aplicaciones.js?v=6"></script>
 </body>
 </html>
