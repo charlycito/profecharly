@@ -290,5 +290,44 @@ const semanasCiudadania = [
         }
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 1,
+    titulo: "Identidad y huella digital",
+    descripcion: "Reconoce cómo se construye tu identidad digital, analiza la huella que dejas al utilizar servicios en línea y toma decisiones para proteger tu información y reputación.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "Identidad y Huella Digital",
+      descripcion: "Consulta las diapositivas de la Semana 1 del Parcial 2 para comprender la identidad digital, la huella activa y pasiva y sus posibles consecuencias.",
+      pdf: "https://drive.google.com/file/d/1mnSh851WXLf64uEMTPTHQODsmSmrhJ3u/preview",
+      abrir: "https://drive.google.com/file/d/1mnSh851WXLf64uEMTPTHQODsmSmrhJ3u/view?usp=sharing"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Actividad editable en Word",
+        titulo: "Actividad de la Semana 1: Identidad y huella digital",
+        descripcion: "Descarga el formato Actividad_S1.docx y complétalo de manera individual durante la actividad de clase.",
+        nota: "Cada estudiante debe descargar su propia copia, escribir sus datos, completar todos los apartados y guardar el archivo con sus cambios para entregarlo por el medio indicado por el profesor.",
+        boton: "Descargar actividad en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1qpCbyZ1dgD1rQLDAhagmXirnt2tIhVbJ",
+        alternativo: {
+          boton: "Abrir vista previa en Drive",
+          abrir: "https://drive.google.com/file/d/1qpCbyZ1dgD1rQLDAhagmXirnt2tIhVbJ/view?usp=sharing"
+        }
+      },
+      {
+        orden: 3,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes: Identidad y huella digital",
+        descripcion: "Conserva en tu libreta las ideas esenciales de la Semana 1 del Parcial 2 sobre identidad, huella digital y protección de la información.",
+        nota: "Puedes imprimir el material y pegarlo en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos en la libreta.",
+        boton: "Abrir o imprimir apuntes",
+        abrir: "https://drive.google.com/file/d/1MRhkt7QB544lTUgtWryG-Ik1hPdaedVc/view?usp=sharing"
+      }
+    ]
   }
 ];
