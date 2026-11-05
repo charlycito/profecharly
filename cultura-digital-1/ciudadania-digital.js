@@ -1,11 +1,17 @@
 (() => {
+  const menuParciales = document.querySelector("#menu-parciales");
   const menu = document.querySelector("#menu-semanas");
+  const tituloMenu = document.querySelector("#titulo-menu-semanas");
   const numero = document.querySelector("#numero-semana");
   const titulo = document.querySelector("#titulo-semana");
   const descripcion = document.querySelector("#descripcion-semana");
   const contenido = document.querySelector("#contenido-semana");
 
-  if (!menu || !contenido || !Array.isArray(semanasCiudadania) || semanasCiudadania.length === 0) return;
+  if (!menuParciales || !menu || !contenido || !Array.isArray(semanasCiudadania) || semanasCiudadania.length === 0) return;
+
+  function parcialDe(semana) {
+    return semana.parcial || 1;
+  }
 
   function crearFormulario(semana) {
     const formulario = semana.formulario;
@@ -242,9 +248,9 @@
     return fragmento;
   }
 
-  function mostrarSemana(indice) {
-    const semana = semanasCiudadania[indice];
-    numero.textContent = `Semana ${semana.numero}`;
+  function mostrarSemana(semana, botonActivo) {
+    const parcial = parcialDe(semana);
+    numero.textContent = `Semana ${semana.numero} · Parcial ${parcial}`;
     titulo.textContent = semana.titulo;
     descripcion.textContent = semana.descripcion;
     contenido.replaceChildren();
@@ -257,25 +263,55 @@
       contenido.appendChild(crearMateriales(semana));
     }
 
-    [...menu.children].forEach((boton, posicion) => {
-      const activo = posicion === indice;
+    [...menu.children].forEach((boton) => {
+      const activo = boton === botonActivo;
       boton.classList.toggle("active", activo);
       boton.setAttribute("aria-pressed", activo ? "true" : "false");
     });
   }
 
-  semanasCiudadania.forEach((semana, indice) => {
+  function cargarParcial(parcial) {
+    const semanas = semanasCiudadania.filter((semana) => parcialDe(semana) === parcial);
+    tituloMenu.textContent = `Semanas del Parcial ${parcial}`;
+    menu.replaceChildren();
+
+    semanas.forEach((semana) => {
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "week-menu-button";
+      const numeroBoton = document.createElement("span");
+      numeroBoton.textContent = `Semana ${semana.numero}`;
+      const tituloBoton = document.createElement("strong");
+      tituloBoton.textContent = semana.titulo;
+      boton.append(numeroBoton, tituloBoton);
+      boton.addEventListener("click", () => mostrarSemana(semana, boton));
+      menu.appendChild(boton);
+    });
+
+    [...menuParciales.children].forEach((boton) => {
+      const activo = Number(boton.dataset.parcial) === parcial;
+      boton.classList.toggle("active", activo);
+      boton.setAttribute("aria-pressed", activo ? "true" : "false");
+    });
+
+    if (semanas.length > 0) mostrarSemana(semanas[0], menu.firstElementChild);
+  }
+
+  const parciales = [...new Set(semanasCiudadania.map(parcialDe))].sort((a, b) => a - b);
+  parciales.forEach((parcial) => {
     const boton = document.createElement("button");
     boton.type = "button";
-    boton.className = "week-menu-button";
-    const numeroBoton = document.createElement("span");
-    numeroBoton.textContent = `Semana ${semana.numero}`;
-    const tituloBoton = document.createElement("strong");
-    tituloBoton.textContent = semana.titulo;
-    boton.append(numeroBoton, tituloBoton);
-    boton.addEventListener("click", () => mostrarSemana(indice));
-    menu.appendChild(boton);
+    boton.className = "partial-menu-button";
+    boton.dataset.parcial = parcial;
+    const etiqueta = document.createElement("span");
+    etiqueta.textContent = `Parcial ${parcial}`;
+    const resumen = document.createElement("strong");
+    const total = semanasCiudadania.filter((semana) => parcialDe(semana) === parcial).length;
+    resumen.textContent = `${total} ${total === 1 ? "semana publicada" : "semanas publicadas"}`;
+    boton.append(etiqueta, resumen);
+    boton.addEventListener("click", () => cargarParcial(parcial));
+    menuParciales.appendChild(boton);
   });
 
-  mostrarSemana(0);
+  cargarParcial(parciales[0]);
 })();
