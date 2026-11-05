@@ -27,6 +27,16 @@
     .teacher-card p{margin:0;color:var(--muted)}
     .teacher-card a{color:var(--blue);font-weight:600}
     .weeks-intro{padding-bottom:20px}
+    .partial-selector{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px;padding:22px 24px;border:1px solid #cfe2ef;border-radius:17px;background:#fff;box-shadow:0 7px 22px rgba(5,42,74,.07)}
+    .partial-selector h3{margin:4px 0 0;color:var(--navy);font-size:1.15rem}
+    .partial-menu{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:12px;min-width:min(100%,430px)}
+    .partial-menu-button{padding:13px 17px;border:1px solid var(--border);border-radius:12px;color:var(--navy);background:#f8fafc;text-align:left;cursor:pointer}
+    .partial-menu-button span,.partial-menu-button strong{display:block}
+    .partial-menu-button span{color:var(--blue);font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .partial-menu-button strong{margin-top:2px;font-size:.88rem}
+    .partial-menu-button:hover,.partial-menu-button:focus-visible{border-color:var(--blue);background:var(--blue-light);outline:none}
+    .partial-menu-button.active{border-color:var(--blue);color:#fff;background:var(--blue);box-shadow:0 8px 18px rgba(8,120,201,.2)}
+    .partial-menu-button.active span{color:#ffe48b}
     html,body{max-width:100%;overflow-x:hidden}
     .weeks-section{padding:0 0 72px}
     .week-layout{display:grid;grid-template-columns:minmax(220px,260px) minmax(0,1fr);gap:24px;align-items:start;width:100%;min-width:0;max-width:100%}
@@ -89,9 +99,9 @@
     .resource-note{grid-column:2/4;margin:0;padding:13px 14px;border-left:4px solid #8b1d17;border-radius:9px;color:#65302c;background:#fff1f0;font-size:.92rem;font-weight:600;line-height:1.5}
     .podcast-player{grid-column:1/-1;display:block;width:100%;height:152px;border:0;border-radius:14px;background:#151515}
     .video-player{grid-column:1/-1;display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#071b2d}
-    @media(max-width:900px){.welcome-grid,.week-layout,.diagnostic-layout{grid-template-columns:1fr}.teacher-card,.qr-card{max-width:520px;width:100%;margin:auto}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:210px}}
+    @media(max-width:900px){.welcome-grid,.week-layout,.diagnostic-layout{grid-template-columns:1fr}.teacher-card,.qr-card{max-width:520px;width:100%;margin:auto}.week-menu{position:static}.week-menu #menu-semanas{display:flex;gap:8px;overflow-x:auto}.week-menu-button{min-width:210px}.partial-selector{align-items:stretch;flex-direction:column}.partial-menu{width:100%;min-width:0}}
     @media(max-width:760px){.week-menu #menu-semanas{display:grid;grid-template-columns:1fr;gap:10px;overflow:visible}.week-menu-button{min-width:0;width:100%}.ordered-resource,.week-resource-card{grid-template-columns:auto minmax(0,1fr)}.ordered-resource .primary-button,.week-resource-card .primary-button,.resource-note,.resource-actions{grid-column:1/-1;text-align:center}.resource-actions{width:100%;min-width:0}.slides-card-header{align-items:flex-start;flex-direction:column}.slides-card-header .primary-button{width:100%;text-align:center}.slides-frame{height:520px}}
-    @media(max-width:620px){.welcome-card{padding:25px 21px}.subject-pillars{grid-template-columns:1fr}.week-viewer-header,.ordered-resource,.week-resource-card,.slides-card-header{padding:21px 18px}.diagnostic-card-header{padding:21px 20px 17px}.diagnostic-frame{height:620px}.diagnostic-actions{padding:16px 18px 21px}.diagnostic-actions .primary-button{display:block;width:100%}.slides-frame{height:460px}}
+    @media(max-width:620px){.welcome-card{padding:25px 21px}.subject-pillars{grid-template-columns:1fr}.week-viewer-header,.ordered-resource,.week-resource-card,.slides-card-header{padding:21px 18px}.diagnostic-card-header{padding:21px 20px 17px}.diagnostic-frame{height:620px}.diagnostic-actions{padding:16px 18px 21px}.diagnostic-actions .primary-button{display:block;width:100%}.slides-frame{height:460px}.partial-menu{grid-template-columns:1fr}}
   </style>
 </head>
 <body id="inicio">
@@ -149,9 +159,16 @@
     </section>
 
     <section class="section-shell weeks-section" aria-label="Semanas disponibles de Ciudadanía Digital">
+      <div class="partial-selector" aria-label="Seleccionar parcial">
+        <div>
+          <p class="eyebrow">Organización del curso</p>
+          <h3>Selecciona el parcial que deseas consultar</h3>
+        </div>
+        <div class="partial-menu" id="menu-parciales"></div>
+      </div>
       <div class="week-layout">
         <aside class="week-menu" aria-label="Seleccionar semana">
-          <h3>Semanas</h3>
+          <h3 id="titulo-menu-semanas">Semanas del Parcial 1</h3>
           <div id="menu-semanas"></div>
         </aside>
 
@@ -173,7 +190,7 @@
     <p>Ciudadanía Digital | Preparatoria Amozoc | Complejo Regional Centro – BUAP</p>
     <a href="#inicio">Volver al inicio ↑</a>
   </footer>
-  <script src="semanas.js?v=10"></script>
-  <script src="ciudadania-digital.js?v=5"></script>
+  <script src="semanas.js?v=11"></script>
+  <script src="ciudadania-digital.js?v=6"></script>
 </body>
 </html>
