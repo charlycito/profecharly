@@ -329,5 +329,44 @@ const semanasCiudadania = [
         abrir: "https://drive.google.com/file/d/1MRhkt7QB544lTUgtWryG-Ik1hPdaedVc/view?usp=sharing"
       }
     ]
+  },
+  {
+    parcial: 2,
+    numero: 2,
+    titulo: "Mi vida digital bajo control",
+    descripcion: "Analiza cómo utilizas la tecnología, reconoce hábitos que influyen en tu bienestar y seguridad, y propone decisiones concretas para mantener una vida digital más equilibrada y responsable.",
+    tipo: "materiales",
+    ruta: null,
+    diapositivas: {
+      orden: 1,
+      titulo: "Mi vida digital bajo control",
+      descripcion: "Consulta la presentación de la Semana 2 del Parcial 2 para analizar tus hábitos digitales, los riesgos asociados y las decisiones que pueden ayudarte a utilizar la tecnología de manera consciente.",
+      pdf: "https://drive.google.com/file/d/1PCIvUotfjnOWAwq0o6oARH-edyqf6fkq/preview",
+      abrir: "https://drive.google.com/file/d/1PCIvUotfjnOWAwq0o6oARH-edyqf6fkq/view?usp=sharing"
+    },
+    materiales: [
+      {
+        orden: 2,
+        tipo: "Evidencia 1 · Actividad editable en Word",
+        titulo: "Evidencia 1: Mi vida digital bajo control",
+        descripcion: "Descarga el archivo Evidencia1.docx y complétalo de manera individual durante la actividad de clase.",
+        nota: "Cada estudiante debe descargar su propia copia, escribir sus datos, responder todos los apartados y guardar el archivo con sus cambios antes de entregarlo por el medio indicado por el profesor.",
+        boton: "Descargar Evidencia 1 en Word",
+        abrir: "https://drive.google.com/uc?export=download&id=1LjDugzKkTd3HZBJTW82kNVp2xOQvybaL",
+        alternativo: {
+          boton: "Abrir vista previa en Drive",
+          abrir: "https://drive.google.com/file/d/1LjDugzKkTd3HZBJTW82kNVp2xOQvybaL/view?usp=sharing"
+        }
+      },
+      {
+        orden: 3,
+        tipo: "Apuntes obligatorios de libreta",
+        titulo: "Apuntes de la Semana 2",
+        descripcion: "Conserva en tu libreta las ideas esenciales de la sesión sobre hábitos, bienestar, seguridad y decisiones responsables en la vida digital.",
+        nota: "Puedes imprimir el material y pegarlo en tu libreta o transcribir todo su contenido. En cualquiera de las dos opciones, los apuntes deben quedar completos en la libreta.",
+        boton: "Abrir o imprimir apuntes",
+        abrir: "https://drive.google.com/file/d/16jkD_kFs92vQYAxj2sOEPK1X_1zoh7qt/view?usp=sharing"
+      }
+    ]
   }
 ];
